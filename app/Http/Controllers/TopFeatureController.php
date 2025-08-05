@@ -1,42 +1,81 @@
 <?php
+
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\TopFeature;
-use Illuminate\Support\Facades\Storage;
 
 class TopFeatureController extends Controller
 {
     public function index()
     {
-        $feature = TopFeature::first();
-        return view('dashboard.top-feature', compact('feature'));
+        $features = TopFeature::latest()->get();
+        return view('dashboard.top-feature', compact('features'));
     }
 
-    public function update(Request $request, $field)
+    public function store(Request $request)
     {
-        $feature = TopFeature::first() ?? new TopFeature();
-
-        $validated = $request->validate([
-            'value' => $field === 'icon' ? 'required|image|mimes:png,jpg,jpeg,svg|max:2048' : 'required|string',
+        $request->validate([
+            'title' => 'required|string|max:255',
+            'short_description' => 'required|string|max:255',
+            'long_description' => 'required|string',
+            'icon' => 'nullable|image|mimes:jpeg,png,jpg,svg,webp|max:2048',
         ]);
 
-        if ($field === 'icon') {
-            $request->validate([
-                'icon' => 'required|image|mimes:jpeg,png,jpg,gif,svg,webp|max:2048',
-            ]);
-        
+        $feature = new TopFeature();
+        $feature->title = $request->title;
+        $feature->short_description = $request->short_description;
+        $feature->long_description = $request->long_description;
+
+        if ($request->hasFile('icon')) {
             $file = $request->file('icon');
             $filename = 'icon_' . time() . '.' . $file->getClientOriginalExtension();
             $file->move(public_path('uploads'), $filename);
-    
-            $topFeature->icon = $filename;
-            $topFeature->save();
-        } else {
-            $feature->{$field} = $validated['value'];
+            $feature->icon = $filename;
         }
 
         $feature->save();
-        return redirect()->back()->with('success', ucfirst($field) . ' updated successfully.');
+
+        return redirect()->back()->with('success', 'Feature added successfully.');
+    }
+
+    public function update(Request $request, $id)
+    {
+        $feature = TopFeature::findOrFail($id);
+
+        $request->validate([
+            'title' => 'required|string|max:255',
+            'short_description' => 'required|string|max:255',
+            'long_description' => 'required|string',
+            'icon' => 'nullable|image|mimes:jpeg,png,jpg,svg,webp|max:2048',
+        ]);
+
+        $feature->title = $request->title;
+        $feature->short_description = $request->short_description;
+        $feature->long_description = $request->long_description;
+
+        if ($request->hasFile('icon')) {
+            $file = $request->file('icon');
+            $filename = 'icon_' . time() . '.' . $file->getClientOriginalExtension();
+            $file->move(public_path('uploads'), $filename);
+            $feature->icon = $filename;
+        }
+
+        $feature->save();
+
+        return redirect()->back()->with('success', 'Feature updated successfully.');
+    }
+
+    public function delete($id)
+    {
+        $feature = TopFeature::findOrFail($id);
+
+        if ($feature->icon && file_exists(public_path('uploads/' . $feature->icon))) {
+            unlink(public_path('uploads/' . $feature->icon));
+        }
+
+        $feature->delete();
+
+        return redirect()->back()->with('success', 'Feature deleted successfully.');
     }
 }

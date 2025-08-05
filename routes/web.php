@@ -25,14 +25,18 @@ Route::middleware('auth')->group(function () {
     Route::get('/dashboard', function () {
         return view('dashboard.dashboard'); // make this view
     });
+    Route::post('/top-elements/update/{key}', [TopElementController::class, 'update'])->name('top-elements.update');
     Route::get('/goals', [GoalController::class, 'index'])->name('goals.index');
     Route::post('goals', [GoalController::class, 'store'])->name('goal.store');
     Route::post('goals/{goal}/update', [GoalController::class, 'update'])->name('goal.update');
     Route::delete('goals/{goal}', [GoalController::class, 'destroy'])->name('goal.destroy');
-    Route::get('/top-feature', [TopFeatureController::class, 'index'])->name('top-feature.index');
-    Route::post('/top-feature/{field}', [TopFeatureController::class, 'update'])->name('top-feature.update');
-    Route::get('/top-element', [TopElementController::class, 'index'])->name('top-element.index');
-    Route::post('/top-element/update/{key}', [TopElementController::class, 'update'])->name('top-element.update');
+    Route::prefix('top-feature')->group(function () {
+        Route::get('/', [TopFeatureController::class, 'index'])->name('top-element.index');
+        Route::post('/store', [TopFeatureController::class, 'store'])->name('top-element.store');
+        Route::put('/update/{id}', [TopFeatureController::class, 'update'])->name('top-element.update');
+        Route::delete('/delete/{id}', [TopFeatureController::class, 'destroy'])->name('top-element.destroy');
+    });
+
     Route::get('/top-banner', [TopBannerController::class, 'index'])->name('top-banner.index');
     Route::post('/top-banner/update/{key}', [TopBannerController::class, 'update'])->name('top-banner.update');
     Route::resource('missions', MissionController::class);

@@ -22,12 +22,12 @@ class FrontendController extends Controller
         $missions = Mission::all();
         $projects = Project::all();
         $teams = Team::all();
-        $topBanner = TopBanner::latest()->first(); // Assuming only one active
+        $topBanner = TopBanner::all();
         $topElements = TopElement::all();
         $topFeatures = TopFeature::all();
         $whyChooseUs = WhyChooseUs::latest()->first(); // Assuming only one
         $whyChooseUsReasons = WhyChooseUsReason::all();
-
+        
         return view('index', compact(
             'futures',
             'goals',

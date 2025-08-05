@@ -1,66 +1,58 @@
 @extends('dashboard.layouts')
 
 @section('content')
+    <div class="container">
+        <h2 class="mb-4">Top Elements</h2>
 
-<style>
-    .card {
-        background-color: #fff;
-        border: 1px solid #e3e6f0;
-    }
+        @if (session('success'))
+            <div class="alert alert-success">{{ session('success') }}</div>
+        @endif
 
-    .form-label {
-        font-weight: 500;
-        margin-bottom: 0.3rem;
-    }
+        {{-- Define fields --}}
+        @php
+            $fields = [
+                'email' => 'Email Address',
+                'phone' => 'Phone Number',
+                'address' => 'Address',
+                'facebook' => 'Facebook URL',
+                'linkedin' => 'LinkedIn URL',
+            ];
+            $data = \App\Models\TopElement::pluck('value', 'key')->toArray();
+        @endphp
 
-    .input-group .form-control {
-        border-right: 0;
-    }
-
-    .input-group .btn {
-        border-left: 0;
-    }
-</style>
-
-
-<div class="container mt-4">
-    <div class="card shadow-lg rounded-4 p-4">
-        <h4 class="mb-4 border-bottom pb-2">Top Elements</h4>
-
-        {{-- Address, Facebook, LinkedIn, Twitter --}}
-        @foreach (['address', 'facebook', 'linkedin', 'twitter'] as $field)
-            <form action="{{ route('top-element.update', $field) }}" method="POST" class="mb-3">
+        @foreach ($fields as $field => $label)
+            <form action="{{ route('top-elements.update', $field) }}" method="POST" class="mb-3">
                 @csrf
-                <label class="form-label">{{ ucfirst($field) }}</label>
-                <div class="input-group">
-                    <input type="text" name="value" class="form-control" placeholder="Enter {{ ucfirst($field) }}" 
-                        value="{{ old('value', $data[$field] ?? '') }}">
-                    <button class="btn btn-primary" type="submit">Update</button>
+                <div class="form-group">
+                    <label>{{ $label }}</label>
+                    <input type="text" name="value" class="form-control @error('value_' . $field) is-invalid @enderror"
+                        value="{{ old('value_' . $field, $data[$field] ?? '') }}">
+                    @error('value_' . $field)
+                        <small class="text-danger">{{ $message }}</small>
+                    @enderror
                 </div>
-                @error('value')
-                    <small class="text-danger">{{ $message }}</small>
-                @enderror
+                <button type="submit" class="btn btn-primary mt-2">Update {{ ucfirst($field) }}</button>
             </form>
         @endforeach
 
         {{-- Logo Upload --}}
-        <form action="{{ route('top-element.update', 'logo') }}" method="POST" enctype="multipart/form-data" class="mb-3">
+        <form action="{{ route('top-elements.update', 'logo') }}" method="POST" enctype="multipart/form-data"
+            class="mb-5">
             @csrf
-            <label class="form-label">Logo <small class="text-muted">(Recommended: 350px × 70px)</small></label>
-            <div class="input-group">
-                <input type="file" name="value" class="form-control">
-                <button class="btn btn-primary" type="submit">Update Logo</button>
-            </div>
-            @error('value')
-                <small class="text-danger">{{ $message }}</small>
-            @enderror
-        </form>
+            <div class="form-group">
+                <label>Logo</label>
+                <input type="file" name="value" class="form-control-file @error('value_logo') is-invalid @enderror">
+                @error('value_logo')
+                    <small class="text-danger">{{ $message }}</small>
+                @enderror
 
-        @if(session('success'))
-            <div class="alert alert-success mt-3">
-                {{ session('success') }}
+                @if (!empty($data['logo']))
+                    <div class="mt-2">
+                        <img src="{{ asset('storage/' . $data['logo']) }}" alt="Logo" width="150">
+                    </div>
+                @endif
             </div>
-        @endif
+            <button type="submit" class="btn btn-primary mt-2">Update Logo</button>
+        </form>
     </div>
-</div>
 @endsection

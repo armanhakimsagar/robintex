@@ -39,12 +39,20 @@
             --e-global-typography-primary-font-size: 16px;
             --e-global-typography-primary-font-weight: 400;
         }
+
+        .elementor-146 .elementor-element.elementor-element-d0d5a32:not(.elementor-motion-effects-element-type-background),
+        .elementor-146 .elementor-element.elementor-element-d0d5a32>.elementor-motion-effects-container>.elementor-motion-effects-layer {
+            background-color: #F7F7F7;
+            background-image: url("{{ $topBanner[0]->value }}");
+            background-position: top left;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
     </style>
 
     <!-- JS Files -->
 
     <!-- Favicon -->
-    <link rel="icon" href="{{ asset('assets/data/cropped-favicon-32x32.png') }}" sizes="32x32">
     <meta name="msapplication-TileImage" content="{{ asset('assets/data/cropped-favicon-270x270.png') }}">
 </head>
 
@@ -69,18 +77,12 @@
                             <ul class="ekit-header-info">
                                 <li>
                                     <a>
-                                        <i aria-hidden="true" class="icon icon-map-marker1"></i> 140 King Street,
-                                        Melbourne victoria </a>
-                                </li>
+                                        <i aria-hidden="true" class="icon icon-map-marker1"></i>
 
-                                <li>
-                                    <a>
-                                        <svg aria-hidden="true" class="e-font-icon-svg e-far-clock"
-                                            viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
-                                            <path
-                                                d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm0 448c-110.5 0-200-89.5-200-200S145.5 56 256 56s200 89.5 200 200-89.5 200-200 200zm61.8-104.4l-84.9-61.7c-3.1-2.3-4.9-5.9-4.9-9.7V116c0-6.6 5.4-12 12-12h32c6.6 0 12 5.4 12 12v141.7l66.8 48.6c5.4 3.9 6.5 11.4 2.6 16.8L334.6 349c-3.9 5.3-11.4 6.5-16.8 2.6z">
-                                            </path>
-                                        </svg> Monday- Saturday: 9:30 – 04:30 </a>
+                                        @if (isset($topElements))
+                                            {{ $topElements[0]->value }}
+                                        @endif
+                                    </a>
                                 </li>
 
                             </ul>
@@ -93,32 +95,29 @@
                         <div class="ekit-wid-con">
                             <ul class="ekit_social_media">
                                 <li class="elementor-repeater-item-4ddda0e">
-                                    <a href=" " aria-label="Facebook" class="facebook">
+                                    <a href="
+                                        @if (isset($topElements)) {{ $topElements[1]->value }} @endif"
+                                        aria-label="Facebook" class="facebook">
 
                                         <i aria-hidden="true" class="icon icon-facebook"></i>
                                     </a>
                                 </li>
-                                <li class="elementor-repeater-item-38bcfbf">
-                                    <a href=" " aria-label="X" class="twitter">
-
-                                        <svg aria-hidden="true" class="e-font-icon-svg e-fab-x-twitter"
-                                            viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
-                                            <path
-                                                d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z">
-                                            </path>
-                                        </svg>
-                                    </a>
-                                </li>
-                                <li class="elementor-repeater-item-7c80710">
-                                    <a href=" " aria-label="Vimeo" class="vimeo">
-
-                                        <i aria-hidden="true" class="icon icon-vimeo"></i>
+                                <li class="elementor-repeater-item-527b00c">
+                                    <a
+                                        href="
+                                        @if (isset($topElements)) {{ $topElements[2]->value }} @endif">
+                                        <i aria-hidden="true" class="fab fa-linkedin"></i>
                                     </a>
                                 </li>
                                 <li class="elementor-repeater-item-527b00c">
-                                    <a href=" " aria-label="LinkedIn" class="linkedin">
-
-                                        <i aria-hidden="true" class="icon icon-linkedin"></i>
+                                    <a href="@if (isset($topElements)) {{ $topElements[2]->value }} @endif">
+                                        <i aria-hidden="true" class="fab fa-facebook"></i>
+                                    </a>
+                                </li>
+                                <li class="elementor-repeater-item-527b00c">
+                                    <a href="@if (isset($topElements)) {{ $topElements[3]->value }} @endif"
+                                        aria-label="twitter" class="twitter">
+                                        <i aria-hidden="true" class="fab fa-twitter"></i>
                                     </a>
                                 </li>
                             </ul>
@@ -139,8 +138,10 @@
                             <div class="elementor-element elementor-element-3dae3acc elementor-widget elementor-widget-image"
                                 data-id="3dae3acc" data-element_type="widget" data-widget_type="image.default">
                                 <div class="elementor-widget-container">
+
                                     <a href=" ">
-                                        <img width="350" height="69" src=""
+                                        <img width="350" height="69"
+                                            src="@if (isset($topElements)) {{ asset('storage/' . trim($topElements[4]->value)) }} @endif"
                                             class="attachment-full size-full wp-image-3553" alt=""
                                             decoding="async" srcset="" sizes="(max-width: 350px) 100vw, 350px">
                                     </a>
@@ -169,26 +170,15 @@
                                                     class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-146 current_page_item menu-item-2232 nav-item elementskit-mobile-builder-content active"
                                                     data-vertical-menu="750px"><a href=" "
                                                         class="ekit-menu-nav-link active">Home</a></li>
-                                                <li id="menu-item-2227"
-                                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-2227 nav-item elementskit-dropdown-has relative_position elementskit-dropdown-menu-default_width elementskit-mobile-builder-content"
-                                                    data-vertical-menu="750px"><a href=" about-us/"
+
+
+                                                <li id="menu-item-2237"
+                                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-2237 nav-item elementskit-dropdown-has relative_position elementskit-dropdown-menu-default_width elementskit-mobile-builder-content"
+                                                    data-vertical-menu="750px"><a href=" services/"
                                                         class="ekit-menu-nav-link ekit-menu-dropdown-toggle">About Us<i
                                                             aria-hidden="true"
                                                             class="icon icon-plus elementskit-submenu-indicator"></i></a>
-                                                    <ul class="elementskit-dropdown elementskit-submenu-panel">
-                                                        <li id="menu-item-2234"
-                                                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2234 nav-item elementskit-mobile-builder-content"
-                                                            data-vertical-menu="750px"><a href=" our-team/"
-                                                                class=" dropdown-item">Our Team</a> </li>
-                                                        <li id="menu-item-2230"
-                                                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2230 nav-item elementskit-mobile-builder-content"
-                                                            data-vertical-menu="750px"><a href=" error-404/"
-                                                                class=" dropdown-item">Error 404</a> </li>
-                                                        <li id="menu-item-2231"
-                                                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2231 nav-item elementskit-mobile-builder-content"
-                                                            data-vertical-menu="750px"><a href=" faq/"
-                                                                class=" dropdown-item">Faq</a></li>
-                                                    </ul>
+
                                                 </li>
                                                 <li id="menu-item-2237"
                                                     class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-2237 nav-item elementskit-dropdown-has relative_position elementskit-dropdown-menu-default_width elementskit-mobile-builder-content"
@@ -196,16 +186,7 @@
                                                         class="ekit-menu-nav-link ekit-menu-dropdown-toggle">Services<i
                                                             aria-hidden="true"
                                                             class="icon icon-plus elementskit-submenu-indicator"></i></a>
-                                                    <ul class="elementskit-dropdown elementskit-submenu-panel">
-                                                        <li id="menu-item-2244"
-                                                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2244 nav-item elementskit-mobile-builder-content"
-                                                            data-vertical-menu="750px"><a href=" services/"
-                                                                class=" dropdown-item">Services Default</a> </li>
-                                                        <li id="menu-item-2238"
-                                                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2238 nav-item elementskit-mobile-builder-content"
-                                                            data-vertical-menu="750px"><a href=" services-details/"
-                                                                class=" dropdown-item">Services Details</a></li>
-                                                    </ul>
+
                                                 </li>
                                                 <li id="menu-item-2233"
                                                     class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-2233 nav-item elementskit-dropdown-has relative_position elementskit-dropdown-menu-default_width elementskit-mobile-builder-content"
@@ -213,34 +194,7 @@
                                                         class="ekit-menu-nav-link ekit-menu-dropdown-toggle">Our
                                                         Portfolio<i aria-hidden="true"
                                                             class="icon icon-plus elementskit-submenu-indicator"></i></a>
-                                                    <ul class="elementskit-dropdown elementskit-submenu-panel">
-                                                        <li id="menu-item-2242"
-                                                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2242 nav-item elementskit-mobile-builder-content"
-                                                            data-vertical-menu="750px"><a href=" our-portfolio/"
-                                                                class=" dropdown-item">Portfolio Default</a> </li>
-                                                        <li id="menu-item-2235"
-                                                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2235 nav-item elementskit-mobile-builder-content"
-                                                            data-vertical-menu="750px"><a href=" portfolio-details/"
-                                                                class=" dropdown-item">Portfolio Details</a></li>
-                                                    </ul>
-                                                </li>
-                                                <li id="menu-item-2228"
-                                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-2228 nav-item elementskit-dropdown-has relative_position elementskit-dropdown-menu-default_width elementskit-mobile-builder-content"
-                                                    data-vertical-menu="750px"><a href=" blog/"
-                                                        class="ekit-menu-nav-link ekit-menu-dropdown-toggle">Blog<i
-                                                            aria-hidden="true"
-                                                            class="icon icon-plus elementskit-submenu-indicator"></i></a>
-                                                    <ul class="elementskit-dropdown elementskit-submenu-panel">
-                                                        <li id="menu-item-2241"
-                                                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2241 nav-item elementskit-mobile-builder-content"
-                                                            data-vertical-menu="750px"><a href=" blog/"
-                                                                class=" dropdown-item">Blog Default</a> </li>
-                                                        <li id="menu-item-2240"
-                                                            class="menu-item menu-item-type-post_type menu-item-object-post menu-item-2240 nav-item elementskit-mobile-builder-content"
-                                                            data-vertical-menu="750px"><a
-                                                                href=" why-fabric-pilling-and-how-to-prevent-it/"
-                                                                class=" dropdown-item">Blog Details</a></li>
-                                                    </ul>
+
                                                 </li>
                                                 <li id="menu-item-2229"
                                                     class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2229 nav-item elementskit-mobile-builder-content"
@@ -348,7 +302,7 @@
                                         data-id="6a980435" data-element_type="widget"
                                         data-widget_type="text-editor.default">
                                         <div class="elementor-widget-container">
-                                            From Threads to Trends </div>
+                                            {{ $topBanner[1]->value }}</div>
                                     </div>
                                 </div>
                                 <div class="elementor-element elementor-element-e9a5aee elementor-widget elementor-widget-heading animated fadeInUp"
@@ -356,8 +310,8 @@
                                     data-settings="{&quot;_animation&quot;:&quot;fadeInUp&quot;}"
                                     data-widget_type="heading.default">
                                     <div class="elementor-widget-container">
-                                        <h2 class="elementor-heading-title elementor-size-default">World of Textiles:
-                                            Where Style Meets Quality.</h2>
+                                        <h2 class="elementor-heading-title elementor-size-default">
+                                            {{ $topBanner[2]->value }}</h2>
                                     </div>
                                 </div>
                                 <div class="elementor-element elementor-element-5eb824f e-con-full e-flex e-con e-child animated fadeInUp"
@@ -371,7 +325,7 @@
                                             <div class="elementor-widget-container">
                                                 <div class="elementor-button-wrapper">
                                                     <a class="elementor-button elementor-button-link elementor-size-sm"
-                                                        href=" about-us/">
+                                                        href="">
                                                         <span class="elementor-button-content-wrapper">
                                                             <span class="elementor-button-icon">
                                                                 <i aria-hidden="true"
@@ -418,8 +372,12 @@
                                                         class="elementskit-infobox text- text- icon-lef-right-aligin elementor-animation-   ">
                                                         <div class="box-body">
                                                             <h4 class="elementskit-info-box-title">
-                                                                24/7 customer care </h4>
-                                                            <p>Calls us: 474 – 937-8270</p>
+                                                                24/7 Support </h4>
+                                                            <p>Calls us:
+                                                                @if (isset($topElements))
+                                                                    {{ $topElements[5]->value }}
+                                                                @endif
+                                                            </p>
                                                         </div>
 
 
@@ -447,111 +405,37 @@
                     data-id="e707c14" data-element_type="container">
                     <div class="elementor-element elementor-element-25be30d e-con-full e-flex e-con e-child"
                         data-id="25be30d" data-element_type="container">
-                        <div class="elementor-element elementor-element-4bf8ff1 e-con-full e-flex e-con e-child"
-                            data-id="4bf8ff1" data-element_type="container">
-                            <div class="elementor-element elementor-element-8a7891c e-con-full e-flex e-con e-child"
-                                data-id="8a7891c" data-element_type="container">
-                                <div class="elementor-element elementor-element-bae694f elementor-widget elementor-widget-image"
-                                    data-id="bae694f" data-element_type="widget" data-widget_type="image.default">
+                        @foreach ($topFeatures as $feature)
+                            <div class="elementor-element elementor-element-4bf8ff1 e-con-full e-flex e-con e-child"
+                                data-id="4bf8ff1" data-element_type="container">
+                                <div class="elementor-element elementor-element-8a7891c e-con-full e-flex e-con e-child"
+                                    data-id="8a7891c" data-element_type="container">
+                                    <div class="elementor-element elementor-element-bae694f elementor-widget elementor-widget-image"
+                                        data-id="bae694f" data-element_type="widget"
+                                        data-widget_type="image.default">
+                                        <div class="elementor-widget-container">
+                                            <img decoding="async" src="{{ asset('uploads/' . $feature->icon) }}"
+                                                title="" alt="" loading="lazy">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="elementor-element elementor-element-cf78ebf elementor-widget elementor-widget-heading"
+                                    data-id="cf78ebf" data-element_type="widget" data-widget_type="heading.default">
                                     <div class="elementor-widget-container">
-                                        <img decoding="async" src="" title="" alt=""
-                                            loading="lazy">
+                                        <h4 class="elementor-heading-title elementor-size-default">
+                                            {{ $feature->title }}
+                                        </h4>
+                                    </div>
+                                </div>
+                                <div class="elementor-element elementor-element-b82f099 elementor-widget elementor-widget-text-editor"
+                                    data-id="b82f099" data-element_type="widget"
+                                    data-widget_type="text-editor.default">
+                                    <div class="elementor-widget-container">
+                                        {{ $feature->short_description }}
                                     </div>
                                 </div>
                             </div>
-                            <div class="elementor-element elementor-element-cf78ebf elementor-widget elementor-widget-heading"
-                                data-id="cf78ebf" data-element_type="widget" data-widget_type="heading.default">
-                                <div class="elementor-widget-container">
-                                    <h4 class="elementor-heading-title elementor-size-default">Comfort &amp; Protection
-                                    </h4>
-                                </div>
-                            </div>
-                            <div class="elementor-element elementor-element-b82f099 elementor-widget elementor-widget-text-editor"
-                                data-id="b82f099" data-element_type="widget" data-widget_type="text-editor.default">
-                                <div class="elementor-widget-container">
-                                    There are many variations passages Lorem the Ipsum available, but the majority have
-                                    suffered of alteration in some form </div>
-                            </div>
-                        </div>
-                        <div class="elementor-element elementor-element-5067fa4 e-con-full e-flex e-con e-child"
-                            data-id="5067fa4" data-element_type="container">
-                            <div class="elementor-element elementor-element-f5c3ee3 e-con-full e-flex e-con e-child"
-                                data-id="f5c3ee3" data-element_type="container">
-                                <div class="elementor-element elementor-element-7710d7a elementor-widget elementor-widget-image"
-                                    data-id="7710d7a" data-element_type="widget" data-widget_type="image.default">
-                                    <div class="elementor-widget-container">
-                                        <img decoding="async" width="128" height="128" src=""
-                                            class="attachment-full size-full wp-image-3664" alt="">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="elementor-element elementor-element-bdf1207 elementor-widget elementor-widget-heading"
-                                data-id="bdf1207" data-element_type="widget" data-widget_type="heading.default">
-                                <div class="elementor-widget-container">
-                                    <h4 class="elementor-heading-title elementor-size-default">Fashion and Personal
-                                    </h4>
-                                </div>
-                            </div>
-                            <div class="elementor-element elementor-element-c9dd1e0 elementor-widget elementor-widget-text-editor"
-                                data-id="c9dd1e0" data-element_type="widget" data-widget_type="text-editor.default">
-                                <div class="elementor-widget-container">
-                                    There are many variations passages Lorem the Ipsum available, but the majority have
-                                    suffered of alteration in some form </div>
-                            </div>
-                        </div>
-                        <div class="elementor-element elementor-element-3826a49 e-con-full e-flex e-con e-child"
-                            data-id="3826a49" data-element_type="container">
-                            <div class="elementor-element elementor-element-1d7e21d e-con-full e-flex e-con e-child"
-                                data-id="1d7e21d" data-element_type="container">
-                                <div class="elementor-element elementor-element-34fb6a2 elementor-widget elementor-widget-image"
-                                    data-id="34fb6a2" data-element_type="widget" data-widget_type="image.default">
-                                    <div class="elementor-widget-container">
-                                        <img loading="lazy" decoding="async" width="128" height="128"
-                                            src="" class="attachment-full size-full wp-image-3665"
-                                            alt="">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="elementor-element elementor-element-9411217 elementor-widget elementor-widget-heading"
-                                data-id="9411217" data-element_type="widget" data-widget_type="heading.default">
-                                <div class="elementor-widget-container">
-                                    <h4 class="elementor-heading-title elementor-size-default">Economic Growth</h4>
-                                </div>
-                            </div>
-                            <div class="elementor-element elementor-element-fc6efeb elementor-widget elementor-widget-text-editor"
-                                data-id="fc6efeb" data-element_type="widget" data-widget_type="text-editor.default">
-                                <div class="elementor-widget-container">
-                                    There are many variations passages Lorem the Ipsum available, but the majority have
-                                    suffered of alteration in some form </div>
-                            </div>
-                        </div>
-                        <div class="elementor-element elementor-element-c4a89f5 e-con-full e-flex e-con e-child"
-                            data-id="c4a89f5" data-element_type="container">
-                            <div class="elementor-element elementor-element-d77993d e-con-full e-flex e-con e-child"
-                                data-id="d77993d" data-element_type="container">
-                                <div class="elementor-element elementor-element-7532499 elementor-widget elementor-widget-image"
-                                    data-id="7532499" data-element_type="widget" data-widget_type="image.default">
-                                    <div class="elementor-widget-container">
-                                        <img loading="lazy" decoding="async" width="128" height="128"
-                                            src="" class="attachment-full size-full wp-image-3666"
-                                            alt="">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="elementor-element elementor-element-0974c4a elementor-widget elementor-widget-heading"
-                                data-id="0974c4a" data-element_type="widget" data-widget_type="heading.default">
-                                <div class="elementor-widget-container">
-                                    <h4 class="elementor-heading-title elementor-size-default">Innovation and Fabric
-                                    </h4>
-                                </div>
-                            </div>
-                            <div class="elementor-element elementor-element-623eb3c elementor-widget elementor-widget-text-editor"
-                                data-id="623eb3c" data-element_type="widget" data-widget_type="text-editor.default">
-                                <div class="elementor-widget-container">
-                                    There are many variations passages Lorem the Ipsum available, but the majority have
-                                    suffered of alteration in some form </div>
-                            </div>
-                        </div>
+                        @endforeach
                     </div>
                 </div>
                 <div class="elementor-element elementor-element-13aa636a e-flex e-con-boxed e-con e-parent e-lazyloaded"
@@ -595,17 +479,6 @@
                                                 <h2 class="elementor-heading-title elementor-size-default">Building the
                                                     Future of Fashion and Threads</h2>
                                             </div>
-                                        </div>
-                                    </div>
-                                    <div class="elementor-element elementor-element-f546097 e-con-full e-flex e-con e-child"
-                                        data-id="f546097" data-element_type="container">
-                                        <div class="elementor-element elementor-element-444905d elementor-widget elementor-widget-text-editor"
-                                            data-id="444905d" data-element_type="widget"
-                                            data-widget_type="text-editor.default">
-                                            <div class="elementor-widget-container">
-                                                There are many variations of passages of Lorem Ipsum available, but the
-                                                majority have suffered alteration in some form, by injected humour, or
-                                                randomised words which don’t look even slightly believable. </div>
                                         </div>
                                     </div>
                                 </div>
@@ -736,66 +609,39 @@
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    <div class="elementor-element elementor-element-8661dfe ekit-equal-height-disable elementor-widget elementor-widget-elementskit-icon-box"
-                                                        data-id="8661dfe" data-element_type="widget"
-                                                        data-widget_type="elementskit-icon-box.default">
-                                                        <div class="elementor-widget-container">
-                                                            <div class="ekit-wid-con"> <!-- link opening -->
-                                                                <a href=" " class="ekit_global_links">
-                                                                    <!-- end link opening -->
 
-                                                                    <div
-                                                                        class="elementskit-infobox text- text-left icon-lef-right-aligin elementor-animation- media  ">
+                                                    @foreach ($goals as $goal)
+                                                        <div class="elementor-element elementor-element-8661dfe ekit-equal-height-disable elementor-widget elementor-widget-elementskit-icon-box"
+                                                            data-id="8661dfe" data-element_type="widget"
+                                                            data-widget_type="elementskit-icon-box.default">
+                                                            <div class="elementor-widget-container">
+                                                                <div class="ekit-wid-con"> <!-- link opening -->
+                                                                    <a href=" " class="ekit_global_links">
+                                                                        <!-- end link opening -->
+
                                                                         <div
-                                                                            class="elementskit-box-header elementor-animation-">
+                                                                            class="elementskit-infobox text- text-left icon-lef-right-aligin elementor-animation- media  ">
                                                                             <div
-                                                                                class="elementskit-info-box-icon  text-center">
-                                                                                <i aria-hidden="true"
-                                                                                    class="elementkit-infobox-icon icon icon-shield1"></i>
+                                                                                class="elementskit-box-header elementor-animation-">
+                                                                                <div
+                                                                                    class="elementskit-info-box-icon  text-center">
+                                                                                    <i aria-hidden="true"
+                                                                                        class="elementkit-infobox-icon icon icon-shield1"></i>
+                                                                                </div>
                                                                             </div>
-                                                                        </div>
-                                                                        <div class="box-body">
-                                                                            <p>There are many variations of passages of
-                                                                                Lorem Ipsum available, but the majority
-                                                                                have in some form</p>
-                                                                        </div>
+                                                                            <div class="box-body">
+                                                                                <p>{{ $goal->title }}</p>
+                                                                            </div>
 
 
-                                                                    </div>
-                                                                </a>
+                                                                        </div>
+                                                                    </a>
+                                                                </div>
                                                             </div>
                                                         </div>
-                                                    </div>
-                                                    <div class="elementor-element elementor-element-a0a5e68 ekit-equal-height-disable elementor-widget elementor-widget-elementskit-icon-box"
-                                                        data-id="a0a5e68" data-element_type="widget"
-                                                        data-widget_type="elementskit-icon-box.default">
-                                                        <div class="elementor-widget-container">
-                                                            <div class="ekit-wid-con"> <!-- link opening -->
-                                                                <a href=" " class="ekit_global_links">
-                                                                    <!-- end link opening -->
-
-                                                                    <div
-                                                                        class="elementskit-infobox text- text-left icon-lef-right-aligin elementor-animation- media  ">
-                                                                        <div
-                                                                            class="elementskit-box-header elementor-animation-">
-                                                                            <div
-                                                                                class="elementskit-info-box-icon  text-center">
-                                                                                <i aria-hidden="true"
-                                                                                    class="elementkit-infobox-icon jki jki-truck-line"></i>
-                                                                            </div>
-                                                                        </div>
-                                                                        <div class="box-body">
-                                                                            <p>There are many variations of passages of
-                                                                                Lorem Ipsum available, but the majority
-                                                                                have in some form</p>
-                                                                        </div>
+                                                    @endforeach
 
 
-                                                                    </div>
-                                                                </a>
-                                                            </div>
-                                                        </div>
-                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -827,6 +673,9 @@
                                             data-id="f65e19e" data-element_type="container">
                                             <div class="elementor-element elementor-element-3254950 e-con-full e-flex e-con e-child"
                                                 data-id="3254950" data-element_type="container">
+
+
+
                                                 <div class="elementor-element elementor-element-40ba433 e-con-full e-flex e-con e-child"
                                                     data-id="40ba433" data-element_type="container">
                                                     <div class="elementor-element elementor-element-4ffbe84 ekit-equal-height-disable elementor-widget elementor-widget-elementskit-icon-box"
@@ -858,54 +707,24 @@
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    <div class="elementor-element elementor-element-2639361 elementor-widget elementor-widget-text-editor"
-                                                        data-id="2639361" data-element_type="widget"
-                                                        data-widget_type="text-editor.default">
-                                                        <div class="elementor-widget-container">
-                                                            There are many variations of passages of Lorem Ipsum
-                                                            available, but the majority have in some form </div>
-                                                    </div>
-                                                </div>
-                                                <div class="elementor-element elementor-element-10b02f6 e-con-full e-flex e-con e-child"
-                                                    data-id="10b02f6" data-element_type="container">
-                                                    <div class="elementor-element elementor-element-481e71c ekit-equal-height-disable elementor-widget elementor-widget-elementskit-icon-box"
-                                                        data-id="481e71c" data-element_type="widget"
-                                                        data-widget_type="elementskit-icon-box.default">
-                                                        <div class="elementor-widget-container">
-                                                            <div class="ekit-wid-con"> <!-- link opening -->
-                                                                <a href=" " class="ekit_global_links">
-                                                                    <!-- end link opening -->
-
-                                                                    <div
-                                                                        class="elementskit-infobox text- text-left icon-lef-right-aligin elementor-animation- media  ">
-                                                                        <div
-                                                                            class="elementskit-box-header elementor-animation-">
-                                                                            <div
-                                                                                class="elementskit-info-box-icon  text-center">
-                                                                                <i aria-hidden="true"
-                                                                                    class="elementkit-infobox-icon icon icon-check"></i>
-                                                                            </div>
-                                                                        </div>
-                                                                        <div class="box-body">
-                                                                            <h4 class="elementskit-info-box-title">
-                                                                                Our Goal </h4>
-                                                                        </div>
 
 
-                                                                    </div>
-                                                                </a>
+                                                    @foreach ($missions as $mission)
+                                                        <div class="elementor-element elementor-element-2639361 elementor-widget elementor-widget-text-editor"
+                                                            data-id="2639361" data-element_type="widget"
+                                                            data-widget_type="text-editor.default">
+                                                            <div class="elementor-widget-container">
+                                                                {{ $mission->title }}
                                                             </div>
                                                         </div>
-                                                    </div>
-                                                    <div class="elementor-element elementor-element-a64445f elementor-widget elementor-widget-text-editor"
-                                                        data-id="a64445f" data-element_type="widget"
-                                                        data-widget_type="text-editor.default">
-                                                        <div class="elementor-widget-container">
-                                                            There are many variations of passages of Lorem Ipsum
-                                                            available, but the majority have in some form </div>
-                                                    </div>
+                                                    @endforeach
+
                                                 </div>
                                             </div>
+
+
+
+
                                         </div>
                                         <div class="elementor-element elementor-element-2cf63bcd elementor-widget elementor-widget-image"
                                             data-id="2cf63bcd" data-element_type="widget"
@@ -983,6 +802,9 @@
                             data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
                             <div class="elementor-element elementor-element-c9ae573 e-con-full e-flex e-con e-child"
                                 data-id="c9ae573" data-element_type="container">
+
+
+
                                 <div class="elementor-element elementor-element-090e1ac e-con-full e-flex e-con e-child"
                                     data-id="090e1ac" data-element_type="container">
                                     <div class="elementor-element elementor-element-f164f86 e-con-full e-flex e-con e-child"
@@ -1039,118 +861,9 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="elementor-element elementor-element-9d56a7d e-con-full e-flex e-con e-child"
-                                    data-id="9d56a7d" data-element_type="container">
-                                    <div class="elementor-element elementor-element-0bd3915 e-con-full e-flex e-con e-child"
-                                        data-id="0bd3915" data-element_type="container"
-                                        data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
-                                        <div class="elementor-element elementor-element-0901653 elementor-widget__width-initial elementor-widget elementor-widget-image"
-                                            data-id="0901653" data-element_type="widget"
-                                            data-widget_type="image.default">
-                                            <div class="elementor-widget-container">
-                                                <a href="">
-                                                    <img loading="lazy" decoding="async" width="128"
-                                                        height="128" src=""
-                                                        class="attachment-full size-full wp-image-3668"
-                                                        alt=""> </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="elementor-element elementor-element-617bc8c e-con-full e-flex e-con e-child"
-                                        data-id="617bc8c" data-element_type="container">
-                                        <div class="elementor-element elementor-element-3a1fb2a elementor-widget elementor-widget-heading"
-                                            data-id="3a1fb2a" data-element_type="widget"
-                                            data-widget_type="heading.default">
-                                            <div class="elementor-widget-container">
-                                                <h4 class="elementor-heading-title elementor-size-default">Labeling
-                                                    &amp; Branding</h4>
-                                            </div>
-                                        </div>
-                                        <div class="elementor-element elementor-element-21e700f elementor-widget elementor-widget-text-editor"
-                                            data-id="21e700f" data-element_type="widget"
-                                            data-widget_type="text-editor.default">
-                                            <div class="elementor-widget-container">
-                                                There are many variations passages Lorem the Ipsum available, but the
-                                                majority have suffered of alteration in some form.. </div>
-                                        </div>
-                                    </div>
-                                    <div class="elementor-element elementor-element-52d88a9 e-con-full e-flex e-con e-child"
-                                        data-id="52d88a9" data-element_type="container">
-                                        <div class="elementor-element elementor-element-a7e13ba elementor-widget elementor-widget-button"
-                                            data-id="a7e13ba" data-element_type="widget"
-                                            data-widget_type="button.default">
-                                            <div class="elementor-widget-container">
-                                                <div class="elementor-button-wrapper">
-                                                    <a class="elementor-button elementor-button-link elementor-size-sm"
-                                                        href=" services-details/">
-                                                        <span class="elementor-button-content-wrapper">
-                                                            <span class="elementor-button-icon">
-                                                                <i aria-hidden="true"
-                                                                    class="jki jki-arrow-up-right-line"></i> </span>
-                                                            <span class="elementor-button-text">Read More</span>
-                                                        </span>
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="elementor-element elementor-element-c863175 e-con-full e-flex e-con e-child"
-                                    data-id="c863175" data-element_type="container">
-                                    <div class="elementor-element elementor-element-2b1382d e-con-full e-flex e-con e-child"
-                                        data-id="2b1382d" data-element_type="container"
-                                        data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
-                                        <div class="elementor-element elementor-element-24df798 elementor-widget__width-initial elementor-widget elementor-widget-image"
-                                            data-id="24df798" data-element_type="widget"
-                                            data-widget_type="image.default">
-                                            <div class="elementor-widget-container">
-                                                <a href="">
-                                                    <img loading="lazy" decoding="async" width="128"
-                                                        height="128" src=""
-                                                        class="attachment-full size-full wp-image-3669"
-                                                        alt=""> </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="elementor-element elementor-element-cfbfcb8 e-con-full e-flex e-con e-child"
-                                        data-id="cfbfcb8" data-element_type="container">
-                                        <div class="elementor-element elementor-element-54d2377 elementor-widget elementor-widget-heading"
-                                            data-id="54d2377" data-element_type="widget"
-                                            data-widget_type="heading.default">
-                                            <div class="elementor-widget-container">
-                                                <h4 class="elementor-heading-title elementor-size-default">Garment
-                                                    Manufacturing</h4>
-                                            </div>
-                                        </div>
-                                        <div class="elementor-element elementor-element-29cfe76 elementor-widget elementor-widget-text-editor"
-                                            data-id="29cfe76" data-element_type="widget"
-                                            data-widget_type="text-editor.default">
-                                            <div class="elementor-widget-container">
-                                                There are many variations passages Lorem the Ipsum available, but the
-                                                majority have suffered of alteration in some form.. </div>
-                                        </div>
-                                    </div>
-                                    <div class="elementor-element elementor-element-f599d31 e-con-full e-flex e-con e-child"
-                                        data-id="f599d31" data-element_type="container">
-                                        <div class="elementor-element elementor-element-47f4133 elementor-widget elementor-widget-button"
-                                            data-id="47f4133" data-element_type="widget"
-                                            data-widget_type="button.default">
-                                            <div class="elementor-widget-container">
-                                                <div class="elementor-button-wrapper">
-                                                    <a class="elementor-button elementor-button-link elementor-size-sm"
-                                                        href=" services-details/">
-                                                        <span class="elementor-button-content-wrapper">
-                                                            <span class="elementor-button-icon">
-                                                                <i aria-hidden="true"
-                                                                    class="jki jki-arrow-up-right-line"></i> </span>
-                                                            <span class="elementor-button-text">Read More</span>
-                                                        </span>
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+
+
+
                             </div>
                         </div>
                     </div>
@@ -1170,8 +883,7 @@
                                 <div class="elementor-element elementor-element-d83677a e-con-full e-flex e-con e-child"
                                     data-id="d83677a" data-element_type="container">
                                     <div class="elementor-element elementor-element-fac1c19 elementor-view-default elementor-widget elementor-widget-icon"
-                                        data-id="fac1c19" data-element_type="widget"
-                                        data-widget_type="icon.default">
+                                        data-id="fac1c19" data-element_type="widget" data-widget_type="icon.default">
                                         <div class="elementor-widget-container">
                                             <div class="elementor-icon-wrapper">
                                                 <div class="elementor-icon">
@@ -1188,8 +900,7 @@
                                     </div>
                                 </div>
                                 <div class="elementor-element elementor-element-b6a077d elementor-widget elementor-widget-heading"
-                                    data-id="b6a077d" data-element_type="widget"
-                                    data-widget_type="heading.default">
+                                    data-id="b6a077d" data-element_type="widget" data-widget_type="heading.default">
                                     <div class="elementor-widget-container">
                                         <h2 class="elementor-heading-title elementor-size-default">Quality You Can
                                             Feel, Trust You Can Wear with Premium.</h2>
@@ -1311,16 +1022,15 @@
                                     </div>
                                 </div>
                                 <div class="elementor-element elementor-element-5dbad1c elementor-widget elementor-widget-button"
-                                    data-id="5dbad1c" data-element_type="widget"
-                                    data-widget_type="button.default">
+                                    data-id="5dbad1c" data-element_type="widget" data-widget_type="button.default">
                                     <div class="elementor-widget-container">
                                         <div class="elementor-button-wrapper">
                                             <a class="elementor-button elementor-button-link elementor-size-sm"
                                                 href=" about-us/">
                                                 <span class="elementor-button-content-wrapper">
                                                     <span class="elementor-button-icon">
-                                                        <i aria-hidden="true"
-                                                            class="jki jki-arrow-up-right-line"></i> </span>
+                                                        <i aria-hidden="true" class="jki jki-arrow-up-right-line"></i>
+                                                    </span>
                                                     <span class="elementor-button-text">Learn More</span>
                                                 </span>
                                             </a>
@@ -1625,14 +1335,7 @@
                                 </div>
                                 <div class="elementor-element elementor-element-ea20ac5 e-con-full e-flex e-con e-child"
                                     data-id="ea20ac5" data-element_type="container">
-                                    <div class="elementor-element elementor-element-c80aac5 elementor-widget elementor-widget-text-editor"
-                                        data-id="c80aac5" data-element_type="widget"
-                                        data-widget_type="text-editor.default">
-                                        <div class="elementor-widget-container">
-                                            There are many variations of passages of Lorem Ipsum available, but the
-                                            majority have suffered alteration in some form, by injected humour, or
-                                            randomised words which don’t look even slightly believable. </div>
-                                    </div>
+
                                     <div class="elementor-element elementor-element-418d3dd e-con-full e-flex e-con e-child"
                                         data-id="418d3dd" data-element_type="container">
                                         <div class="elementor-element elementor-element-e0c1b24 e-con-full e-flex e-con e-child"
@@ -1927,8 +1630,11 @@
                                                                                                 class="icon icon-phone1"></i>
                                                                                         </span>
                                                                                         <span
-                                                                                            class="elementor-icon-list-text">+(528)
-                                                                                            456-7592</span>
+                                                                                            class="elementor-icon-list-text">
+                                                                                            @if (isset($topElements))
+                                                                                                {{ $topElements[5]->value }}
+                                                                                            @endif
+                                                                                        </span>
                                                                                     </a>
                                                                                 </li>
                                                                             </ul>
@@ -2056,8 +1762,11 @@
                                                                                                 class="icon icon-phone1"></i>
                                                                                         </span>
                                                                                         <span
-                                                                                            class="elementor-icon-list-text">+(528)
-                                                                                            456-7592</span>
+                                                                                            class="elementor-icon-list-text">
+                                                                                            @if (isset($topElements))
+                                                                                                {{ $topElements[5]->value }}
+                                                                                            @endif
+                                                                                        </span>
                                                                                     </a>
                                                                                 </li>
                                                                             </ul>
@@ -2185,8 +1894,11 @@
                                                                                                 class="icon icon-phone1"></i>
                                                                                         </span>
                                                                                         <span
-                                                                                            class="elementor-icon-list-text">+(528)
-                                                                                            456-7592</span>
+                                                                                            class="elementor-icon-list-text">
+                                                                                            @if (isset($topElements))
+                                                                                                {{ $topElements[5]->value }}
+                                                                                            @endif
+                                                                                        </span>
                                                                                     </a>
                                                                                 </li>
                                                                             </ul>
@@ -2311,11 +2023,14 @@
                                                                                         <span
                                                                                             class="elementor-icon-list-icon">
                                                                                             <i aria-hidden="true"
-                                                                                                class="icon icon-phone1"></i>
+                                                                                                class="fas fa-phone-alt"></i>
                                                                                         </span>
                                                                                         <span
-                                                                                            class="elementor-icon-list-text">+(528)
-                                                                                            456-7592</span>
+                                                                                            class="elementor-icon-list-text">
+                                                                                            @if (isset($topElements))
+                                                                                                {{ $topElements[5]->value }}
+                                                                                            @endif
+                                                                                        </span>
                                                                                     </a>
                                                                                 </li>
                                                                             </ul>
@@ -2383,7 +2098,8 @@
                                 data-id="6b8c4ca" data-element_type="widget" data-widget_type="image.default">
                                 <div class="elementor-widget-container">
                                     <a href="">
-                                        <img width="350" height="69" src=""
+                                        <img width="350" height="69"
+                                            src="@if (isset($topElements)) {{ asset('storage/' . trim($topElements[4]->value)) }} @endif"
                                             class="attachment-full size-full wp-image-3553" alt=""
                                             decoding="async" srcset=""
                                             sizes="(max-width: 350px) 100vw, 350px"> </a>
@@ -2392,8 +2108,6 @@
                             <div class="elementor-element elementor-element-632280a1 elementor-widget elementor-widget-text-editor"
                                 data-id="632280a1" data-element_type="widget"
                                 data-widget_type="text-editor.default">
-                                <div class="elementor-widget-container">
-                                    All the Lorem Ipsum generators on the Internet tend to repeat </div>
                             </div>
                         </div>
                         <div class="elementor-element elementor-element-075afb6 e-con-full e-flex e-con e-child"
@@ -2403,7 +2117,7 @@
                                 <div class="elementor-widget-container">
                                     <div class="elementor-icon-wrapper">
                                         <div class="elementor-icon">
-                                            <i aria-hidden="true" class="icon icon-phone-handset"></i>
+                                            <i aria-hidden="true" class="fas fa-phone-alt"></i>
                                         </div>
                                     </div>
                                 </div>
@@ -2420,8 +2134,11 @@
                                     data-id="1ffa148" data-element_type="widget"
                                     data-widget_type="heading.default">
                                     <div class="elementor-widget-container">
-                                        <div class="elementor-heading-title elementor-size-default"><a
-                                                href=" ">+(528) 456-7592</a></div>
+                                        <div class="elementor-heading-title elementor-size-default">
+                                            @if (isset($topElements))
+                                                {{ $topElements[5]->value }}
+                                            @endif
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -2433,7 +2150,7 @@
                                 <div class="elementor-widget-container">
                                     <div class="elementor-icon-wrapper">
                                         <div class="elementor-icon">
-                                            <i aria-hidden="true" class="icon icon-email"></i>
+                                            <i aria-hidden="true" class="fas fa-envelope"></i>
                                         </div>
                                     </div>
                                 </div>
@@ -2450,8 +2167,11 @@
                                     data-id="ef97c98" data-element_type="widget"
                                     data-widget_type="heading.default">
                                     <div class="elementor-widget-container">
-                                        <div class="elementor-heading-title elementor-size-default"><a
-                                                href=" "> info@robintex.com</a></div>
+                                        <div class="elementor-heading-title elementor-size-default">
+                                            @if (isset($topElements))
+                                                {{ $topElements[6]->value }}
+                                            @endif
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -2480,7 +2200,7 @@
                                         data-id="735f5247" data-element_type="widget"
                                         data-widget_type="heading.default">
                                         <div class="elementor-widget-container">
-                                            <h2 class="elementor-heading-title elementor-size-default">Our Services
+                                            <h2 class="elementor-heading-title elementor-size-default">Explore Us
                                             </h2>
                                         </div>
                                     </div>
@@ -2493,47 +2213,7 @@
                                         <div class="elementor-widget-container">
                                             <div class="ekit-wid-con">
                                                 <div class="elementor-icon-list-items ">
-                                                    <div class="elementor-icon-list-item   ">
-                                                        <a class="elementor-repeater-item-01d06f0 ekit_badge_left"
-                                                            href=" " target="_blank" rel="nofollow">
-                                                            <div class="ekit_page_list_content">
-                                                                <span class="elementor-icon-list-icon">
-                                                                    <svg aria-hidden="true"
-                                                                        class="e-font-icon-svg e-fas-dot-circle"
-                                                                        viewBox="0 0 512 512"
-                                                                        xmlns="http://www.w3.org/2000/svg">
-                                                                        <path
-                                                                            d="M256 8C119.033 8 8 119.033 8 256s111.033 248 248 248 248-111.033 248-248S392.967 8 256 8zm80 248c0 44.112-35.888 80-80 80s-80-35.888-80-80 35.888-80 80-80 80 35.888 80 80z">
-                                                                        </path>
-                                                                    </svg> </span>
-                                                                <span class="elementor-icon-list-text">
-                                                                    <span
-                                                                        class="ekit_page_list_title_title">Eco-Friendly
-                                                                        Dyeing</span>
-                                                                </span>
-                                                            </div>
-                                                        </a>
-                                                    </div>
-                                                    <div class="elementor-icon-list-item   ">
-                                                        <a class="elementor-repeater-item-86d313d ekit_badge_left"
-                                                            href=" " target="_blank" rel="nofollow">
-                                                            <div class="ekit_page_list_content">
-                                                                <span class="elementor-icon-list-icon">
-                                                                    <svg aria-hidden="true"
-                                                                        class="e-font-icon-svg e-fas-dot-circle"
-                                                                        viewBox="0 0 512 512"
-                                                                        xmlns="http://www.w3.org/2000/svg">
-                                                                        <path
-                                                                            d="M256 8C119.033 8 8 119.033 8 256s111.033 248 248 248 248-111.033 248-248S392.967 8 256 8zm80 248c0 44.112-35.888 80-80 80s-80-35.888-80-80 35.888-80 80-80 80 35.888 80 80z">
-                                                                        </path>
-                                                                    </svg> </span>
-                                                                <span class="elementor-icon-list-text">
-                                                                    <span class="ekit_page_list_title_title">Labeling
-                                                                        &amp; Branding</span>
-                                                                </span>
-                                                            </div>
-                                                        </a>
-                                                    </div>
+
                                                     <div class="elementor-icon-list-item   ">
                                                         <a class="elementor-repeater-item-7fb4654 ekit_badge_left"
                                                             href=" " target="_blank" rel="nofollow">
@@ -2548,8 +2228,8 @@
                                                                         </path>
                                                                     </svg> </span>
                                                                 <span class="elementor-icon-list-text">
-                                                                    <span class="ekit_page_list_title_title">Garment
-                                                                        Manufacturing</span>
+                                                                    <span class="ekit_page_list_title_title">Why
+                                                                        Choose Us</span>
                                                                 </span>
                                                             </div>
                                                         </a>
@@ -2568,8 +2248,8 @@
                                                                         </path>
                                                                     </svg> </span>
                                                                 <span class="elementor-icon-list-text">
-                                                                    <span class="ekit_page_list_title_title">Custom
-                                                                        Fabric Design</span>
+                                                                    <span class="ekit_page_list_title_title">Future
+                                                                        Technology</span>
                                                                 </span>
                                                             </div>
                                                         </a>
@@ -2588,8 +2268,8 @@
                                                                         </path>
                                                                     </svg> </span>
                                                                 <span class="elementor-icon-list-text">
-                                                                    <span class="ekit_page_list_title_title">Bulk
-                                                                        Orders &amp; Wholesale</span>
+                                                                    <span class="ekit_page_list_title_title">Our
+                                                                        Goal</span>
                                                                 </span>
                                                             </div>
                                                         </a>
@@ -2608,12 +2288,57 @@
                                                                         </path>
                                                                     </svg> </span>
                                                                 <span class="elementor-icon-list-text">
-                                                                    <span class="ekit_page_list_title_title">Textile
-                                                                        Dyeing &amp; Printing</span>
+                                                                    <span class="ekit_page_list_title_title">Our
+                                                                        Mission</span>
                                                                 </span>
                                                             </div>
                                                         </a>
                                                     </div>
+
+
+                                                    <div class="elementor-icon-list-item   ">
+                                                        <a class="elementor-repeater-item-ed87c16 ekit_badge_left"
+                                                            href=" " target="_blank" rel="nofollow">
+                                                            <div class="ekit_page_list_content">
+                                                                <span class="elementor-icon-list-icon">
+                                                                    <svg aria-hidden="true"
+                                                                        class="e-font-icon-svg e-fas-dot-circle"
+                                                                        viewBox="0 0 512 512"
+                                                                        xmlns="http://www.w3.org/2000/svg">
+                                                                        <path
+                                                                            d="M256 8C119.033 8 8 119.033 8 256s111.033 248 248 248 248-111.033 248-248S392.967 8 256 8zm80 248c0 44.112-35.888 80-80 80s-80-35.888-80-80 35.888-80 80-80 80 35.888 80 80z">
+                                                                        </path>
+                                                                    </svg> </span>
+                                                                <span class="elementor-icon-list-text">
+                                                                    <span class="ekit_page_list_title_title">Our
+                                                                        Portfolio</span>
+                                                                </span>
+                                                            </div>
+                                                        </a>
+                                                    </div>
+
+
+                                                    <div class="elementor-icon-list-item   ">
+                                                        <a class="elementor-repeater-item-ed87c16 ekit_badge_left"
+                                                            href=" " target="_blank" rel="nofollow">
+                                                            <div class="ekit_page_list_content">
+                                                                <span class="elementor-icon-list-icon">
+                                                                    <svg aria-hidden="true"
+                                                                        class="e-font-icon-svg e-fas-dot-circle"
+                                                                        viewBox="0 0 512 512"
+                                                                        xmlns="http://www.w3.org/2000/svg">
+                                                                        <path
+                                                                            d="M256 8C119.033 8 8 119.033 8 256s111.033 248 248 248 248-111.033 248-248S392.967 8 256 8zm80 248c0 44.112-35.888 80-80 80s-80-35.888-80-80 35.888-80 80-80 80 35.888 80 80z">
+                                                                        </path>
+                                                                    </svg> </span>
+                                                                <span class="elementor-icon-list-text">
+                                                                    <span class="ekit_page_list_title_title">Our
+                                                                        Services</span>
+                                                                </span>
+                                                            </div>
+                                                        </a>
+                                                    </div>
+
                                                 </div>
                                             </div>
                                         </div>
@@ -2711,66 +2436,6 @@
                                                             </div>
                                                         </a>
                                                     </div>
-                                                    <div class="elementor-icon-list-item   ">
-                                                        <a class="elementor-repeater-item-ed87c16 ekit_badge_left"
-                                                            href=" " target="_blank" rel="nofollow">
-                                                            <div class="ekit_page_list_content">
-                                                                <span class="elementor-icon-list-icon">
-                                                                    <svg aria-hidden="true"
-                                                                        class="e-font-icon-svg e-fas-dot-circle"
-                                                                        viewBox="0 0 512 512"
-                                                                        xmlns="http://www.w3.org/2000/svg">
-                                                                        <path
-                                                                            d="M256 8C119.033 8 8 119.033 8 256s111.033 248 248 248 248-111.033 248-248S392.967 8 256 8zm80 248c0 44.112-35.888 80-80 80s-80-35.888-80-80 35.888-80 80-80 80 35.888 80 80z">
-                                                                        </path>
-                                                                    </svg> </span>
-                                                                <span class="elementor-icon-list-text">
-                                                                    <span class="ekit_page_list_title_title">Help
-                                                                        &amp; Faq</span>
-                                                                </span>
-                                                            </div>
-                                                        </a>
-                                                    </div>
-                                                    <div class="elementor-icon-list-item   ">
-                                                        <a class="elementor-repeater-item-7be2475 ekit_badge_left"
-                                                            href=" " target="_blank" rel="nofollow">
-                                                            <div class="ekit_page_list_content">
-                                                                <span class="elementor-icon-list-icon">
-                                                                    <svg aria-hidden="true"
-                                                                        class="e-font-icon-svg e-fas-dot-circle"
-                                                                        viewBox="0 0 512 512"
-                                                                        xmlns="http://www.w3.org/2000/svg">
-                                                                        <path
-                                                                            d="M256 8C119.033 8 8 119.033 8 256s111.033 248 248 248 248-111.033 248-248S392.967 8 256 8zm80 248c0 44.112-35.888 80-80 80s-80-35.888-80-80 35.888-80 80-80 80 35.888 80 80z">
-                                                                        </path>
-                                                                    </svg> </span>
-                                                                <span class="elementor-icon-list-text">
-                                                                    <span class="ekit_page_list_title_title">Privacy
-                                                                        Policy</span>
-                                                                </span>
-                                                            </div>
-                                                        </a>
-                                                    </div>
-                                                    <div class="elementor-icon-list-item   ">
-                                                        <a class="elementor-repeater-item-c2033b6 ekit_badge_left"
-                                                            href=" " target="_blank" rel="nofollow">
-                                                            <div class="ekit_page_list_content">
-                                                                <span class="elementor-icon-list-icon">
-                                                                    <svg aria-hidden="true"
-                                                                        class="e-font-icon-svg e-fas-dot-circle"
-                                                                        viewBox="0 0 512 512"
-                                                                        xmlns="http://www.w3.org/2000/svg">
-                                                                        <path
-                                                                            d="M256 8C119.033 8 8 119.033 8 256s111.033 248 248 248 248-111.033 248-248S392.967 8 256 8zm80 248c0 44.112-35.888 80-80 80s-80-35.888-80-80 35.888-80 80-80 80 35.888 80 80z">
-                                                                        </path>
-                                                                    </svg> </span>
-                                                                <span class="elementor-icon-list-text">
-                                                                    <span class="ekit_page_list_title_title">Contact
-                                                                        Us</span>
-                                                                </span>
-                                                            </div>
-                                                        </a>
-                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -2779,103 +2444,18 @@
                             </div>
                             <div class="elementor-element elementor-element-128640c2 e-con-full e-flex e-con e-child"
                                 data-id="128640c2" data-element_type="container">
-                                <div class="elementor-element elementor-element-748714ad e-con-full e-flex e-con e-child"
-                                    data-id="748714ad" data-element_type="container">
-                                    <div class="elementor-element elementor-element-1b58d99 elementor-view-default elementor-widget elementor-widget-icon"
-                                        data-id="1b58d99" data-element_type="widget"
-                                        data-widget_type="icon.default">
-                                        <div class="elementor-widget-container">
-                                            <div class="elementor-icon-wrapper">
-                                                <div class="elementor-icon">
-                                                    <i aria-hidden="true" class="jki jki-ellipsis-h-solid"></i>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="elementor-element elementor-element-6c2eb7da elementor-widget elementor-widget-heading"
-                                        data-id="6c2eb7da" data-element_type="widget"
-                                        data-widget_type="heading.default">
-                                        <div class="elementor-widget-container">
-                                            <h2 class="elementor-heading-title elementor-size-default">Subscribe Now
-                                            </h2>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="elementor-element elementor-element-29a874de elementor-widget elementor-widget-text-editor"
-                                    data-id="29a874de" data-element_type="widget"
-                                    data-widget_type="text-editor.default">
-                                    <div class="elementor-widget-container">
-                                        <p>Don’t miss our future updates! Get Subscribed Today on the Internet tend to
-                                            repeat.</p>
-                                    </div>
-                                </div>
+
                                 <div class="elementor-element elementor-element-2b3fc671 elementor-widget elementor-widget-elementskit-mail-chimp"
                                     data-id="2b3fc671" data-element_type="widget"
                                     data-widget_type="elementskit-mail-chimp.default">
                                     <div class="elementor-widget-container">
                                         <div class="ekit-wid-con">
                                             <div class="ekit-mail-chimp">
-                                                <form method="post" class="ekit-mailChimpForm" data-listed=""
-                                                    data-success-message="Successfully listed this email"
-                                                    data-success-opt-in-message="">
-                                                    <div class="ekit-mail-message"></div>
-                                                    <input type="hidden" name="double_opt_in" value="">
-
-                                                    <div class="elementskit_form_wraper elementskit_inline_form">
-                                                        <div
-                                                            class="ekit-mail-chimp-email elementskit_input_wraper elementskit_input_container">
-                                                            <div class="elementskit_form_group">
-                                                                <div class="elementskit_input_element_container ">
-                                                                    <input type="email" aria-label="email"
-                                                                        name="email"
-                                                                        class="ekit_mail_email ekit_form_control "
-                                                                        placeholder="Email Address" required="">
-
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div
-                                                            class="ekit_submit_input_holder elementskit_input_wraper">
-                                                            <button type="submit" aria-label="submit"
-                                                                class="ekit-mail-submit" name="ekit_mail_chimp">
-
-                                                                <i aria-hidden="true"
-                                                                    class="icon icon-location"></i>
-                                                            </button>
-                                                        </div>
-                                                    </div>
-                                                </form>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="elementor-element elementor-element-8683915 e-con-full e-flex e-con e-child"
-                                    data-id="8683915" data-element_type="container">
-                                    <div class="elementor-element elementor-element-540ea2c elementor-view-stacked elementor-shape-circle elementor-widget elementor-widget-icon"
-                                        data-id="540ea2c" data-element_type="widget"
-                                        data-widget_type="icon.default">
-                                        <div class="elementor-widget-container">
-                                            <div class="elementor-icon-wrapper">
-                                                <div class="elementor-icon">
-                                                    <i aria-hidden="true" class="icon icon-clock-1"></i>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="elementor-element elementor-element-ea0bae7 e-con-full e-flex e-con e-child"
-                                        data-id="ea0bae7" data-element_type="container">
-                                        <div class="elementor-element elementor-element-a1ed3e3 elementor-widget elementor-widget-text-editor"
-                                            data-id="a1ed3e3" data-element_type="widget"
-                                            data-widget_type="text-editor.default">
-                                            <div class="elementor-widget-container">
-                                                Hours: </div>
-                                        </div>
-                                        <div class="elementor-element elementor-element-5d9cee2 elementor-widget elementor-widget-heading"
-                                            data-id="5d9cee2" data-element_type="widget"
-                                            data-widget_type="heading.default">
-                                            <div class="elementor-widget-container">
-                                                <div class="elementor-heading-title elementor-size-default"><a
-                                                        href=" ">Daily: 8 AM to 5 PM</a></div>
+                                                <iframe
+                                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3651.0973078281972!2d90.41388697555888!3d23.77954898765636!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c77d5719ab2f%3A0xa8f283b9e86a2c82!2sRobintex%20Group!5e0!3m2!1sen!2sbd!4v1754413974172!5m2!1sen!2sbd"
+                                                    width="100%" height="200px" style="border:0;"
+                                                    allowfullscreen="" loading="lazy"
+                                                    referrerpolicy="no-referrer-when-downgrade"></iframe>
                                             </div>
                                         </div>
                                     </div>
@@ -2899,7 +2479,7 @@
                                     <div
                                         class="ekit-heading elementskit-section-title-wraper text_left   ekit_heading_tablet-   ekit_heading_mobile-text_center">
                                         <p class="ekit-heading--title elementskit-section-title ">© 2025
-                                            craftyrexthemes.com</p>
+                                            All right received Robintex-Group</p>
                                     </div>
                                 </div>
                             </div>
@@ -2914,7 +2494,8 @@
                                 <div class="ekit-wid-con">
                                     <ul class="ekit_social_media">
                                         <li class="elementor-repeater-item-da8f4de">
-                                            <a href=" " aria-label="Facebook" class="f">
+                                            <a href="@if (isset($topElements)) {{ $topElements[0]->value }} @endif"
+                                                aria-label="Facebook" class="f">
 
                                                 <svg aria-hidden="true" class="e-font-icon-svg e-fab-facebook-f"
                                                     viewBox="0 0 320 512" xmlns="http://www.w3.org/2000/svg">
@@ -2925,7 +2506,8 @@
                                             </a>
                                         </li>
                                         <li class="elementor-repeater-item-1399011">
-                                            <a href=" " aria-label="Twitter" class="twitter">
+                                            <a href="@if (isset($topElements)) {{ $topElements[3]->value }} @endif"
+                                                aria-label="Twitter" class="twitter">
 
                                                 <svg aria-hidden="true" class="e-font-icon-svg e-fab-twitter"
                                                     viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
@@ -2936,23 +2518,13 @@
                                             </a>
                                         </li>
                                         <li class="elementor-repeater-item-8f886e8">
-                                            <a href=" " aria-label="LinkedIn" class="in">
+                                            <a href="@if (isset($topElements)) {{ $topElements[2]->value }} @endif"
+                                                aria-label="LinkedIn" class="in">
 
                                                 <svg aria-hidden="true" class="e-font-icon-svg e-fab-linkedin-in"
                                                     viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg">
                                                     <path
                                                         d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z">
-                                                    </path>
-                                                </svg>
-                                            </a>
-                                        </li>
-                                        <li class="elementor-repeater-item-c8596be">
-                                            <a href=" " aria-label="Instagram" class="instagram">
-
-                                                <svg aria-hidden="true" class="e-font-icon-svg e-fab-instagram"
-                                                    viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg">
-                                                    <path
-                                                        d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z">
                                                     </path>
                                                 </svg>
                                             </a>
@@ -3000,8 +2572,9 @@
     <!-- Styles -->
     <link rel="stylesheet" id="jeg-dynamic-style-css" href="{{ asset('assets/data/jeg-dynamic-styles.css') }}"
         media="all">
-    <link rel="stylesheet" id="font-awesome-5-all-css" href="{{ asset('assets/data/all.min.css') }}"
-        media="all">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
     <link rel="stylesheet" id="font-awesome-4-shim-css" href="{{ asset('assets/data/v4-shims.min.css') }}"
         media="all">
 
