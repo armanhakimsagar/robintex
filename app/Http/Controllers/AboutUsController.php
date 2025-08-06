@@ -2,6 +2,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 use App\Models\Future;
 use App\Models\Goal;
 use App\Models\Mission;
@@ -15,10 +16,39 @@ use App\Models\WhyChooseUsReason;
 use App\Models\Service;
 use App\Models\AboutUsPage;
 
-class FrontendController extends Controller
+class AboutUsController extends Controller
 {
     public function index()
     {
+        $about = AboutUsPage::first();
+        return view('dashboard.page.about', compact('about'));
+    }
+
+    public function store(Request $request)
+    {
+        $request->validate([
+            'description' => 'nullable|string',
+            'banner_one' => 'nullable|image|max:2048',
+            'banner_two' => 'nullable|image|max:2048',
+            'banner_three' => 'nullable|image|max:2048',
+        ]);
+
+        $data = $request->only('description');
+
+        foreach (['banner_one', 'banner_two', 'banner_three'] as $banner) {
+            if ($request->hasFile($banner)) {
+                $data[$banner] = $request->file($banner)->store('about_us', 'public');
+            }
+        }
+
+        AboutUsPage::updateOrCreate(['id' => 1], $data);
+
+        return back()->with('success', 'About Us updated successfully.');
+    }
+
+    public function show()
+    {
+        
         $futures = Future::all();
         $goals = Goal::all();
         $missions = Mission::all();
@@ -32,7 +62,7 @@ class FrontendController extends Controller
         $whyChooseUsReasons = WhyChooseUsReason::all();        
         $aboutUsPage = AboutUsPage::all();
         
-        return view('index', compact(
+        return view('dashboard.frontend.about', compact(
             'futures',
             'goals',
             'missions',
@@ -48,3 +78,4 @@ class FrontendController extends Controller
         ));
     }
 }
+

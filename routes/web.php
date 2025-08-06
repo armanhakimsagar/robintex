@@ -14,11 +14,17 @@ use App\Http\Controllers\FutureController;
 use App\Http\Controllers\TeamController;
 use App\Http\Controllers\FrontendController;
 use App\Http\Controllers\ServiceController;
-
+use App\Http\Controllers\AboutUsController;
+use App\Http\Controllers\PortfolioController;
+use App\Http\Controllers\ContactController;
 
 
 
 Route::get('/', [FrontendController::class, 'index']);
+Route::get('/about-us', [AboutUsController::class, 'show'])->name('about.page');
+Route::get('/service', [ServiceController::class, 'show'])->name('service.page');
+Route::get('/our-portfolio', [ServiceController::class, 'portfolio'])->name('portfolio.page');
+Route::get('/contact-us', [ServiceController::class, 'contact'])->name('contact.us');
 Route::get('/login', [LoginController::class, 'showLogin'])->name('login');
 Route::post('/login', [LoginController::class, 'login'])->name('login.submit');
 Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
@@ -27,6 +33,14 @@ Route::middleware('auth')->group(function () {
     Route::get('/dashboard', function () {
         return view('dashboard.dashboard'); // make this view
     });
+    // Admin/Dashboard Route
+    Route::match(['get', 'post'], '/portfolio', [PortfolioController::class, 'index'])->name('portfolio.index');
+    Route::match(['get', 'post'], '/contact', [ContactController::class, 'index'])->name('contact.index');
+
+    Route::get('/about-us-page', [AboutUsController::class, 'index'])->name('about.index');
+    Route::post('/about-us-page', [AboutUsController::class, 'store'])->name('about.store');
+
+
     Route::post('/top-elements/update/{key}', [TopElementController::class, 'update'])->name('top-elements.update');
     Route::get('/goals', [GoalController::class, 'index'])->name('goals.index');
     Route::post('goals', [GoalController::class, 'store'])->name('goal.store');

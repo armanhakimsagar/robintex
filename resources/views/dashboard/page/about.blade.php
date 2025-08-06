@@ -1,0 +1,48 @@
+@extends('dashboard.layouts')
+
+@section('content')
+    <div class="container">
+        <h2>About Us</h2>
+
+        @if (session('success'))
+            <div class="alert alert-success">{{ session('success') }}</div>
+        @endif
+
+        <form action="{{ route('about.store') }}" method="POST" enctype="multipart/form-data">
+            @csrf
+
+            <div class="form-group mb-3">
+                <textarea name="description" id="editor" class="form-control" rows="6">{{ old('description', $about->description ?? '') }}</textarea>
+
+                <script src="https://cdn.ckeditor.com/ckeditor5/39.0.1/classic/ckeditor.js"></script>
+                <script>
+                    ClassicEditor
+                        .create(document.querySelector('#editor'))
+                        .catch(error => {
+                            console.error(error);
+                        });
+                </script>
+
+                @error('description')
+                    <div class="text-danger">{{ $message }}</div>
+                @enderror
+            </div>
+
+            @foreach (['banner_one', 'banner_two', 'banner_three'] as $banner)
+                <div class="form-group mb-3">
+                    <label>{{ ucfirst(str_replace('_', ' ', $banner)) }}</label>
+                    <input type="file" class="form-control" name="{{ $banner }}">
+                    @if (!empty($about->$banner))
+                        <img src="{{ asset('storage/' . $about->$banner) }}" alt="" style="max-height:150px;"
+                            class="mt-2">
+                    @endif
+                    @error($banner)
+                        <div class="text-danger">{{ $message }}</div>
+                    @enderror
+                </div>
+            @endforeach
+
+            <button type="submit" class="btn btn-primary">Save</button>
+        </form>
+    </div>
+@endsection
