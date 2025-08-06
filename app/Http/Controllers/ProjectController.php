@@ -19,7 +19,7 @@ class ProjectController extends Controller
             'title' => 'required|string|max:255',
             'short_description' => 'required|string|max:255',
             'long_description' => 'nullable|string',
-            'image' => 'nullable|image|mimes:jpeg,png,jpg|max:1024',
+            'image' => 'nullable|image|mimes:jpeg,png,jpg',
         ]);
 
         $path = $request->file('image') ? $request->file('image')->store('projects', 'public') : null;
@@ -40,7 +40,7 @@ class ProjectController extends Controller
             'title' => 'required|string|max:255',
             'short_description' => 'required|string|max:255',
             'long_description' => 'nullable|string',
-            'image' => 'nullable|image|mimes:jpeg,png,jpg|max:1024',
+            'image' => 'nullable|image|mimes:jpeg,png,jpg',
         ]);
 
         if ($request->hasFile('image')) {

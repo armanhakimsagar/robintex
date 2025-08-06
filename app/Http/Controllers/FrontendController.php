@@ -12,6 +12,7 @@ use App\Models\TopElement;
 use App\Models\TopFeature;
 use App\Models\WhyChooseUs;
 use App\Models\WhyChooseUsReason;
+use App\Models\Service;
 
 class FrontendController extends Controller
 {
@@ -21,6 +22,7 @@ class FrontendController extends Controller
         $goals = Goal::all();
         $missions = Mission::all();
         $projects = Project::all();
+        $services = Service::all();
         $teams = Team::all();
         $topBanner = TopBanner::all();
         $topElements = TopElement::all();
@@ -38,7 +40,8 @@ class FrontendController extends Controller
             'topElements',
             'topFeatures',
             'whyChooseUs',
-            'whyChooseUsReasons'
+            'whyChooseUsReasons',
+            'services'
         ));
     }
 }

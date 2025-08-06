@@ -766,32 +766,7 @@
                                         data-id="a3ab26e" data-element_type="widget"
                                         data-widget_type="text-editor.default">
                                         <div class="elementor-widget-container">
-                                            Our Services </div>
-                                    </div>
-                                </div>
-                                <div class="elementor-element elementor-element-ef46e16 elementor-widget elementor-widget-heading"
-                                    data-id="ef46e16" data-element_type="widget" data-widget_type="heading.default">
-                                    <div class="elementor-widget-container">
-                                        <h2 class="elementor-heading-title elementor-size-default">Your Trusted Partner
-                                            in Textile &amp; Garment Production</h2>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="elementor-element elementor-element-5825a22 e-con-full e-flex e-con e-child"
-                                data-id="5825a22" data-element_type="container">
-                                <div class="elementor-element elementor-element-f0e3788 elementor-widget elementor-widget-button"
-                                    data-id="f0e3788" data-element_type="widget" data-widget_type="button.default">
-                                    <div class="elementor-widget-container">
-                                        <div class="elementor-button-wrapper">
-                                            <a class="elementor-button elementor-button-link elementor-size-sm"
-                                                href=" services/">
-                                                <span class="elementor-button-content-wrapper">
-                                                    <span class="elementor-button-icon">
-                                                        <i aria-hidden="true" class="jki jki-arrow-up-right-line"></i>
-                                                    </span>
-                                                    <span class="elementor-button-text">Learn More</span>
-                                                </span>
-                                            </a>
+                                            <h2> Our Services </h2>
                                         </div>
                                     </div>
                                 </div>
@@ -805,63 +780,58 @@
 
 
 
-                                <div class="elementor-element elementor-element-090e1ac e-con-full e-flex e-con e-child"
-                                    data-id="090e1ac" data-element_type="container">
-                                    <div class="elementor-element elementor-element-f164f86 e-con-full e-flex e-con e-child"
-                                        data-id="f164f86" data-element_type="container"
-                                        data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
-                                        <div class="elementor-element elementor-element-43e50af elementor-widget__width-initial elementor-widget elementor-widget-image"
-                                            data-id="43e50af" data-element_type="widget"
-                                            data-widget_type="image.default">
-                                            <div class="elementor-widget-container">
-                                                <a href="">
-                                                    <img loading="lazy" decoding="async" width="128"
-                                                        height="128" src=""
-                                                        class="attachment-full size-full wp-image-3667"
-                                                        alt=""> </a>
+                                @foreach ($services as $service)
+                                    <div class="elementor-element elementor-element-090e1ac e-con-full e-flex e-con e-child"
+                                        data-id="090e1ac" data-element_type="container">
+                                        <div class="elementor-element elementor-element-f164f86 e-con-full e-flex e-con e-child"
+                                            data-id="f164f86" data-element_type="container"
+                                            data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+                                            <div class="elementor-element elementor-element-43e50af elementor-widget__width-initial elementor-widget elementor-widget-image"
+                                                data-id="43e50af" data-element_type="widget"
+                                                data-widget_type="image.default">
+
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="elementor-element elementor-element-0a96476 e-con-full e-flex e-con e-child"
-                                        data-id="0a96476" data-element_type="container">
-                                        <div class="elementor-element elementor-element-b921b1e elementor-widget elementor-widget-heading"
-                                            data-id="b921b1e" data-element_type="widget"
-                                            data-widget_type="heading.default">
-                                            <div class="elementor-widget-container">
-                                                <h4 class="elementor-heading-title elementor-size-default">Eco-Friendly
-                                                    Dyeing</h4>
+                                        <div class="elementor-element elementor-element-0a96476 e-con-full e-flex e-con e-child"
+                                            data-id="0a96476" data-element_type="container">
+                                            <div class="elementor-element elementor-element-b921b1e elementor-widget elementor-widget-heading"
+                                                data-id="b921b1e" data-element_type="widget"
+                                                data-widget_type="heading.default">
+                                                <div class="elementor-widget-container">
+                                                    <h4 class="elementor-heading-title elementor-size-default">
+                                                        {{ $service->title }}</h4>
+                                                </div>
+                                            </div>
+                                            <div class="elementor-element elementor-element-53991fc elementor-widget elementor-widget-text-editor"
+                                                data-id="53991fc" data-element_type="widget"
+                                                data-widget_type="text-editor.default">
+                                                <div class="elementor-widget-container">
+                                                    {{ $service->short_description }}</div>
                                             </div>
                                         </div>
-                                        <div class="elementor-element elementor-element-53991fc elementor-widget elementor-widget-text-editor"
-                                            data-id="53991fc" data-element_type="widget"
-                                            data-widget_type="text-editor.default">
-                                            <div class="elementor-widget-container">
-                                                There are many variations passages Lorem the Ipsum available, but the
-                                                majority have suffered of alteration in some form.. </div>
-                                        </div>
-                                    </div>
-                                    <div class="elementor-element elementor-element-92c98af e-con-full e-flex e-con e-child"
-                                        data-id="92c98af" data-element_type="container">
-                                        <div class="elementor-element elementor-element-a902cad elementor-widget elementor-widget-button"
-                                            data-id="a902cad" data-element_type="widget"
-                                            data-widget_type="button.default">
-                                            <div class="elementor-widget-container">
-                                                <div class="elementor-button-wrapper">
-                                                    <a class="elementor-button elementor-button-link elementor-size-sm"
-                                                        href=" services-details/">
-                                                        <span class="elementor-button-content-wrapper">
-                                                            <span class="elementor-button-icon">
-                                                                <i aria-hidden="true"
-                                                                    class="jki jki-arrow-up-right-line"></i> </span>
-                                                            <span class="elementor-button-text">Read More</span>
-                                                        </span>
-                                                    </a>
+                                        <div class="elementor-element elementor-element-92c98af e-con-full e-flex e-con e-child"
+                                            data-id="92c98af" data-element_type="container">
+                                            <div class="elementor-element elementor-element-a902cad elementor-widget elementor-widget-button"
+                                                data-id="a902cad" data-element_type="widget"
+                                                data-widget_type="button.default">
+                                                <div class="elementor-widget-container">
+                                                    <div class="elementor-button-wrapper">
+                                                        <a class="elementor-button elementor-button-link elementor-size-sm"
+                                                            href=" services-details/">
+                                                            <span class="elementor-button-content-wrapper">
+                                                                <span class="elementor-button-icon">
+                                                                    <i aria-hidden="true"
+                                                                        class="jki jki-arrow-up-right-line"></i>
+                                                                </span>
+                                                                <span class="elementor-button-text">Read More</span>
+                                                            </span>
+                                                        </a>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
-
+                                @endforeach
 
 
                             </div>
@@ -902,8 +872,9 @@
                                 <div class="elementor-element elementor-element-b6a077d elementor-widget elementor-widget-heading"
                                     data-id="b6a077d" data-element_type="widget" data-widget_type="heading.default">
                                     <div class="elementor-widget-container">
-                                        <h2 class="elementor-heading-title elementor-size-default">Quality You Can
-                                            Feel, Trust You Can Wear with Premium.</h2>
+                                        <h2 class="elementor-heading-title elementor-size-default">
+                                            {{ $whyChooseUs->title }}
+                                        </h2>
                                     </div>
                                 </div>
                             </div>
@@ -922,105 +893,46 @@
                             data-id="0910b7b" data-element_type="container">
                             <div class="elementor-element elementor-element-09d3e9a e-con-full e-flex e-con e-child"
                                 data-id="09d3e9a" data-element_type="container">
-                                <div class="elementor-element elementor-element-6c1082d e-con-full e-flex e-con e-child"
-                                    data-id="6c1082d" data-element_type="container">
-                                    <div class="elementor-element elementor-element-a7e4af8 ekit-equal-height-disable elementor-widget elementor-widget-elementskit-icon-box"
-                                        data-id="a7e4af8" data-element_type="widget"
-                                        data-widget_type="elementskit-icon-box.default">
-                                        <div class="elementor-widget-container">
-                                            <div class="ekit-wid-con"> <!-- link opening -->
-                                                <a href=" " class="ekit_global_links">
-                                                    <!-- end link opening -->
 
-                                                    <div
-                                                        class="elementskit-infobox text- text-left icon-lef-right-aligin elementor-animation- media  ">
-                                                        <div class="elementskit-box-header elementor-animation-">
-                                                            <div class="elementskit-info-box-icon  text-center">
-                                                                <i aria-hidden="true"
-                                                                    class="elementkit-infobox-icon icon icon-menu-8"></i>
+
+
+
+                                @foreach ($whyChooseUsReasons as $whyChooseUsReason)
+                                    <div class="elementor-element elementor-element-6c1082d e-con-full e-flex e-con e-child"
+                                        data-id="6c1082d" data-element_type="container">
+                                        <div class="elementor-element elementor-element-a7e4af8 ekit-equal-height-disable elementor-widget elementor-widget-elementskit-icon-box"
+                                            data-id="a7e4af8" data-element_type="widget"
+                                            data-widget_type="elementskit-icon-box.default">
+                                            <div class="elementor-widget-container">
+                                                <div class="ekit-wid-con"> <!-- link opening -->
+                                                    <a href=" " class="ekit_global_links">
+                                                        <!-- end link opening -->
+
+                                                        <div
+                                                            class="elementskit-infobox text- text-left icon-lef-right-aligin elementor-animation- media  ">
+                                                            <div class="elementskit-box-header elementor-animation-">
+                                                                <div class="elementskit-info-box-icon  text-center">
+                                                                    <i aria-hidden="true"
+                                                                        class="elementkit-infobox-icon icon icon-menu-8"></i>
+                                                                </div>
                                                             </div>
-                                                        </div>
-                                                        <div class="box-body">
-                                                            <h4 class="elementskit-info-box-title">
-                                                                Premium Quality Materials </h4>
-                                                            <p>There are many variations of passages of but the majority
-                                                                have suffered alteration in some form, by injected
-                                                                humour.</p>
-                                                        </div>
+                                                            <div class="box-body">
+                                                                <h4 class="elementskit-info-box-title">
+                                                                    {{ $whyChooseUsReason->title }} </h4>
+                                                                <p>{{ $whyChooseUsReason->short_description }}</p>
+                                                            </div>
 
 
-                                                    </div>
-                                                </a>
+                                                        </div>
+                                                    </a>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="elementor-element elementor-element-e0c0d45 e-con-full e-flex e-con e-child"
-                                    data-id="e0c0d45" data-element_type="container">
-                                    <div class="elementor-element elementor-element-525ef62 ekit-equal-height-disable elementor-widget elementor-widget-elementskit-icon-box"
-                                        data-id="525ef62" data-element_type="widget"
-                                        data-widget_type="elementskit-icon-box.default">
-                                        <div class="elementor-widget-container">
-                                            <div class="ekit-wid-con"> <!-- link opening -->
-                                                <a href=" " class="ekit_global_links">
-                                                    <!-- end link opening -->
-
-                                                    <div
-                                                        class="elementskit-infobox text- text-left icon-lef-right-aligin elementor-animation- media  ">
-                                                        <div class="elementskit-box-header elementor-animation-">
-                                                            <div class="elementskit-info-box-icon  text-center">
-                                                                <i aria-hidden="true"
-                                                                    class="elementkit-infobox-icon icon icon-paperclip"></i>
-                                                            </div>
-                                                        </div>
-                                                        <div class="box-body">
-                                                            <h4 class="elementskit-info-box-title">
-                                                                Customization &amp; Innovation </h4>
-                                                            <p>There are many variations of passages of but the majority
-                                                                have suffered alteration in some form, by injected
-                                                                humour.</p>
-                                                        </div>
+                                @endforeach
 
 
-                                                    </div>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="elementor-element elementor-element-e02a9ea e-con-full e-flex e-con e-child"
-                                    data-id="e02a9ea" data-element_type="container">
-                                    <div class="elementor-element elementor-element-c7730ae ekit-equal-height-disable elementor-widget elementor-widget-elementskit-icon-box"
-                                        data-id="c7730ae" data-element_type="widget"
-                                        data-widget_type="elementskit-icon-box.default">
-                                        <div class="elementor-widget-container">
-                                            <div class="ekit-wid-con"> <!-- link opening -->
-                                                <a href=" " class="ekit_global_links">
-                                                    <!-- end link opening -->
 
-                                                    <div
-                                                        class="elementskit-infobox text- text-left icon-lef-right-aligin elementor-animation- media  ">
-                                                        <div class="elementskit-box-header elementor-animation-">
-                                                            <div class="elementskit-info-box-icon  text-center">
-                                                                <i aria-hidden="true"
-                                                                    class="elementkit-infobox-icon icon icon-trolley-1"></i>
-                                                            </div>
-                                                        </div>
-                                                        <div class="box-body">
-                                                            <h4 class="elementskit-info-box-title">
-                                                                Reliable Delivery </h4>
-                                                            <p>There are many variations of passages of but the majority
-                                                                have suffered alteration in some form, by injected
-                                                                humour.</p>
-                                                        </div>
-
-
-                                                    </div>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
                                 <div class="elementor-element elementor-element-5dbad1c elementor-widget elementor-widget-button"
                                     data-id="5dbad1c" data-element_type="widget" data-widget_type="button.default">
                                     <div class="elementor-widget-container">
@@ -1041,275 +953,22 @@
                         </div>
                     </div>
                 </div>
-                <div class="elementor-element elementor-element-2ffa550 e-flex e-con-boxed e-con e-parent e-lazyloaded"
-                    data-id="2ffa550" data-element_type="container"
-                    data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
-                    <div class="e-con-inner">
-                        <div class="elementor-element elementor-element-c4b5b21 e-flex e-con-boxed e-con e-child"
-                            data-id="c4b5b21" data-element_type="container"
-                            data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
-                            <div class="e-con-inner">
-                                <div class="elementor-element elementor-element-f84ff62 e-con-full e-flex e-con e-child"
-                                    data-id="f84ff62" data-element_type="container">
-                                    <div class="elementor-element elementor-element-cabf97e e-con-full e-flex e-con e-child"
-                                        data-id="cabf97e" data-element_type="container">
-                                        <div class="elementor-element elementor-element-ad09722 elementor-view-default elementor-widget elementor-widget-icon"
-                                            data-id="ad09722" data-element_type="widget"
-                                            data-widget_type="icon.default">
-                                            <div class="elementor-widget-container">
-                                                <div class="elementor-icon-wrapper">
-                                                    <div class="elementor-icon">
-                                                        <i aria-hidden="true" class="jki jki-ellipsis-h-solid"></i>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="elementor-element elementor-element-c4b7353 elementor-widget elementor-widget-text-editor"
-                                            data-id="c4b7353" data-element_type="widget"
-                                            data-widget_type="text-editor.default">
-                                            <div class="elementor-widget-container">
-                                                Our Projects </div>
-                                        </div>
-                                        <div class="elementor-element elementor-element-d723287 elementor-view-default elementor-widget elementor-widget-icon"
-                                            data-id="d723287" data-element_type="widget"
-                                            data-widget_type="icon.default">
-                                            <div class="elementor-widget-container">
-                                                <div class="elementor-icon-wrapper">
-                                                    <div class="elementor-icon">
-                                                        <i aria-hidden="true" class="jki jki-ellipsis-h-solid"></i>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="elementor-element elementor-element-acd5912 elementor-widget elementor-widget-heading"
-                                        data-id="acd5912" data-element_type="widget"
-                                        data-widget_type="heading.default">
-                                        <div class="elementor-widget-container">
-                                            <h2 class="elementor-heading-title elementor-size-default">The Impact of
-                                                Fast Fashion on the Environment</h2>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="elementor-element elementor-element-a74e9e9 e-flex e-con-boxed e-con e-parent e-lazyloaded"
-                    data-id="a74e9e9" data-element_type="container"
-                    data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
-                    <div class="e-con-inner">
-                        <div class="elementor-element elementor-element-e452e73 e-con-full e-flex e-con e-child"
-                            data-id="e452e73" data-element_type="container">
-                            <div class="elementor-element elementor-element-5187b82 e-con-full e-flex e-con e-child"
-                                data-id="5187b82" data-element_type="container"
-                                data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
-                                <div class="elementor-element elementor-element-df10b2d e-con-full e-flex e-con e-child"
-                                    data-id="df10b2d" data-element_type="container" data-settings="">
-                                    <div class="elementor-background-slideshow swiper swiper-fade swiper-initialized swiper-horizontal swiper-pointer-events swiper-rtl swiper-watch-progress swiper-backface-hidden"
-                                        dir="rtl">
-                                        <div class="swiper-wrapper" id="swiper-wrapper-10d19eecad789cbf7"
-                                            aria-live="off" style="transition-duration: 0ms;">
-                                            <div class="elementor-background-slideshow__slide swiper-slide swiper-slide-duplicate"
-                                                data-swiper-slide-index="0"
-                                                style="width: 787px; transition-duration: 0ms; opacity: 0; transform: translate3d(0px, 0px, 0px);"
-                                                role="group" aria-label="1 / 2">
-                                                <div class="elementor-background-slideshow__slide__image"
-                                                    style="">
-                                                </div>
-                                            </div>
-                                            <div class="elementor-background-slideshow__slide swiper-slide swiper-slide-duplicate swiper-slide-duplicate-prev"
-                                                data-swiper-slide-index="1"
-                                                style="width: 787px; transition-duration: 0ms; opacity: 0; transform: translate3d(787px, 0px, 0px);"
-                                                role="group" aria-label="2 / 2">
-                                                <div class="elementor-background-slideshow__slide__image"
-                                                    style="">
-                                                </div>
-                                            </div>
-                                            <div class="elementor-background-slideshow__slide swiper-slide swiper-slide-duplicate-active"
-                                                data-swiper-slide-index="0"
-                                                style="width: 787px; transition-duration: 0ms; opacity: 0; transform: translate3d(1574px, 0px, 0px);"
-                                                role="group" aria-label="1 / 2">
-                                                <div class="elementor-background-slideshow__slide__image"
-                                                    style="">
-                                                </div>
-                                            </div>
-                                            <div class="elementor-background-slideshow__slide swiper-slide swiper-slide-prev swiper-slide-duplicate-next"
-                                                data-swiper-slide-index="1"
-                                                style="width: 787px; transition-duration: 0ms; opacity: 0; transform: translate3d(2361px, 0px, 0px);"
-                                                role="group" aria-label="2 / 2">
-                                                <div class="elementor-background-slideshow__slide__image"
-                                                    style="">
-                                                </div>
-                                            </div>
-                                            <div class="elementor-background-slideshow__slide swiper-slide swiper-slide-duplicate swiper-slide-visible swiper-slide-active"
-                                                data-swiper-slide-index="0"
-                                                style="width: 787px; transition-duration: 0ms; opacity: 1; transform: translate3d(3148px, 0px, 0px);"
-                                                role="group" aria-label="1 / 2">
-                                                <div class="elementor-background-slideshow__slide__image"
-                                                    style="">
-                                                </div>
-                                            </div>
-                                            <div class="elementor-background-slideshow__slide swiper-slide swiper-slide-duplicate swiper-slide-next swiper-slide-duplicate-prev"
-                                                data-swiper-slide-index="1" role="group" aria-label="2 / 2"
-                                                style="width: 787px; transition-duration: 0ms; opacity: 0; transform: translate3d(3935px, 0px, 0px);">
-                                                <div class="elementor-background-slideshow__slide__image"
-                                                    style="">
-                                                </div>
-                                            </div>
-                                        </div><span class="swiper-notification" aria-live="assertive"
-                                            aria-atomic="true"></span>
-                                    </div>
-                                    <div class="elementor-element elementor-element-7cbcafe e-con-full e-flex e-con e-child"
-                                        data-id="7cbcafe" data-element_type="container">
-                                        <div class="elementor-element elementor-element-97aa326 e-con-full e-flex e-con e-child"
-                                            data-id="97aa326" data-element_type="container"
-                                            data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
-                                            <div class="elementor-element elementor-element-f8683a2 elementor-widget elementor-widget-heading"
-                                                data-id="f8683a2" data-element_type="widget"
-                                                data-widget_type="heading.default">
-                                                <div class="elementor-widget-container">
-                                                    <h4 class="elementor-heading-title elementor-size-default">
-                                                        Excellent Fabric Quality! Perfect Fit &amp; Stylish </h4>
-                                                </div>
-                                            </div>
-                                            <div class="elementor-element elementor-element-71b4f03 elementor-widget elementor-widget-button"
-                                                data-id="71b4f03" data-element_type="widget"
-                                                data-widget_type="button.default">
-                                                <div class="elementor-widget-container">
-                                                    <div class="elementor-button-wrapper">
-                                                        <a class="elementor-button elementor-button-link elementor-size-sm"
-                                                            href=" about-us/">
-                                                            <span class="elementor-button-content-wrapper">
-                                                                <span class="elementor-button-icon">
-                                                                    <i aria-hidden="true"
-                                                                        class="jki jki-arrow-up-right-line"></i>
-                                                                </span>
-                                                                <span class="elementor-button-text">More
-                                                                    Projects</span>
-                                                            </span>
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="elementor-element elementor-element-2dd1b74 e-con-full e-flex e-con e-child"
-                                    data-id="2dd1b74" data-element_type="container">
-                                    <div class="elementor-element elementor-element-2e073ae elementor-widget elementor-widget-image-carousel e-widget-swiper"
-                                        data-id="2e073ae" data-element_type="widget"
-                                        data-settings="{&quot;slides_to_show&quot;:&quot;1&quot;,&quot;navigation&quot;:&quot;none&quot;,&quot;autoplay&quot;:&quot;yes&quot;,&quot;pause_on_hover&quot;:&quot;yes&quot;,&quot;pause_on_interaction&quot;:&quot;yes&quot;,&quot;autoplay_speed&quot;:5000,&quot;infinite&quot;:&quot;yes&quot;,&quot;effect&quot;:&quot;slide&quot;,&quot;speed&quot;:500}"
-                                        data-widget_type="image-carousel.default">
-                                        <div class="elementor-widget-container">
-                                            <div class="elementor-image-carousel-wrapper swiper swiper-initialized swiper-horizontal swiper-pointer-events swiper-backface-hidden"
-                                                role="region" aria-roledescription="carousel"
-                                                aria-label="Image Carousel" dir="ltr">
-                                                <div class="elementor-image-carousel swiper-wrapper swiper-image-stretch"
-                                                    aria-live="off"
-                                                    style="transform: translate3d(-1272px, 0px, 0px); transition-duration: 0ms;"
-                                                    id="swiper-wrapper-0dc94cab94e3ffb7">
-                                                    <div class="swiper-slide swiper-slide-duplicate swiper-slide-duplicate-active"
-                                                        role="group" aria-roledescription="slide"
-                                                        aria-label="3 / 3" data-swiper-slide-index="2"
-                                                        style="width: 424px;" aria-hidden="true" inert=""><a
-                                                            data-elementor-open-lightbox="yes"
-                                                            data-elementor-lightbox-slideshow="2e073ae"
-                                                            data-elementor-lightbox-title="gallery-img-9"
-                                                            data-e-action-hash="#elementor-action%3Aaction%3Dlightbox%26settings%3DeyJpZCI6NTE1MiwidXJsIjoiaHR0cHM6XC9cL2NyYWZ0eXJleHRoZW1lcy5jb21cL2dhcmNyYWZ0XC93cC1jb250ZW50XC91cGxvYWRzXC9zaXRlc1wvNlwvMjAyNVwvMDJcL2dhbGxlcnktaW1nLTkuanBnIiwic2xpZGVzaG93IjoiMmUwNzNhZSJ9"
-                                                            href=" ">
-                                                            <figure class="swiper-slide-inner"><img decoding="async"
-                                                                    class="swiper-slide-image" src=""
-                                                                    alt="gallery-img-9"></figure>
-                                                        </a></div>
-                                                    <div class="swiper-slide swiper-slide-duplicate-next"
-                                                        role="group" aria-roledescription="slide"
-                                                        aria-label="1 / 3" data-swiper-slide-index="0"
-                                                        style="width: 424px;" aria-hidden="true" inert=""><a
-                                                            data-elementor-open-lightbox="yes"
-                                                            data-elementor-lightbox-slideshow="2e073ae"
-                                                            data-elementor-lightbox-title="gallery-img-2"
-                                                            data-e-action-hash="#elementor-action%3Aaction%3Dlightbox%26settings%3DeyJpZCI6NTE1MCwidXJsIjoiaHR0cHM6XC9cL2NyYWZ0eXJleHRoZW1lcy5jb21cL2dhcmNyYWZ0XC93cC1jb250ZW50XC91cGxvYWRzXC9zaXRlc1wvNlwvMjAyNVwvMDJcL2dhbGxlcnktaW1nLTIuanBnIiwic2xpZGVzaG93IjoiMmUwNzNhZSJ9"
-                                                            href=" ">
-                                                            <figure class="swiper-slide-inner"><img decoding="async"
-                                                                    class="swiper-slide-image" src=""
-                                                                    alt="gallery-img-2"></figure>
-                                                        </a></div>
-                                                    <div class="swiper-slide swiper-slide-prev" role="group"
-                                                        aria-roledescription="slide" aria-label="2 / 3"
-                                                        data-swiper-slide-index="1" style="width: 424px;"
-                                                        aria-hidden="true" inert=""><a
-                                                            data-elementor-open-lightbox="yes"
-                                                            data-elementor-lightbox-slideshow="2e073ae"
-                                                            data-elementor-lightbox-title="project-img-11"
-                                                            data-e-action-hash="#elementor-action%3Aaction%3Dlightbox%26settings%3DeyJpZCI6NDc2NywidXJsIjoiaHR0cHM6XC9cL2NyYWZ0eXJleHRoZW1lcy5jb21cL2dhcmNyYWZ0XC93cC1jb250ZW50XC91cGxvYWRzXC9zaXRlc1wvNlwvMjAyNVwvMDJcL3Byb2plY3QtaW1nLTExLmpwZyIsInNsaWRlc2hvdyI6IjJlMDczYWUifQ%3D%3D"
-                                                            href=" ">
-                                                            <figure class="swiper-slide-inner"><img decoding="async"
-                                                                    class="swiper-slide-image" src=""
-                                                                    alt="project-img-11"></figure>
-                                                        </a></div>
-                                                    <div class="swiper-slide swiper-slide-active" role="group"
-                                                        aria-roledescription="slide" aria-label="3 / 3"
-                                                        data-swiper-slide-index="2" style="width: 424px;"><a
-                                                            data-elementor-open-lightbox="yes"
-                                                            data-elementor-lightbox-slideshow="2e073ae"
-                                                            data-elementor-lightbox-title="gallery-img-9"
-                                                            data-e-action-hash="#elementor-action%3Aaction%3Dlightbox%26settings%3DeyJpZCI6NTE1MiwidXJsIjoiaHR0cHM6XC9cL2NyYWZ0eXJleHRoZW1lcy5jb21cL2dhcmNyYWZ0XC93cC1jb250ZW50XC91cGxvYWRzXC9zaXRlc1wvNlwvMjAyNVwvMDJcL2dhbGxlcnktaW1nLTkuanBnIiwic2xpZGVzaG93IjoiMmUwNzNhZSJ9"
-                                                            href=" ">
-                                                            <figure class="swiper-slide-inner"><img decoding="async"
-                                                                    class="swiper-slide-image" src=""
-                                                                    alt="gallery-img-9"></figure>
-                                                        </a></div>
-                                                    <div class="swiper-slide swiper-slide-duplicate swiper-slide-next"
-                                                        role="group" aria-roledescription="slide"
-                                                        aria-label="1 / 3" data-swiper-slide-index="0"
-                                                        style="width: 424px;" aria-hidden="true" inert=""><a
-                                                            data-elementor-open-lightbox="yes"
-                                                            data-elementor-lightbox-slideshow="2e073ae"
-                                                            data-elementor-lightbox-title="gallery-img-2"
-                                                            data-e-action-hash="#elementor-action%3Aaction%3Dlightbox%26settings%3DeyJpZCI6NTE1MCwidXJsIjoiaHR0cHM6XC9cL2NyYWZ0eXJleHRoZW1lcy5jb21cL2dhcmNyYWZ0XC93cC1jb250ZW50XC91cGxvYWRzXC9zaXRlc1wvNlwvMjAyNVwvMDJcL2dhbGxlcnktaW1nLTIuanBnIiwic2xpZGVzaG93IjoiMmUwNzNhZSJ9"
-                                                            href=" ">
-                                                            <figure class="swiper-slide-inner"><img decoding="async"
-                                                                    class="swiper-slide-image" src=""
-                                                                    alt="gallery-img-2"></figure>
-                                                        </a></div>
-                                                </div>
 
-                                                <span class="swiper-notification" aria-live="assertive"
-                                                    aria-atomic="true"></span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="elementor-element elementor-element-b40fa1b e-flex e-con-boxed e-con e-parent e-lazyloaded"
-                    data-id="b40fa1b" data-element_type="container"
+
+
+                <div class="elementor-element elementor-element-097d571 e-flex e-con-boxed e-con e-parent e-lazyloaded"
+                    data-id="097d571" data-element_type="container"
                     data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
                     <div class="e-con-inner">
-                        <div class="elementor-element elementor-element-fd1f468 e-con-full e-flex e-con e-child"
-                            data-id="fd1f468" data-element_type="container"
-                            data-settings="{&quot;position&quot;:&quot;absolute&quot;}">
-                            <div class="elementor-element elementor-element-d2e68f0 elementor-hidden-tablet elementor-hidden-mobile elementor-widget elementor-widget-image"
-                                data-id="d2e68f0" data-element_type="widget" data-widget_type="image.default">
-                                <div class="elementor-widget-container">
-                                    <img loading="lazy" decoding="async" width="1675" height="58"
-                                        src="" class="attachment-full size-full wp-image-2443"
-                                        alt="" sizes="(max-width: 1675px) 100vw, 1675px">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="elementor-element elementor-element-a90e5cf e-con-full e-flex e-con e-child"
-                            data-id="a90e5cf" data-element_type="container">
-                            <div class="elementor-element elementor-element-a893688 e-con-full e-flex e-con e-child"
-                                data-id="a893688" data-element_type="container">
-                                <div class="elementor-element elementor-element-34aa06d e-con-full e-flex e-con e-child"
-                                    data-id="34aa06d" data-element_type="container">
-                                    <div class="elementor-element elementor-element-c3b66d8 elementor-view-default elementor-widget elementor-widget-icon"
-                                        data-id="c3b66d8" data-element_type="widget"
-                                        data-widget_type="icon.default">
+                        <div class="elementor-element elementor-element-1d66ad9 e-con-full e-flex e-con e-child"
+                            data-id="1d66ad9" data-element_type="container"
+                            data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+                            <div class="elementor-element elementor-element-f68c6bc e-con-full e-flex e-con e-child"
+                                data-id="f68c6bc" data-element_type="container">
+                                <div class="elementor-element elementor-element-2d540b8 e-con-full e-flex e-con e-child"
+                                    data-id="2d540b8" data-element_type="container">
+                                    <div class="elementor-element elementor-element-e12c814 elementor-view-default elementor-widget elementor-widget-icon"
+                                        data-id="e12c814" data-element_type="widget" data-widget_type="icon.default">
                                         <div class="elementor-widget-container">
                                             <div class="elementor-icon-wrapper">
                                                 <div class="elementor-icon">
@@ -1318,168 +977,83 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="elementor-element elementor-element-9b6b837 elementor-widget elementor-widget-text-editor"
-                                        data-id="9b6b837" data-element_type="widget"
+                                    <div class="elementor-element elementor-element-a3ab26e elementor-widget elementor-widget-text-editor"
+                                        data-id="a3ab26e" data-element_type="widget"
                                         data-widget_type="text-editor.default">
                                         <div class="elementor-widget-container">
-                                            Future Starts Here </div>
-                                    </div>
-                                </div>
-                                <div class="elementor-element elementor-element-eb46a89 elementor-widget elementor-widget-heading"
-                                    data-id="eb46a89" data-element_type="widget"
-                                    data-widget_type="heading.default">
-                                    <div class="elementor-widget-container">
-                                        <h2 class="elementor-heading-title elementor-size-default">Artificial
-                                            Intelligence in Textile Design and Production</h2>
-                                    </div>
-                                </div>
-                                <div class="elementor-element elementor-element-ea20ac5 e-con-full e-flex e-con e-child"
-                                    data-id="ea20ac5" data-element_type="container">
-
-                                    <div class="elementor-element elementor-element-418d3dd e-con-full e-flex e-con e-child"
-                                        data-id="418d3dd" data-element_type="container">
-                                        <div class="elementor-element elementor-element-e0c1b24 e-con-full e-flex e-con e-child"
-                                            data-id="e0c1b24" data-element_type="container">
-                                            <div class="elementor-element elementor-element-381d6d3 elementor-widget__width-initial elementor-widget elementor-widget-counter"
-                                                data-id="381d6d3" data-element_type="widget"
-                                                data-widget_type="counter.default">
-                                                <div class="elementor-widget-container">
-                                                    <div class="elementor-counter">
-                                                        <div class="elementor-counter-number-wrapper">
-                                                            <span class="elementor-counter-number-prefix"></span>
-                                                            <span class="elementor-counter-number"
-                                                                data-duration="2000" data-to-value="20"
-                                                                data-from-value="0">20</span>
-                                                            <span class="elementor-counter-number-suffix">k</span>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="elementor-element elementor-element-bf7006c elementor-widget elementor-widget-heading"
-                                                data-id="bf7006c" data-element_type="widget"
-                                                data-widget_type="heading.default">
-                                                <div class="elementor-widget-container">
-                                                    <div class="elementor-heading-title elementor-size-default">Total
-                                                        Customers</div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="elementor-element elementor-element-152a647 e-con-full e-flex e-con e-child"
-                                            data-id="152a647" data-element_type="container">
-                                            <div class="elementor-element elementor-element-2a49c2c elementor-widget__width-initial elementor-widget elementor-widget-counter"
-                                                data-id="2a49c2c" data-element_type="widget"
-                                                data-widget_type="counter.default">
-                                                <div class="elementor-widget-container">
-                                                    <div class="elementor-counter">
-                                                        <div class="elementor-counter-number-wrapper">
-                                                            <span class="elementor-counter-number-prefix"></span>
-                                                            <span class="elementor-counter-number"
-                                                                data-duration="2000" data-to-value="35"
-                                                                data-from-value="0">35</span>
-                                                            <span class="elementor-counter-number-suffix">+</span>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="elementor-element elementor-element-6d4a70a elementor-widget elementor-widget-heading"
-                                                data-id="6d4a70a" data-element_type="widget"
-                                                data-widget_type="heading.default">
-                                                <div class="elementor-widget-container">
-                                                    <div class="elementor-heading-title elementor-size-default">
-                                                        Package&amp; Dispatch</div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="elementor-element elementor-element-7503590 e-con-full e-flex e-con e-child"
-                                            data-id="7503590" data-element_type="container">
-                                            <div class="elementor-element elementor-element-2c5c198 elementor-widget__width-initial elementor-widget elementor-widget-counter"
-                                                data-id="2c5c198" data-element_type="widget"
-                                                data-widget_type="counter.default">
-                                                <div class="elementor-widget-container">
-                                                    <div class="elementor-counter">
-                                                        <div class="elementor-counter-number-wrapper">
-                                                            <span class="elementor-counter-number-prefix"></span>
-                                                            <span class="elementor-counter-number"
-                                                                data-duration="2000" data-to-value="15"
-                                                                data-from-value="0">15</span>
-                                                            <span class="elementor-counter-number-suffix">k</span>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="elementor-element elementor-element-9a40438 elementor-widget elementor-widget-heading"
-                                                data-id="9a40438" data-element_type="widget"
-                                                data-widget_type="heading.default">
-                                                <div class="elementor-widget-container">
-                                                    <div class="elementor-heading-title elementor-size-default">Online
-                                                        Order Pickup</div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="elementor-element elementor-element-d21ac83 elementor-widget elementor-widget-button"
-                                        data-id="d21ac83" data-element_type="widget"
-                                        data-widget_type="button.default">
-                                        <div class="elementor-widget-container">
-                                            <div class="elementor-button-wrapper">
-                                                <a class="elementor-button elementor-button-link elementor-size-sm"
-                                                    href=" about-us/">
-                                                    <span class="elementor-button-content-wrapper">
-                                                        <span class="elementor-button-icon">
-                                                            <i aria-hidden="true"
-                                                                class="jki jki-arrow-up-right-line"></i> </span>
-                                                        <span class="elementor-button-text">Learn More</span>
-                                                    </span>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="elementor-element elementor-element-039ac70 e-con-full e-flex e-con e-child"
-                                data-id="039ac70" data-element_type="container">
-                                <div class="elementor-element elementor-element-a2f4dd1 e-con-full e-flex e-con e-child"
-                                    data-id="a2f4dd1" data-element_type="container">
-                                    <div class="elementor-element elementor-element-9fb56bb elementor-widget elementor-widget-image"
-                                        data-id="9fb56bb" data-element_type="widget"
-                                        data-widget_type="image.default">
-                                        <div class="elementor-widget-container">
-                                            <img decoding="async" src=""
-                                                title="the-team-of-two-young-latin-women-and-one-man"
-                                                alt="the-team-of-two-young-latin-women-and-one-man" loading="lazy">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="elementor-element elementor-element-17512eb e-con-full e-flex e-con e-child"
-                                    data-id="17512eb" data-element_type="container"
-                                    data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
-                                    <div class="elementor-element elementor-element-ba423fd elementor-widget__width-initial elementor-widget elementor-widget-counter"
-                                        data-id="ba423fd" data-element_type="widget"
-                                        data-widget_type="counter.default">
-                                        <div class="elementor-widget-container">
-                                            <div class="elementor-counter">
-                                                <div class="elementor-counter-number-wrapper">
-                                                    <span class="elementor-counter-number-prefix"></span>
-                                                    <span class="elementor-counter-number" data-duration="2000"
-                                                        data-to-value="21" data-from-value="0">21</span>
-                                                    <span class="elementor-counter-number-suffix">+</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="elementor-element elementor-element-f7a556b elementor-widget elementor-widget-heading"
-                                        data-id="f7a556b" data-element_type="widget"
-                                        data-widget_type="heading.default">
-                                        <div class="elementor-widget-container">
-                                            <h4 class="elementor-heading-title elementor-size-default">Years
-                                                Experience</h4>
+                                            <h2> Our Projects </h2>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
+                        <div class="elementor-element elementor-element-a5bb7c1 e-con-full e-flex e-con e-child"
+                            data-id="a5bb7c1" data-element_type="container"
+                            data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+                            <div class="elementor-element elementor-element-c9ae573 e-con-full e-flex e-con e-child"
+                                data-id="c9ae573" data-element_type="container">
+
+
+
+                                @foreach ($projects as $project)
+                                    <div class="elementor-element elementor-element-090e1ac e-con-full e-flex e-con e-child"
+                                        data-id="090e1ac" data-element_type="container">
+                                        <div class="elementor-element elementor-element-f164f86 e-con-full e-flex e-con e-child"
+                                            data-id="f164f86" data-element_type="container"
+                                            data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+                                            <div class="elementor-element elementor-element-43e50af elementor-widget__width-initial elementor-widget elementor-widget-image"
+                                                data-id="43e50af" data-element_type="widget"
+                                                data-widget_type="image.default">
+
+                                            </div>
+                                        </div>
+                                        <div class="elementor-element elementor-element-0a96476 e-con-full e-flex e-con e-child"
+                                            data-id="0a96476" data-element_type="container">
+                                            <div class="elementor-element elementor-element-b921b1e elementor-widget elementor-widget-heading"
+                                                data-id="b921b1e" data-element_type="widget"
+                                                data-widget_type="heading.default">
+                                                <div class="elementor-widget-container">
+                                                    <h4 class="elementor-heading-title elementor-size-default">
+                                                        {{ $project->title }}</h4>
+                                                </div>
+                                            </div>
+                                            <div class="elementor-element elementor-element-53991fc elementor-widget elementor-widget-text-editor"
+                                                data-id="53991fc" data-element_type="widget"
+                                                data-widget_type="text-editor.default">
+                                                <div class="elementor-widget-container">
+                                                    {{ $project->short_description }}</div>
+                                            </div>
+                                        </div>
+                                        <div class="elementor-element elementor-element-92c98af e-con-full e-flex e-con e-child"
+                                            data-id="92c98af" data-element_type="container">
+                                            <div class="elementor-element elementor-element-a902cad elementor-widget elementor-widget-button"
+                                                data-id="a902cad" data-element_type="widget"
+                                                data-widget_type="button.default">
+                                                <div class="elementor-widget-container">
+                                                    <div class="elementor-button-wrapper">
+                                                        <a class="elementor-button elementor-button-link elementor-size-sm"
+                                                            href=" services-details/">
+                                                            <span class="elementor-button-content-wrapper">
+                                                                <span class="elementor-button-icon">
+                                                                    <i aria-hidden="true"
+                                                                        class="jki jki-arrow-up-right-line"></i>
+                                                                </span>
+                                                                <span class="elementor-button-text">Read More</span>
+                                                            </span>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                @endforeach
+
+
+                            </div>
+                        </div>
                     </div>
                 </div>
+
                 <div class="elementor-element elementor-element-1124a4c8 e-flex e-con-boxed e-con e-parent e-lazyloaded"
                     data-id="1124a4c8" data-element_type="container"
                     data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
@@ -1540,132 +1114,99 @@
                                 <div class="elementor-element elementor-element-76992ca e-flex e-con-boxed e-con e-child"
                                     data-id="76992ca" data-element_type="container">
                                     <div class="e-con-inner">
-                                        <div class="elementor-element elementor-element-354a00c3 e-flex e-con-boxed e-con e-child"
-                                            data-id="354a00c3" data-element_type="container"
-                                            data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
-                                            <div class="e-con-inner">
-                                                <div class="elementor-element elementor-element-3a81d4c2 e-flex e-con-boxed e-con e-child"
-                                                    data-id="3a81d4c2" data-element_type="container">
-                                                    <div class="e-con-inner">
-                                                        <div class="elementor-element elementor-element-fe9ca8b e-flex e-con-boxed e-con e-child"
-                                                            data-id="fe9ca8b" data-element_type="container"
-                                                            data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
-                                                            <div class="e-con-inner">
-                                                                <div class="elementor-element elementor-element-d332821 elementor-widget elementor-widget-elementskit-team"
-                                                                    data-id="d332821" data-element_type="widget"
-                                                                    data-widget_type="elementskit-team.default">
-                                                                    <div class="elementor-widget-container">
-                                                                        <div class="ekit-wid-con">
-                                                                            <div class="small-gutters image-card-v3">
-                                                                                <div
-                                                                                    class="profile-image-card elementor-animation- ekit-team-img ekit-team-style-long_height_hover text-center">
 
-                                                                                    <img loading="lazy"
-                                                                                        decoding="async"
-                                                                                        width="600"
-                                                                                        height="600"
-                                                                                        src=""
-                                                                                        class="attachment-full size-full wp-image-3633"
-                                                                                        alt=""
-                                                                                        sizes="(max-width: 600px) 100vw, 600px">
-                                                                                    <div class="hover-area">
-                                                                                        <div class="profile-body">
-                                                                                            <h2 class="profile-title">
-                                                                                            </h2>
-                                                                                            <p
-                                                                                                class="profile-designation">
-                                                                                            </p>
-                                                                                        </div>
-                                                                                        <div class="profile-footer">
-                                                                                            <ul
-                                                                                                class="ekit-team-social-list">
-                                                                                                <li
-                                                                                                    class="elementor-repeater-item-257fbe0">
-                                                                                                    <a href="https://facebook.com/"
-                                                                                                        aria-label="Facebook">
-                                                                                                        <i aria-hidden="true"
-                                                                                                            class="icon icon-facebook"></i>
-                                                                                                    </a>
-                                                                                                </li>
-                                                                                                <li
-                                                                                                    class="elementor-repeater-item-265edbe">
-                                                                                                    <a href="https://facebook.com/"
-                                                                                                        aria-label="Twitter">
-                                                                                                        <i aria-hidden="true"
-                                                                                                            class="icon icon-twitter"></i>
-                                                                                                    </a>
-                                                                                                </li>
-                                                                                                <li
-                                                                                                    class="elementor-repeater-item-e63155c">
-                                                                                                    <a href="https://facebook.com/"
-                                                                                                        aria-label="Pinterest">
-                                                                                                        <i aria-hidden="true"
-                                                                                                            class="icon icon-pinterest"></i>
-                                                                                                    </a>
-                                                                                                </li>
-                                                                                            </ul>
+
+
+
+
+                                        @foreach ($teams as $team)
+                                            <div class="elementor-element elementor-element-354a00c3 e-flex e-con-boxed e-con e-child"
+                                                data-id="354a00c3" data-element_type="container"
+                                                data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+                                                <div class="e-con-inner">
+                                                    <div class="elementor-element elementor-element-3a81d4c2 e-flex e-con-boxed e-con e-child"
+                                                        data-id="3a81d4c2" data-element_type="container">
+                                                        <div class="e-con-inner">
+                                                            <div class="elementor-element elementor-element-fe9ca8b e-flex e-con-boxed e-con e-child"
+                                                                data-id="fe9ca8b" data-element_type="container"
+                                                                data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+                                                                <div class="e-con-inner">
+                                                                    <div class="elementor-element elementor-element-d332821 elementor-widget elementor-widget-elementskit-team"
+                                                                        data-id="d332821" data-element_type="widget"
+                                                                        data-widget_type="elementskit-team.default">
+                                                                        <div class="elementor-widget-container">
+                                                                            <div class="ekit-wid-con">
+                                                                                <div
+                                                                                    class="small-gutters image-card-v3">
+                                                                                    <div
+                                                                                        class="profile-image-card elementor-animation- ekit-team-img ekit-team-style-long_height_hover text-center">
+
+                                                                                        <img loading="lazy"
+                                                                                            decoding="async"
+                                                                                            width="600"
+                                                                                            height="600"
+                                                                                            src="{{ asset('storage/' . $team->image) }}"
+                                                                                            class="attachment-full size-full wp-image-3633"
+                                                                                            alt=""
+                                                                                            sizes="(max-width: 600px) 100vw, 600px">
+                                                                                        <div class="hover-area">
+                                                                                            <div class="profile-body">
+                                                                                                <h2
+                                                                                                    class="profile-title">
+                                                                                                </h2>
+                                                                                                <p
+                                                                                                    class="profile-designation">
+                                                                                                </p>
+                                                                                            </div>
                                                                                         </div>
                                                                                     </div>
                                                                                 </div>
-                                                                            </div>
 
+                                                                            </div>
                                                                         </div>
                                                                     </div>
-                                                                </div>
-                                                                <div class="elementor-element elementor-element-2fe9502b e-con-full e-flex e-con e-child"
-                                                                    data-id="2fe9502b"
-                                                                    data-element_type="container">
-                                                                    <div class="elementor-element elementor-element-253efbf9 elementor-align-center elementor-icon-list--layout-traditional elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list"
-                                                                        data-id="253efbf9"
-                                                                        data-element_type="widget"
-                                                                        data-widget_type="icon-list.default">
-                                                                        <div class="elementor-widget-container">
-                                                                            <ul class="elementor-icon-list-items">
-                                                                                <li class="elementor-icon-list-item">
-                                                                                    <a href=" ">
-
-                                                                                        <span
-                                                                                            class="elementor-icon-list-icon">
-                                                                                            <i aria-hidden="true"
-                                                                                                class="icon icon-phone1"></i>
-                                                                                        </span>
-                                                                                        <span
-                                                                                            class="elementor-icon-list-text">
-                                                                                            @if (isset($topElements))
-                                                                                                {{ $topElements[5]->value }}
-                                                                                            @endif
-                                                                                        </span>
-                                                                                    </a>
-                                                                                </li>
-                                                                            </ul>
+                                                                    <div class="elementor-element elementor-element-2fe9502b e-con-full e-flex e-con e-child"
+                                                                        data-id="2fe9502b"
+                                                                        data-element_type="container">
+                                                                        <div class="elementor-element elementor-element-253efbf9 elementor-align-center elementor-icon-list--layout-traditional elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list"
+                                                                            data-id="253efbf9"
+                                                                            data-element_type="widget"
+                                                                            data-widget_type="icon-list.default">
+                                                                            <div class="elementor-widget-container">
+                                                                                <ul class="elementor-icon-list-items">
+                                                                                    <li
+                                                                                        class="elementor-icon-list-item">
+                                                                                    </li>
+                                                                                </ul>
+                                                                            </div>
                                                                         </div>
                                                                     </div>
                                                                 </div>
                                                             </div>
                                                         </div>
                                                     </div>
-                                                </div>
-                                                <div class="elementor-element elementor-element-7c493e96 e-flex e-con-boxed e-con e-child"
-                                                    data-id="7c493e96" data-element_type="container">
-                                                    <div class="e-con-inner">
-                                                        <div class="elementor-element elementor-element-782c824c elementor-widget elementor-widget-text-editor"
-                                                            data-id="782c824c" data-element_type="widget"
-                                                            data-widget_type="text-editor.default">
-                                                            <div class="elementor-widget-container">
-                                                                Founder &amp; CEO </div>
-                                                        </div>
-                                                        <div class="elementor-element elementor-element-1b8c5629 elementor-widget elementor-widget-elementskit-heading"
-                                                            data-id="1b8c5629" data-element_type="widget"
-                                                            data-widget_type="elementskit-heading.default">
-                                                            <div class="elementor-widget-container">
-                                                                <div class="ekit-wid-con">
-                                                                    <div
-                                                                        class="ekit-heading elementskit-section-title-wraper text_center   ekit_heading_tablet-   ekit_heading_mobile-">
-                                                                        <a href="">
-                                                                            <h4
-                                                                                class="ekit-heading--title elementskit-section-title ">
-                                                                                Sophia Reynolds</h4>
-                                                                        </a>
+                                                    <div class="elementor-element elementor-element-7c493e96 e-flex e-con-boxed e-con e-child"
+                                                        data-id="7c493e96" data-element_type="container">
+                                                        <div class="e-con-inner">
+                                                            <div class="elementor-element elementor-element-782c824c elementor-widget elementor-widget-text-editor"
+                                                                data-id="782c824c" data-element_type="widget"
+                                                                data-widget_type="text-editor.default">
+                                                                <div class="elementor-widget-container">
+                                                                    {{ $team->name }}</div>
+                                                            </div>
+                                                            <div class="elementor-element elementor-element-1b8c5629 elementor-widget elementor-widget-elementskit-heading"
+                                                                data-id="1b8c5629" data-element_type="widget"
+                                                                data-widget_type="elementskit-heading.default">
+                                                                <div class="elementor-widget-container">
+                                                                    <div class="ekit-wid-con">
+                                                                        <div
+                                                                            class="ekit-heading elementskit-section-title-wraper text_center   ekit_heading_tablet-   ekit_heading_mobile-">
+                                                                            <a href="">
+                                                                                <h4
+                                                                                    class="ekit-heading--title elementskit-section-title ">
+                                                                                    {{ $team->designation }}</h4>
+                                                                            </a>
+                                                                        </div>
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -1673,403 +1214,10 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                        </div>
-                                        <div class="elementor-element elementor-element-2dd0b39 e-flex e-con-boxed e-con e-child"
-                                            data-id="2dd0b39" data-element_type="container"
-                                            data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
-                                            <div class="e-con-inner">
-                                                <div class="elementor-element elementor-element-93c5d82 e-flex e-con-boxed e-con e-child"
-                                                    data-id="93c5d82" data-element_type="container">
-                                                    <div class="e-con-inner">
-                                                        <div class="elementor-element elementor-element-7b8f938 e-flex e-con-boxed e-con e-child"
-                                                            data-id="7b8f938" data-element_type="container"
-                                                            data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
-                                                            <div class="e-con-inner">
-                                                                <div class="elementor-element elementor-element-e9bf980 elementor-widget elementor-widget-elementskit-team"
-                                                                    data-id="e9bf980" data-element_type="widget"
-                                                                    data-widget_type="elementskit-team.default">
-                                                                    <div class="elementor-widget-container">
-                                                                        <div class="ekit-wid-con">
-                                                                            <div class="small-gutters image-card-v3">
-                                                                                <div
-                                                                                    class="profile-image-card elementor-animation- ekit-team-img ekit-team-style-long_height_hover text-center">
+                                        @endforeach
 
-                                                                                    <img loading="lazy"
-                                                                                        decoding="async"
-                                                                                        width="600"
-                                                                                        height="600"
-                                                                                        src=""
-                                                                                        class="attachment-full size-full wp-image-3631"
-                                                                                        alt=""
-                                                                                        sizes="(max-width: 600px) 100vw, 600px">
-                                                                                    <div class="hover-area">
-                                                                                        <div class="profile-body">
-                                                                                            <h2 class="profile-title">
-                                                                                            </h2>
-                                                                                            <p
-                                                                                                class="profile-designation">
-                                                                                            </p>
-                                                                                        </div>
-                                                                                        <div class="profile-footer">
-                                                                                            <ul
-                                                                                                class="ekit-team-social-list">
-                                                                                                <li
-                                                                                                    class="elementor-repeater-item-257fbe0">
-                                                                                                    <a href="https://facebook.com/"
-                                                                                                        aria-label="Facebook">
-                                                                                                        <i aria-hidden="true"
-                                                                                                            class="icon icon-facebook"></i>
-                                                                                                    </a>
-                                                                                                </li>
-                                                                                                <li
-                                                                                                    class="elementor-repeater-item-265edbe">
-                                                                                                    <a href="https://facebook.com/"
-                                                                                                        aria-label="Twitter">
-                                                                                                        <i aria-hidden="true"
-                                                                                                            class="icon icon-twitter"></i>
-                                                                                                    </a>
-                                                                                                </li>
-                                                                                                <li
-                                                                                                    class="elementor-repeater-item-e63155c">
-                                                                                                    <a href="https://facebook.com/"
-                                                                                                        aria-label="Pinterest">
-                                                                                                        <i aria-hidden="true"
-                                                                                                            class="icon icon-pinterest"></i>
-                                                                                                    </a>
-                                                                                                </li>
-                                                                                            </ul>
-                                                                                        </div>
-                                                                                    </div>
-                                                                                </div>
-                                                                            </div>
 
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="elementor-element elementor-element-53a75b8 e-con-full e-flex e-con e-child"
-                                                                    data-id="53a75b8" data-element_type="container">
-                                                                    <div class="elementor-element elementor-element-1aa2ed4 elementor-align-center elementor-icon-list--layout-traditional elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list"
-                                                                        data-id="1aa2ed4" data-element_type="widget"
-                                                                        data-widget_type="icon-list.default">
-                                                                        <div class="elementor-widget-container">
-                                                                            <ul class="elementor-icon-list-items">
-                                                                                <li class="elementor-icon-list-item">
-                                                                                    <a href=" ">
 
-                                                                                        <span
-                                                                                            class="elementor-icon-list-icon">
-                                                                                            <i aria-hidden="true"
-                                                                                                class="icon icon-phone1"></i>
-                                                                                        </span>
-                                                                                        <span
-                                                                                            class="elementor-icon-list-text">
-                                                                                            @if (isset($topElements))
-                                                                                                {{ $topElements[5]->value }}
-                                                                                            @endif
-                                                                                        </span>
-                                                                                    </a>
-                                                                                </li>
-                                                                            </ul>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="elementor-element elementor-element-0132349 e-flex e-con-boxed e-con e-child"
-                                                    data-id="0132349" data-element_type="container">
-                                                    <div class="e-con-inner">
-                                                        <div class="elementor-element elementor-element-fe0c41c elementor-widget elementor-widget-text-editor"
-                                                            data-id="fe0c41c" data-element_type="widget"
-                                                            data-widget_type="text-editor.default">
-                                                            <div class="elementor-widget-container">
-                                                                Design Head </div>
-                                                        </div>
-                                                        <div class="elementor-element elementor-element-1f648ca elementor-widget elementor-widget-elementskit-heading"
-                                                            data-id="1f648ca" data-element_type="widget"
-                                                            data-widget_type="elementskit-heading.default">
-                                                            <div class="elementor-widget-container">
-                                                                <div class="ekit-wid-con">
-                                                                    <div
-                                                                        class="ekit-heading elementskit-section-title-wraper text_center   ekit_heading_tablet-   ekit_heading_mobile-">
-                                                                        <a href="">
-                                                                            <h4
-                                                                                class="ekit-heading--title elementskit-section-title ">
-                                                                                Emily Thompson</h4>
-                                                                        </a>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="elementor-element elementor-element-148e244 e-flex e-con-boxed e-con e-child"
-                                            data-id="148e244" data-element_type="container"
-                                            data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
-                                            <div class="e-con-inner">
-                                                <div class="elementor-element elementor-element-481d54d e-flex e-con-boxed e-con e-child"
-                                                    data-id="481d54d" data-element_type="container">
-                                                    <div class="e-con-inner">
-                                                        <div class="elementor-element elementor-element-d0fa231 e-flex e-con-boxed e-con e-child"
-                                                            data-id="d0fa231" data-element_type="container"
-                                                            data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
-                                                            <div class="e-con-inner">
-                                                                <div class="elementor-element elementor-element-757d3bd elementor-widget elementor-widget-elementskit-team"
-                                                                    data-id="757d3bd" data-element_type="widget"
-                                                                    data-widget_type="elementskit-team.default">
-                                                                    <div class="elementor-widget-container">
-                                                                        <div class="ekit-wid-con">
-                                                                            <div class="small-gutters image-card-v3">
-                                                                                <div
-                                                                                    class="profile-image-card elementor-animation- ekit-team-img ekit-team-style-long_height_hover text-center">
-
-                                                                                    <img loading="lazy"
-                                                                                        decoding="async"
-                                                                                        width="600"
-                                                                                        height="600"
-                                                                                        src=""
-                                                                                        class="attachment-full size-full wp-image-3630"
-                                                                                        alt=""
-                                                                                        sizes="(max-width: 600px) 100vw, 600px">
-                                                                                    <div class="hover-area">
-                                                                                        <div class="profile-body">
-                                                                                            <h2 class="profile-title">
-                                                                                            </h2>
-                                                                                            <p
-                                                                                                class="profile-designation">
-                                                                                            </p>
-                                                                                        </div>
-                                                                                        <div class="profile-footer">
-                                                                                            <ul
-                                                                                                class="ekit-team-social-list">
-                                                                                                <li
-                                                                                                    class="elementor-repeater-item-257fbe0">
-                                                                                                    <a href="https://facebook.com/"
-                                                                                                        aria-label="Facebook">
-                                                                                                        <i aria-hidden="true"
-                                                                                                            class="icon icon-facebook"></i>
-                                                                                                    </a>
-                                                                                                </li>
-                                                                                                <li
-                                                                                                    class="elementor-repeater-item-265edbe">
-                                                                                                    <a href="https://facebook.com/"
-                                                                                                        aria-label="Twitter">
-                                                                                                        <i aria-hidden="true"
-                                                                                                            class="icon icon-twitter"></i>
-                                                                                                    </a>
-                                                                                                </li>
-                                                                                                <li
-                                                                                                    class="elementor-repeater-item-e63155c">
-                                                                                                    <a href="https://facebook.com/"
-                                                                                                        aria-label="Pinterest">
-                                                                                                        <i aria-hidden="true"
-                                                                                                            class="icon icon-pinterest"></i>
-                                                                                                    </a>
-                                                                                                </li>
-                                                                                            </ul>
-                                                                                        </div>
-                                                                                    </div>
-                                                                                </div>
-                                                                            </div>
-
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="elementor-element elementor-element-74a997a e-con-full e-flex e-con e-child"
-                                                                    data-id="74a997a" data-element_type="container">
-                                                                    <div class="elementor-element elementor-element-0af3e01 elementor-align-center elementor-icon-list--layout-traditional elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list"
-                                                                        data-id="0af3e01" data-element_type="widget"
-                                                                        data-widget_type="icon-list.default">
-                                                                        <div class="elementor-widget-container">
-                                                                            <ul class="elementor-icon-list-items">
-                                                                                <li class="elementor-icon-list-item">
-                                                                                    <a href=" ">
-
-                                                                                        <span
-                                                                                            class="elementor-icon-list-icon">
-                                                                                            <i aria-hidden="true"
-                                                                                                class="icon icon-phone1"></i>
-                                                                                        </span>
-                                                                                        <span
-                                                                                            class="elementor-icon-list-text">
-                                                                                            @if (isset($topElements))
-                                                                                                {{ $topElements[5]->value }}
-                                                                                            @endif
-                                                                                        </span>
-                                                                                    </a>
-                                                                                </li>
-                                                                            </ul>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="elementor-element elementor-element-d004835 e-flex e-con-boxed e-con e-child"
-                                                    data-id="d004835" data-element_type="container">
-                                                    <div class="e-con-inner">
-                                                        <div class="elementor-element elementor-element-ec95586 elementor-widget elementor-widget-text-editor"
-                                                            data-id="ec95586" data-element_type="widget"
-                                                            data-widget_type="text-editor.default">
-                                                            <div class="elementor-widget-container">
-                                                                Creative Director </div>
-                                                        </div>
-                                                        <div class="elementor-element elementor-element-64f2b5e elementor-widget elementor-widget-elementskit-heading"
-                                                            data-id="64f2b5e" data-element_type="widget"
-                                                            data-widget_type="elementskit-heading.default">
-                                                            <div class="elementor-widget-container">
-                                                                <div class="ekit-wid-con">
-                                                                    <div
-                                                                        class="ekit-heading elementskit-section-title-wraper text_center   ekit_heading_tablet-   ekit_heading_mobile-">
-                                                                        <a href="">
-                                                                            <h4
-                                                                                class="ekit-heading--title elementskit-section-title ">
-                                                                                William Evans</h4>
-                                                                        </a>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="elementor-element elementor-element-edff9c2 e-flex e-con-boxed e-con e-child"
-                                            data-id="edff9c2" data-element_type="container"
-                                            data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
-                                            <div class="e-con-inner">
-                                                <div class="elementor-element elementor-element-c9161e6 e-flex e-con-boxed e-con e-child"
-                                                    data-id="c9161e6" data-element_type="container">
-                                                    <div class="e-con-inner">
-                                                        <div class="elementor-element elementor-element-cb66d9c e-flex e-con-boxed e-con e-child"
-                                                            data-id="cb66d9c" data-element_type="container"
-                                                            data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
-                                                            <div class="e-con-inner">
-                                                                <div class="elementor-element elementor-element-8dce311 elementor-widget elementor-widget-elementskit-team"
-                                                                    data-id="8dce311" data-element_type="widget"
-                                                                    data-widget_type="elementskit-team.default">
-                                                                    <div class="elementor-widget-container">
-                                                                        <div class="ekit-wid-con">
-                                                                            <div class="small-gutters image-card-v3">
-                                                                                <div
-                                                                                    class="profile-image-card elementor-animation- ekit-team-img ekit-team-style-long_height_hover text-center">
-
-                                                                                    <img loading="lazy"
-                                                                                        decoding="async"
-                                                                                        width="600"
-                                                                                        height="600"
-                                                                                        src=""
-                                                                                        class="attachment-full size-full wp-image-3632"
-                                                                                        alt=""
-                                                                                        sizes="(max-width: 600px) 100vw, 600px">
-                                                                                    <div class="hover-area">
-                                                                                        <div class="profile-body">
-                                                                                            <h2 class="profile-title">
-                                                                                            </h2>
-                                                                                            <p
-                                                                                                class="profile-designation">
-                                                                                            </p>
-                                                                                        </div>
-                                                                                        <div class="profile-footer">
-                                                                                            <ul
-                                                                                                class="ekit-team-social-list">
-                                                                                                <li
-                                                                                                    class="elementor-repeater-item-257fbe0">
-                                                                                                    <a href="https://facebook.com/"
-                                                                                                        aria-label="Facebook">
-                                                                                                        <i aria-hidden="true"
-                                                                                                            class="icon icon-facebook"></i>
-                                                                                                    </a>
-                                                                                                </li>
-                                                                                                <li
-                                                                                                    class="elementor-repeater-item-265edbe">
-                                                                                                    <a href="https://facebook.com/"
-                                                                                                        aria-label="Twitter">
-                                                                                                        <i aria-hidden="true"
-                                                                                                            class="icon icon-twitter"></i>
-                                                                                                    </a>
-                                                                                                </li>
-                                                                                                <li
-                                                                                                    class="elementor-repeater-item-e63155c">
-                                                                                                    <a href="https://facebook.com/"
-                                                                                                        aria-label="Pinterest">
-                                                                                                        <i aria-hidden="true"
-                                                                                                            class="icon icon-pinterest"></i>
-                                                                                                    </a>
-                                                                                                </li>
-                                                                                            </ul>
-                                                                                        </div>
-                                                                                    </div>
-                                                                                </div>
-                                                                            </div>
-
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="elementor-element elementor-element-e72d3b4 e-con-full e-flex e-con e-child"
-                                                                    data-id="e72d3b4" data-element_type="container">
-                                                                    <div class="elementor-element elementor-element-7fb9da2 elementor-align-center elementor-icon-list--layout-traditional elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list"
-                                                                        data-id="7fb9da2" data-element_type="widget"
-                                                                        data-widget_type="icon-list.default">
-                                                                        <div class="elementor-widget-container">
-                                                                            <ul class="elementor-icon-list-items">
-                                                                                <li class="elementor-icon-list-item">
-                                                                                    <a href=" ">
-
-                                                                                        <span
-                                                                                            class="elementor-icon-list-icon">
-                                                                                            <i aria-hidden="true"
-                                                                                                class="fas fa-phone-alt"></i>
-                                                                                        </span>
-                                                                                        <span
-                                                                                            class="elementor-icon-list-text">
-                                                                                            @if (isset($topElements))
-                                                                                                {{ $topElements[5]->value }}
-                                                                                            @endif
-                                                                                        </span>
-                                                                                    </a>
-                                                                                </li>
-                                                                            </ul>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="elementor-element elementor-element-cf03cca e-flex e-con-boxed e-con e-child"
-                                                    data-id="cf03cca" data-element_type="container">
-                                                    <div class="e-con-inner">
-                                                        <div class="elementor-element elementor-element-36b8890 elementor-widget elementor-widget-text-editor"
-                                                            data-id="36b8890" data-element_type="widget"
-                                                            data-widget_type="text-editor.default">
-                                                            <div class="elementor-widget-container">
-                                                                Customer Service </div>
-                                                        </div>
-                                                        <div class="elementor-element elementor-element-0851ded elementor-widget elementor-widget-elementskit-heading"
-                                                            data-id="0851ded" data-element_type="widget"
-                                                            data-widget_type="elementskit-heading.default">
-                                                            <div class="elementor-widget-container">
-                                                                <div class="ekit-wid-con">
-                                                                    <div
-                                                                        class="ekit-heading elementskit-section-title-wraper text_center   ekit_heading_tablet-   ekit_heading_mobile-">
-                                                                        <a href="">
-                                                                            <h4
-                                                                                class="ekit-heading--title elementskit-section-title ">
-                                                                                Jasmine Collins</h4>
-                                                                        </a>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -2101,13 +1249,12 @@
                                         <img width="350" height="69"
                                             src="@if (isset($topElements)) {{ asset('storage/' . trim($topElements[4]->value)) }} @endif"
                                             class="attachment-full size-full wp-image-3553" alt=""
-                                            decoding="async" srcset=""
-                                            sizes="(max-width: 350px) 100vw, 350px"> </a>
+                                            decoding="async" srcset="" sizes="(max-width: 350px) 100vw, 350px">
+                                    </a>
                                 </div>
                             </div>
                             <div class="elementor-element elementor-element-632280a1 elementor-widget elementor-widget-text-editor"
-                                data-id="632280a1" data-element_type="widget"
-                                data-widget_type="text-editor.default">
+                                data-id="632280a1" data-element_type="widget" data-widget_type="text-editor.default">
                             </div>
                         </div>
                         <div class="elementor-element elementor-element-075afb6 e-con-full e-flex e-con e-child"

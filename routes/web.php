@@ -13,6 +13,8 @@ use App\Http\Controllers\ProjectController;
 use App\Http\Controllers\FutureController;
 use App\Http\Controllers\TeamController;
 use App\Http\Controllers\FrontendController;
+use App\Http\Controllers\ServiceController;
+
 
 
 
@@ -54,6 +56,7 @@ Route::middleware('auth')->group(function () {
     Route::post('future/update/{id}', [FutureController::class, 'update'])->name('future.update');
     Route::delete('future/delete/{id}', [FutureController::class, 'destroy'])->name('future.destroy');
     Route::resource('team', TeamController::class)->except(['create', 'show', 'edit']);
+    Route::resource('services', ServiceController::class);
 
 });
 
