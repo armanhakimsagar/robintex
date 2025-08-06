@@ -1,11 +1,11 @@
 @extends('dashboard.layouts')
 
 @section('content')
-    <div class="container mt-4">
+    <div class="container mt-5" style="max-width: 800px;">
         {{-- Section: Page Header --}}
         <section class="mb-4">
             <div class="card shadow">
-                <div class="card-header bg-primary text-white">
+                <div class="card-header bg-info text-white">
                     <h4 class="mb-0">Why Choose Us</h4>
                 </div>
                 <div class="card-body">

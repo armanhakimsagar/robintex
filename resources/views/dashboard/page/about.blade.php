@@ -1,12 +1,12 @@
 @extends('dashboard.layouts')
 
 @section('content')
-    <div class="container">
+    <div class="container mt-5" style="max-width: 800px;">
 
         @if (session('success'))
             <div class="alert alert-success">{{ session('success') }}</div>
         @endif
-        <div class="card-header bg-success text-white fw-semibold">
+        <div class="card-header bg-info text-white fw-semibold">
             <i class="fas fa-plus-circle me-2"></i> About Us
         </div>
 
@@ -34,17 +34,19 @@
                 <div class="form-group mb-3">
                     <label>{{ ucfirst(str_replace('_', ' ', $banner)) }}</label>
                     <input type="file" class="form-control" name="{{ $banner }}">
-                    @if (!empty($about->$banner))
+
+                    @if (!empty($about) && !empty($about->$banner))
                         <img src="{{ asset('storage/' . $about->$banner) }}" alt="" style="max-height:150px;"
                             class="mt-2">
                     @endif
+
                     @error($banner)
                         <div class="text-danger">{{ $message }}</div>
                     @enderror
                 </div>
             @endforeach
 
-            <button type="submit" class="btn btn-primary">Save</button>
+            <button type="submit" class="btn btn-primary">Update</button>
         </form>
     </div>
 @endsection

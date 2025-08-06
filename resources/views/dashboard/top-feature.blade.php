@@ -3,17 +3,17 @@
 @section('content')
     <script src="https://cdn.ckeditor.com/4.25.1/standard/ckeditor.js"></script>
 
-    <div class="container mt-5">
+    <div class="container mt-5" style="max-width: 800px;">
         <!-- Page Header -->
 
 
         <!-- Add New Feature Form -->
         <div class="card shadow-sm mb-5">
-            <div class="card-header bg-success text-white fw-semibold">
+            <div class="card-header bg-info text-white fw-semibold">
                 <i class="fas fa-plus-circle me-2"></i> Add New Top Feature
             </div>
             <div class="card-body">
-                <form action="{{ route('top-element.store') }}" method="POST" enctype="multipart/form-data">
+                <form action="{{ route('top-feature.store') }}" method="POST" enctype="multipart/form-data">
                     @csrf
                     <div class="mb-3">
                         <label class="form-label">Title</label>
@@ -58,7 +58,7 @@
             </div>
             <div class="card-body">
                 @foreach ($features as $feature)
-                    <form action="{{ route('top-element.update', $feature->id) }}" method="POST"
+                    <form action="{{ route('top-feature.update', $feature->id) }}" method="POST"
                         enctype="multipart/form-data" class="border-bottom pb-3 mb-3">
                         @csrf
                         @method('PUT')

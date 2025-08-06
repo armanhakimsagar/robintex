@@ -1,10 +1,10 @@
 @extends('dashboard.layouts')
 
 @section('content')
-    <div class="container mt-4">
+    <div class="container mt-5" style="max-width: 800px;">
         {{-- Page Header --}}
-        <div class="card-header bg-primary text-white fw-semibold mb-4 rounded">
-            <h2 class="mb-0">Goals Management</h2>
+        <div class="card-header bg-info text-white fw-semibold">
+            Goals Management
         </div>
 
         {{-- Success Message --}}
@@ -34,7 +34,10 @@
         </form>
 
         {{-- All Goals List --}}
-        <h4 class="mb-3">All Goals</h4>
+        <div class="card-header bg-info text-white fw-semibold">
+            All Goals
+        </div>
+
         @foreach ($goals as $goal)
             <form action="{{ route('goal.update', $goal) }}" method="POST" enctype="multipart/form-data"
                 class="shadow p-4 mb-4 bg-light rounded">

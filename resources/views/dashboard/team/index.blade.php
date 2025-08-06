@@ -1,7 +1,7 @@
 @extends('dashboard.layouts')
 
 @section('content')
-    <div class="container mt-4">
+    <div class="container mt-5" style="max-width: 800px;">
         <div class="card-header bg-info text-white fw-semibold">
             <i class="fas fa-bullseye me-2"></i> Team Members
         </div>

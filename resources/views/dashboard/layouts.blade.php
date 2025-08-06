@@ -109,7 +109,7 @@
                     <ul class="nav sidebar-menu flex-column" data-lte-toggle="treeview" role="navigation"
                         aria-label="Main navigation" data-accordion="false" id="navigation">
                         <li class="nav-item menu-open">
-                            <a href="#" class="nav-link active">
+                            <a href="#" class="nav-link">
                                 <i class="nav-icon bi bi-speedometer"></i>
                                 <p>
                                     Header
@@ -118,7 +118,7 @@
                             </a>
                             <ul class="nav nav-treeview">
                                 <li class="nav-item">
-                                    <a href="{{ route('top-element.index') }}" class="nav-link active">
+                                    <a href="{{ route('top-element.index') }}" class="nav-link">
                                         <i class="nav-icon bi bi-circle"></i>
                                         <p>Top element</p>
                                     </a>
@@ -137,7 +137,7 @@
                     <ul class="nav sidebar-menu flex-column" data-lte-toggle="treeview" role="navigation"
                         aria-label="Main navigation" data-accordion="false" id="navigation">
                         <li class="nav-item menu-open">
-                            <a href="#" class="nav-link active">
+                            <a href="#" class="nav-link">
                                 <i class="nav-icon bi bi-speedometer"></i>
                                 <p>
                                     Page
@@ -146,15 +146,9 @@
                             </a>
                             <ul class="nav nav-treeview">
                                 <li class="nav-item">
-                                    <a href="{{ route('about.index') }}" class="nav-link active">
+                                    <a href="{{ route('about.index') }}" class="nav-link">
                                         <i class="nav-icon bi bi-circle"></i>
                                         <p>About Us Page</p>
-                                    </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="{{ route('top-banner.index') }}" class="nav-link">
-                                        <i class="nav-icon bi bi-circle"></i>
-                                        <p>Service Page</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
@@ -178,7 +172,7 @@
                     <ul class="nav sidebar-menu flex-column" data-lte-toggle="treeview" role="navigation"
                         aria-label="Main navigation" data-accordion="false" id="navigation">
                         <li class="nav-item menu-open">
-                            <a href="#" class="nav-link active">
+                            <a href="#" class="nav-link">
                                 <i class="nav-icon bi bi-speedometer"></i>
                                 <p>
                                     About us
@@ -187,7 +181,7 @@
                             </a>
                             <ul class="nav nav-treeview">
                                 <li class="nav-item">
-                                    <a href="{{ route('top-element.index') }}" class="nav-link active">
+                                    <a href="{{ route('top-feature.index') }}" class="nav-link">
                                         <i class="nav-icon bi bi-circle"></i>
                                         <p>Top Feature</p>
                                     </a>
@@ -220,13 +214,6 @@
                                     <a href="{{ route('projects.index') }}" class="nav-link">
                                         <i class="nav-icon bi bi-circle"></i>
                                         <p>Our Project</p>
-                                    </a>
-                                </li>
-
-                                <li class="nav-item">
-                                    <a href="{{ route('future.index') }}" class="nav-link">
-                                        <i class="nav-icon bi bi-circle"></i>
-                                        <p>Future</p>
                                     </a>
                                 </li>
 

@@ -1,7 +1,7 @@
 @extends('dashboard.layouts')
 
 @section('content')
-    <div class="container">
+    <div class="container mt-5" style="max-width: 800px;">
 
         {{-- Flash Message --}}
         @if (session('success'))

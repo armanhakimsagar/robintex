@@ -13,7 +13,7 @@
         </div>
     @endif
 
-    <div class="container mt-4">
+    <div class="container mt-5" style="max-width: 800px;">
         {{-- Header --}}
         <div class="card-header bg-info text-white fw-semibold">
             <i class="fas fa-bullseye me-2"></i> Our Projects

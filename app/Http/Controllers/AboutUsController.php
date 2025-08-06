@@ -23,7 +23,6 @@ class AboutUsController extends Controller
         $about = AboutUsPage::first();
         return view('dashboard.page.about', compact('about'));
     }
-
     public function store(Request $request)
     {
         $request->validate([
@@ -32,19 +31,29 @@ class AboutUsController extends Controller
             'banner_two' => 'nullable|image|max:2048',
             'banner_three' => 'nullable|image|max:2048',
         ]);
-
+    
         $data = $request->only('description');
-
+    
         foreach (['banner_one', 'banner_two', 'banner_three'] as $banner) {
             if ($request->hasFile($banner)) {
-                $data[$banner] = $request->file($banner)->store('uploads');
+                $data[$banner] = $request->file($banner)->store('upload', 'public');
             }
         }
-
-        AboutUsPage::updateOrCreate(['id' => 1], $data);
-
+    
+        // Check if AboutUsPage already has a record
+        $aboutUs = AboutUsPage::first();
+    
+        if ($aboutUs) {
+            // update existing record
+            $aboutUs->update($data);
+        } else {
+            // create new record
+            AboutUsPage::create($data);
+        }
+    
         return back()->with('success', 'About Us updated successfully.');
     }
+    
 
     public function show()
     {

@@ -1,7 +1,7 @@
 @extends('dashboard.layouts')
 
 @section('content')
-    <div class="container mt-4">
+    <div class="container mt-5" style="max-width: 800px;">
 
         @if (session('success'))
             <div class="alert alert-success alert-dismissible fade show" role="alert">

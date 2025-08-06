@@ -1,7 +1,7 @@
 @extends('dashboard.layouts')
 
 @section('content')
-    <div class="container mt-4">
+    <div class="container mt-5" style="max-width: 800px;">
 
         @if (session('success'))
             <div class="alert alert-success alert-dismissible fade show" role="alert">
@@ -11,7 +11,7 @@
         @endif
 
         <div class="card shadow-sm border-0 mb-4">
-            <div class="card-header bg-primary text-white fw-semibold">
+            <div class="card-header bg-info text-white fw-semibold">
                 <i class="fas fa-briefcase me-2"></i> Manage Portfolio
             </div>
             <div class="card-body">
