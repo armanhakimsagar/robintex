@@ -164,4 +164,68 @@ class ServiceController extends Controller
             'contact'
         ));
     }
+
+    public function product(){
+        $futures = Future::all();
+        $goals = Goal::all();
+        $missions = Mission::all();
+        $projects = Project::all();
+        $services = Service::all();
+        $teams = Team::all();
+        $topBanner = TopBanner::all();
+        $topElements = TopElement::all();
+        $topFeatures = TopFeature::all();
+        $whyChooseUs = WhyChooseUs::latest()->first(); // Assuming only one
+        $whyChooseUsReasons = WhyChooseUsReason::all();        
+        $aboutUsPage = AboutUsPage::all();
+        $contact = Contact::all();
+        
+        return view('dashboard.frontend.product', compact(
+            'futures',
+            'goals',
+            'missions',
+            'projects',
+            'teams',
+            'topBanner',
+            'topElements',
+            'topFeatures',
+            'whyChooseUs',
+            'whyChooseUsReasons',
+            'services',
+            'aboutUsPage',
+            'contact'
+        ));
+    }
+
+    public function team(){
+        $futures = Future::all();
+        $goals = Goal::all();
+        $missions = Mission::all();
+        $projects = Project::all();
+        $services = Service::all();
+        $teams = Team::all();
+        $topBanner = TopBanner::all();
+        $topElements = TopElement::all();
+        $topFeatures = TopFeature::all();
+        $whyChooseUs = WhyChooseUs::latest()->first(); // Assuming only one
+        $whyChooseUsReasons = WhyChooseUsReason::all();        
+        $aboutUsPage = AboutUsPage::all();
+        $contact = Contact::all();
+        
+        return view('dashboard.frontend.team', compact(
+            'futures',
+            'goals',
+            'missions',
+            'projects',
+            'teams',
+            'topBanner',
+            'topElements',
+            'topFeatures',
+            'whyChooseUs',
+            'whyChooseUsReasons',
+            'services',
+            'aboutUsPage',
+            'contact'
+        ));
+    }
 }

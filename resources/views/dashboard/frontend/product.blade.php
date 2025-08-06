@@ -133,6 +133,7 @@
                 </div>
 
 
+
                 <div class="elementor-element elementor-element-097d571 e-flex e-con-boxed e-con e-parent e-lazyloaded"
                     data-id="097d571" data-element_type="container"
                     data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
@@ -158,7 +159,7 @@
                                         data-id="a3ab26e" data-element_type="widget"
                                         data-widget_type="text-editor.default">
                                         <div class="elementor-widget-container">
-                                            <h2> Our Services </h2>
+                                            <h2> Our Projects </h2>
                                         </div>
                                     </div>
                                 </div>
@@ -172,7 +173,7 @@
 
 
 
-                                @foreach ($services as $service)
+                                @foreach ($projects as $project)
                                     <div class="elementor-element elementor-element-090e1ac e-con-full e-flex e-con e-child"
                                         data-id="090e1ac" data-element_type="container">
                                         <div class="elementor-element elementor-element-f164f86 e-con-full e-flex e-con e-child"
@@ -191,14 +192,14 @@
                                                 data-widget_type="heading.default">
                                                 <div class="elementor-widget-container">
                                                     <h4 class="elementor-heading-title elementor-size-default">
-                                                        {{ $service->title }}</h4>
+                                                        {{ $project->title }}</h4>
                                                 </div>
                                             </div>
                                             <div class="elementor-element elementor-element-53991fc elementor-widget elementor-widget-text-editor"
                                                 data-id="53991fc" data-element_type="widget"
                                                 data-widget_type="text-editor.default">
                                                 <div class="elementor-widget-container">
-                                                    {{ $service->short_description }}</div>
+                                                    {{ $project->short_description }}</div>
                                             </div>
                                         </div>
                                         <div class="elementor-element elementor-element-92c98af e-con-full e-flex e-con e-child"
@@ -207,18 +208,7 @@
                                                 data-id="a902cad" data-element_type="widget"
                                                 data-widget_type="button.default">
                                                 <div class="elementor-widget-container">
-                                                    <div class="elementor-button-wrapper">
-                                                        <a class="elementor-button elementor-button-link elementor-size-sm"
-                                                            href=" services-details/">
-                                                            <span class="elementor-button-content-wrapper">
-                                                                <span class="elementor-button-icon">
-                                                                    <i aria-hidden="true"
-                                                                        class="jki jki-arrow-up-right-line"></i>
-                                                                </span>
-                                                                <span class="elementor-button-text">Read More</span>
-                                                            </span>
-                                                        </a>
-                                                    </div>
+
                                                 </div>
                                             </div>
                                         </div>

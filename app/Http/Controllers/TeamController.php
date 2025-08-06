@@ -23,7 +23,7 @@ class TeamController extends Controller
 
         $imagePath = null;
         if ($request->hasFile('image')) {
-            $imagePath = $request->file('image')->store('team_images', 'public');
+            $imagePath = $request->file('image')->store('upload/');
         }
 
         Team::create([
@@ -46,7 +46,7 @@ class TeamController extends Controller
 
         if ($request->hasFile('image')) {
             if ($team->image) Storage::disk('public')->delete($team->image);
-            $team->image = $request->file('image')->store('team', 'public');
+            $team->image = Storage::delete($team->image);
         }
 
         $team->update([
@@ -60,7 +60,7 @@ class TeamController extends Controller
 
     public function destroy(Team $team)
     {
-        if ($team->image) Storage::disk('public')->delete($team->image);
+        if ($team->image) Storage::delete($team->image);
         $team->delete();
         return back()->with('success', 'Team member deleted.');
     }

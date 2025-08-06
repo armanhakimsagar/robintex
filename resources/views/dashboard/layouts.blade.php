@@ -66,8 +66,14 @@
                             <!--end::Menu Body-->
                             <!--begin::Menu Footer-->
                             <li class="user-footer">
-                                <a href="#" class="btn btn-default btn-flat">Password Change</a>
-                                <a href="#" class="btn btn-default btn-flat float-end">Sign out</a>
+                                <a href="{{ route('password.change.form') }}" class="btn btn-default btn-flat">Password
+                                    Change</a>
+                                <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-inline">
+                                    @csrf
+                                    <button type="submit" class="btn btn-outline-danger btn-sm">
+                                        <i class="fas fa-sign-out-alt me-1"></i> Sign Out
+                                    </button>
+                                </form>
                             </li>
                             <!--end::Menu Footer-->
                         </ul>

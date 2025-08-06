@@ -37,7 +37,7 @@ class AboutUsController extends Controller
 
         foreach (['banner_one', 'banner_two', 'banner_three'] as $banner) {
             if ($request->hasFile($banner)) {
-                $data[$banner] = $request->file($banner)->store('about_us', 'public');
+                $data[$banner] = $request->file($banner)->store('uploads');
             }
         }
 

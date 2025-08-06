@@ -2,7 +2,6 @@
 
 @section('content')
     <div class="container">
-        <h2 class="mb-4">Service Management</h2>
 
         {{-- Flash Message --}}
         @if (session('success'))
@@ -11,7 +10,9 @@
 
         {{-- Add New Service Form --}}
         <div class="card mb-4">
-            <div class="card-header">Add New Service</div>
+            <div class="card-header bg-info text-white fw-semibold">
+                <i class="fas fa-bullseye me-2"></i> Add New Service
+            </div>
             <div class="card-body">
                 <form action="{{ route('services.store') }}" method="POST">
                     @csrf

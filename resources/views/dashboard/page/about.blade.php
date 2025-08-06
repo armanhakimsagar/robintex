@@ -2,11 +2,13 @@
 
 @section('content')
     <div class="container">
-        <h2>About Us</h2>
 
         @if (session('success'))
             <div class="alert alert-success">{{ session('success') }}</div>
         @endif
+        <div class="card-header bg-success text-white fw-semibold">
+            <i class="fas fa-plus-circle me-2"></i> About Us
+        </div>
 
         <form action="{{ route('about.store') }}" method="POST" enctype="multipart/form-data">
             @csrf

@@ -30,9 +30,13 @@ class LoginController extends Controller
         return back()->with('error', 'Invalid email or password.');
     }
 
-    public function logout()
+    public function logout(Request $request)
     {
-        Auth::logout();
-        return redirect('/login');
+        auth()->logout();
+
+        $request->session()->invalidate();
+        $request->session()->regenerateToken();
+
+        return redirect('/login'); // or redirect wherever you want after logout
     }
 }

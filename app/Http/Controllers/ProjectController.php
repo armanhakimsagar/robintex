@@ -22,7 +22,7 @@ class ProjectController extends Controller
             'image' => 'nullable|image|mimes:jpeg,png,jpg',
         ]);
 
-        $path = $request->file('image') ? $request->file('image')->store('projects', 'public') : null;
+        $path = $request->file('image') ? $request->file('image')->store('upload/')  : null;
 
         Project::create([
             'title' => $request->title,
@@ -47,7 +47,7 @@ class ProjectController extends Controller
             if ($project->image) {
                 Storage::disk('public')->delete($project->image);
             }
-            $project->image = $request->file('image')->store('projects', 'public');
+            $project->image =  $request->file('image')->store('upload/');
         }
 
         $project->update($request->only('title', 'short_description', 'long_description'));
@@ -58,7 +58,7 @@ class ProjectController extends Controller
     public function destroy(Project $project)
     {
         if ($project->image) {
-            Storage::disk('public')->delete($project->image);
+            Storage::delete($project->image);
         }
 
         $project->delete();

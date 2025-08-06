@@ -15,10 +15,9 @@
 
     <div class="container mt-4">
         {{-- Header --}}
-        <div class="bg-primary text-white p-4 rounded shadow mb-4 d-flex justify-content-between align-items-center">
-            <h4 class="mb-0">📁 Our Projects</h4>
+        <div class="card-header bg-info text-white fw-semibold">
+            <i class="fas fa-bullseye me-2"></i> Our Projects
         </div>
-
         {{-- Success Message --}}
         @if (session('success'))
             <div class="alert alert-success">{{ session('success') }}</div>
@@ -46,7 +45,9 @@
         </form>
 
         {{-- Project List --}}
-        <h5 class="mb-3">Project List</h5>
+        <div class="card-header bg-info text-white fw-semibold">
+            <i class="fas fa-bullseye me-2"></i> Project List
+        </div>
         @foreach ($projects as $project)
             <div class="card p-4 shadow mb-3">
                 <form action="{{ route('projects.update', $project->id) }}" method="POST" enctype="multipart/form-data">

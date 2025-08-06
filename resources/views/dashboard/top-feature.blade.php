@@ -5,11 +5,7 @@
 
     <div class="container mt-5">
         <!-- Page Header -->
-        <div class="d-flex justify-content-between align-items-center mb-4">
-            <div>
-                <h2 class="fw-bold mb-1">Manage Top Features</h2>
-            </div>
-        </div>
+
 
         <!-- Add New Feature Form -->
         <div class="card shadow-sm mb-5">

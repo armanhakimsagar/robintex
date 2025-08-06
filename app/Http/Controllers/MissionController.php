@@ -26,8 +26,8 @@ class MissionController extends Controller
         if ($request->hasFile('icon')) {
             $icon = $request->file('icon');
             $iconName = time().'_'.$icon->getClientOriginalName();
-            $icon->move(public_path('uploads/missions'), $iconName);
-            $data['icon'] = 'uploads/missions/' . $iconName;
+            $icon->move(public_path('uploads/'), $iconName);
+            $data['icon'] = 'uploads/' . $iconName;
         }
 
         Mission::create($data);
@@ -57,8 +57,8 @@ class MissionController extends Controller
         if ($request->hasFile('icon')) {
             $icon = $request->file('icon');
             $iconName = time().'_'.$icon->getClientOriginalName();
-            $icon->move(public_path('uploads/missions'), $iconName);
-            $data['icon'] = 'uploads/missions/' . $iconName;
+            $icon->move(public_path('uploads/'), $iconName);
+            $data['icon'] = 'uploads/' . $iconName;
         }
 
         $mission->update($data);

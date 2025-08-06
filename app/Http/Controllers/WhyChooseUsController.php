@@ -40,7 +40,7 @@ class WhyChooseUsController extends Controller
         $data = $request->only(['title', 'short_description', 'long_description']);
 
         if ($request->hasFile('icon')) {
-            $data['icon'] = $request->file('icon')->store('uploads', 'public');
+            $data['icon'] = $request->file('icon')->store('upload', null);
         }
 
         $why = WhyChooseUs::first();
@@ -57,7 +57,7 @@ class WhyChooseUsController extends Controller
         $data = $request->only(['title', 'short_description', 'long_description']);
 
         if ($request->hasFile('icon')) {
-            $data['icon'] = $request->file('icon')->store('uploads', 'public');
+            $data['icon'] = $request->file('icon')->store('upload', null);
         }
 
         $reason->update($data);

@@ -22,8 +22,7 @@ class GoalController extends Controller
             'short_description' => 'required|string|max:255',
             'long_description' => 'required|string',
         ]);
-
-        $iconPath = $request->file('icon')->store('uploads/goals', 'public');
+        $iconPath = $request->file('icon')->store('upload');
 
         Goal::create([
             'icon' => $iconPath,
@@ -60,7 +59,7 @@ class GoalController extends Controller
             if ($goal->icon && Storage::disk('public')->exists($goal->icon)) {
                 Storage::disk('public')->delete($goal->icon);
             }
-            $iconPath = $request->file('icon')->store('uploads/goals', 'public');
+            $iconPath = $request->file('icon')->store('upload');
             $goal->icon = $iconPath;
         }
 

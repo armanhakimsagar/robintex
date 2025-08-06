@@ -17,12 +17,16 @@ use App\Http\Controllers\ServiceController;
 use App\Http\Controllers\AboutUsController;
 use App\Http\Controllers\PortfolioController;
 use App\Http\Controllers\ContactController;
+use App\Http\Controllers\PasswordController;
 
 
 
+Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
 Route::get('/', [FrontendController::class, 'index']);
 Route::get('/about-us', [AboutUsController::class, 'show'])->name('about.page');
 Route::get('/service', [ServiceController::class, 'show'])->name('service.page');
+Route::get('/project', [ServiceController::class, 'product'])->name('product.page');
+Route::get('/teams', [ServiceController::class, 'team'])->name('teams.page');
 Route::get('/our-portfolio', [ServiceController::class, 'portfolio'])->name('portfolio.page');
 Route::get('/contact-us', [ServiceController::class, 'contact'])->name('contact.us');
 Route::get('/login', [LoginController::class, 'showLogin'])->name('login');
@@ -33,6 +37,8 @@ Route::middleware('auth')->group(function () {
     Route::get('/dashboard', function () {
         return view('dashboard.dashboard'); // make this view
     });
+    Route::get('/change-password', [PasswordController::class, 'showChangeForm'])->name('password.change.form');
+    Route::post('/change-password', [PasswordController::class, 'changePassword'])->name('password.change');
     // Admin/Dashboard Route
     Route::match(['get', 'post'], '/portfolio', [PortfolioController::class, 'index'])->name('portfolio.index');
     Route::match(['get', 'post'], '/contact', [ContactController::class, 'index'])->name('contact.index');
