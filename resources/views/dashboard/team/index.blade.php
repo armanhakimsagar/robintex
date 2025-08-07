@@ -28,33 +28,37 @@
             <button class="btn btn-primary w-100">Add Member</button>
         </form>
 
-        {{-- List --}}
+
         @foreach ($teams as $team)
-            <form action="{{ route('team.update', $team->id) }}" method="POST" enctype="multipart/form-data"
-                class="card p-4 shadow mb-4">
-                @csrf
-                @method('PUT')
+            <div class="card p-4 shadow mb-4">
+                {{-- Update Form --}}
+                <form action="{{ route('team.update', $team->id) }}" method="POST" enctype="multipart/form-data">
+                    @csrf
+                    @method('PUT')
 
-                <input type="text" name="name" class="form-control mb-2" value="{{ $team->name }}" required>
-                <input type="text" name="designation" class="form-control mb-2" value="{{ $team->designation }}"
-                    required>
+                    <input type="text" name="name" class="form-control mb-2" value="{{ $team->name }}" required>
+                    <input type="text" name="designation" class="form-control mb-2" value="{{ $team->designation }}"
+                        required>
 
-                @if ($team->image)
-                    <img src="{{ asset('storage/' . $team->image) }}" width="100" height="100" class="mb-2 rounded">
-                @endif
-                <input type="file" name="image" class="form-control mb-3">
+                    @if ($team->image)
+                        <img src="{{ asset('storage/' . $team->image) }}" width="100" height="100"
+                            class="mb-2 rounded">
+                    @endif
 
-                <div class="d-flex gap-2">
-                    <button class="btn btn-warning w-100" style="max-width: 200px;">Update</button>
+                    <input type="file" name="image" class="form-control mb-3">
 
-                    <form action="{{ route('team.destroy', $team->id) }}" method="POST"
-                        onsubmit="return confirm('Are you sure?')" style="display: inline-block;">
-                        @csrf
-                        @method('DELETE')
-                        <button class="btn btn-danger w-100" style="max-width: 200px;">Delete</button>
-                    </form>
-                </div>
-            </form>
+                    <button class="btn btn-warning w-100 mb-2" style="max-width: 200px;">Update</button>
+                </form>
+
+                {{-- Delete Form --}}
+                <form action="{{ route('team.destroy', $team->id) }}" method="POST"
+                    onsubmit="return confirm('Are you sure?')" style="display: inline-block;">
+                    @csrf
+                    @method('DELETE')
+                    <button class="btn btn-danger w-100" style="max-width: 200px;">Delete</button>
+                </form>
+            </div>
         @endforeach
+
     </div>
 @endsection

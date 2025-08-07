@@ -43,7 +43,7 @@
         .elementor-146 .elementor-element.elementor-element-d0d5a32:not(.elementor-motion-effects-element-type-background),
         .elementor-146 .elementor-element.elementor-element-d0d5a32>.elementor-motion-effects-container>.elementor-motion-effects-layer {
             background-color: #F7F7F7;
-            background-image: url("{{ $topBanner[0]->value }}");
+            background-image: url({{ asset('storage/' . $topBanner[0]->value) }});
             background-position: top left;
             background-repeat: no-repeat;
             background-size: cover;
@@ -150,7 +150,7 @@
 
                                     <a href="{{ url('/') }}">
                                         <img width="350" height="69"
-                                            src="@if (isset($topElements)) {{ asset('storage/' . trim($topElements[4]->value)) }} @endif"
+                                            src="@if (isset($topElements)) {{ asset('storage/' . trim($topElements[6]->value)) }} @endif"
                                             class="attachment-full size-full wp-image-3553" alt=""
                                             decoding="async" srcset="" sizes="(max-width: 350px) 100vw, 350px">
                                     </a>
@@ -313,9 +313,9 @@
                             <div class="elementor-element elementor-element-6b8c4ca elementor-widget elementor-widget-image"
                                 data-id="6b8c4ca" data-element_type="widget" data-widget_type="image.default">
                                 <div class="elementor-widget-container">
-                                    <a href="">
+                                    <a href="{{ url('/') }}">
                                         <img width="350" height="69"
-                                            src="@if (isset($topElements)) {{ asset('storage/' . trim($topElements[4]->value)) }} @endif"
+                                            src="@if (isset($topElements)) {{ asset('storage/' . trim($topElements[6]->value)) }} @endif"
                                             class="attachment-full size-full wp-image-3553" alt=""
                                             decoding="async" srcset="" sizes="(max-width: 350px) 100vw, 350px">
                                     </a>
@@ -350,7 +350,7 @@
                                     <div class="elementor-widget-container">
                                         <div class="elementor-heading-title elementor-size-default">
                                             @if (isset($topElements))
-                                                {{ $topElements[5]->value }}
+                                                {{ $topElements[4]->value }}
                                             @endif
                                         </div>
                                     </div>
@@ -382,7 +382,7 @@
                                     <div class="elementor-widget-container">
                                         <div class="elementor-heading-title elementor-size-default">
                                             @if (isset($topElements))
-                                                {{ $topElements[6]->value }}
+                                                {{ $topElements[5]->value }}
                                             @endif
                                         </div>
                                     </div>
@@ -646,7 +646,7 @@
                                 <div class="ekit-wid-con">
                                     <ul class="ekit_social_media">
                                         <li class="elementor-repeater-item-da8f4de">
-                                            <a href="@if (isset($topElements)) {{ $topElements[0]->value }} @endif"
+                                            <a href="@if (isset($topElements)) {{ $topElements[1]->value }} @endif"
                                                 aria-label="Facebook" class="f">
 
                                                 <svg aria-hidden="true" class="e-font-icon-svg e-fab-facebook-f"

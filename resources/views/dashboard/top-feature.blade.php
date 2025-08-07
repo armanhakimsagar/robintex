@@ -90,8 +90,7 @@
                                 <button class="btn btn-primary w-100 mb-1" type="submit">
                                     <i class="fas fa-save me-1"></i> Update
                                 </button>
-                                <a href="{{ route('top-element.destroy', $feature->id) }}"
-                                    onclick="return confirm('Are you sure?')" class="btn btn-danger w-100">
+                                <a href="" onclick="return confirm('Are you sure?')" class="btn btn-danger w-100">
                                     <i class="fas fa-trash me-1"></i> Delete
                                 </a>
                             </div>

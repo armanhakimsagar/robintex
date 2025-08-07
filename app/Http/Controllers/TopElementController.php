@@ -21,7 +21,7 @@ class TopElementController extends Controller
                 'value' => 'required|file|mimes:jpeg,jpg,png,svg|max:2048',
             ], [], ['value' => 'value_logo']);
 
-            $path = $request->file('value')->store('upload', 'public');;
+            $path = $request->file('value')->store('upload', 'public');
             TopElement::updateOrCreate(['key' => $key], ['value' => $path]);
 
             return back()->with('success', 'Logo updated successfully.');

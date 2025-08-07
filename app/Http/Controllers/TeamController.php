@@ -23,7 +23,7 @@ class TeamController extends Controller
 
         $imagePath = null;
         if ($request->hasFile('image')) {
-            $imagePath = $request->file('image')->store('upload/');
+            $imagePath = $request->file('image')->store('upload', 'public');
         }
 
         Team::create([
@@ -35,29 +35,34 @@ class TeamController extends Controller
         return redirect()->back()->with('success', 'Team member added successfully!');
     }
 
-
     public function update(Request $request, Team $team)
     {
         $request->validate([
             'name' => 'required|string|max:255',
             'designation' => 'required|string|max:255',
-            'image' => 'nullable|image|dimensions:width=300,height=300|max:2048',
+            'image' => 'nullable|image|max:2048',
         ]);
-
-        if ($request->hasFile('image')) {
-            if ($team->image) Storage::disk('public')->delete($team->image);
-            $team->image = Storage::delete($team->image);
-        }
-
-        $team->update([
+    
+        $data = [
             'name' => $request->name,
             'designation' => $request->designation,
-            'image' => $team->image,
-        ]);
-
+        ];
+    
+        if ($request->hasFile('image')) {
+            // Delete old image
+            if ($team->image && Storage::disk('public')->exists($team->image)) {
+                Storage::disk('public')->delete($team->image);
+            }
+    
+            // Store new image
+            $data['image'] = $request->file('image')->store('upload', 'public');
+        }
+    
+        $team->update($data);
+    
         return back()->with('success', 'Team member updated successfully.');
     }
-
+    
     public function destroy(Team $team)
     {
         if ($team->image) Storage::delete($team->image);

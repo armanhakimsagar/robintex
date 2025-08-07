@@ -22,7 +22,7 @@ class GoalController extends Controller
             'short_description' => 'required|string|max:255',
             'long_description' => 'required|string',
         ]);
-        $iconPath = $request->file('icon')->store('upload');
+        $iconPath = $request->file('icon')->store('upload', 'public');
 
         Goal::create([
             'icon' => $iconPath,
