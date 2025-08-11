@@ -146,7 +146,7 @@
                                         data-id="a3ab26e" data-element_type="widget"
                                         data-widget_type="text-editor.default">
                                         <div class="elementor-widget-container">
-                                            <h2> Our Services </h2>
+                                            <h2> Our Products </h2>
                                         </div>
                                     </div>
                                 </div>

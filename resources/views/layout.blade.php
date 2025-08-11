@@ -5,7 +5,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Robinson</title>
+    <title>Robintexbd</title>
     <meta name="robots" content="max-image-preview:large">
 
     <!-- External CSS Files -->
@@ -17,8 +17,6 @@
     <link rel="stylesheet" href="{{ asset('assets/data/post-7.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/data/fadeInUp.min.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/data/widget-heading.min.css') }}">
-
-
     <link rel="stylesheet" href="{{ asset('assets/data/post-146.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/data/style.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/data/text-editor.css') }}">
@@ -43,7 +41,7 @@
         .elementor-146 .elementor-element.elementor-element-d0d5a32:not(.elementor-motion-effects-element-type-background),
         .elementor-146 .elementor-element.elementor-element-d0d5a32>.elementor-motion-effects-container>.elementor-motion-effects-layer {
             background-color: #F7F7F7;
-            background-image: url({{ asset('storage/' . $topBanner[0]->value) }});
+            background-image: url({{ asset('storage/' . $topBanner[3]->value) }});
             background-position: top left;
             background-repeat: no-repeat;
             background-size: cover;
@@ -192,16 +190,8 @@
                                                 <li id="menu-item-2237"
                                                     class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-2237 nav-item elementskit-dropdown-has relative_position elementskit-dropdown-menu-default_width elementskit-mobile-builder-content"
                                                     data-vertical-menu="750px"><a href="{{ route('service.page') }}"
-                                                        class="ekit-menu-nav-link ekit-menu-dropdown-toggle">Services<i
+                                                        class="ekit-menu-nav-link ekit-menu-dropdown-toggle">Products<i
                                                             aria-hidden="true"
-                                                            class="icon icon-plus elementskit-submenu-indicator"></i></a>
-
-                                                </li>
-                                                <li id="menu-item-2233"
-                                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-2233 nav-item elementskit-dropdown-has relative_position elementskit-dropdown-menu-default_width elementskit-mobile-builder-content"
-                                                    data-vertical-menu="750px"><a href=" our-portfolio/"
-                                                        class="ekit-menu-nav-link ekit-menu-dropdown-toggle">Our
-                                                        Portfolio<i aria-hidden="true"
                                                             class="icon icon-plus elementskit-submenu-indicator"></i></a>
 
                                                 </li>
@@ -261,7 +251,7 @@
                                 <div class="elementor-widget-container">
                                     <div class="elementor-button-wrapper">
                                         <a class="elementor-button elementor-button-link elementor-size-sm"
-                                            href=" contact-us/">
+                                            href="{{ route('contact.us') }}">
                                             <span class="elementor-button-content-wrapper">
                                                 <span class="elementor-button-icon">
                                                     <i aria-hidden="true" class="jki jki-arrow-up-right-line"></i>
@@ -441,8 +431,8 @@
                                                                         </path>
                                                                     </svg> </span>
                                                                 <span class="elementor-icon-list-text">
-                                                                    <span class="ekit_page_list_title_title">Our
-                                                                        Project</span>
+                                                                    <span class="ekit_page_list_title_title">
+                                                                        Manufacturing Capabilities</span>
                                                                 </span>
                                                             </div>
                                                         </a>
@@ -463,28 +453,7 @@
                                                                     </svg> </span>
                                                                 <span class="elementor-icon-list-text">
                                                                     <span class="ekit_page_list_title_title">Our
-                                                                        Service</span>
-                                                                </span>
-                                                            </div>
-                                                        </a>
-                                                    </div>
-                                                    <div class="elementor-icon-list-item   ">
-                                                        <a class="elementor-repeater-item-7be2475 ekit_badge_left"
-                                                            href="{{ route('product.page') }}" target="_blank"
-                                                            rel="nofollow">
-                                                            <div class="ekit_page_list_content">
-                                                                <span class="elementor-icon-list-icon">
-                                                                    <svg aria-hidden="true"
-                                                                        class="e-font-icon-svg e-fas-dot-circle"
-                                                                        viewBox="0 0 512 512"
-                                                                        xmlns="http://www.w3.org/2000/svg">
-                                                                        <path
-                                                                            d="M256 8C119.033 8 8 119.033 8 256s111.033 248 248 248 248-111.033 248-248S392.967 8 256 8zm80 248c0 44.112-35.888 80-80 80s-80-35.888-80-80 35.888-80 80-80 80 35.888 80 80z">
-                                                                        </path>
-                                                                    </svg> </span>
-                                                                <span class="elementor-icon-list-text">
-                                                                    <span class="ekit_page_list_title_title">Our
-                                                                        Portfolio</span>
+                                                                        Products</span>
                                                                 </span>
                                                             </div>
                                                         </a>
@@ -570,7 +539,8 @@
                                                     </div>
                                                     <div class="elementor-icon-list-item   ">
                                                         <a class="elementor-repeater-item-7fb4654 ekit_badge_left"
-                                                            href=" " target="_blank" rel="nofollow">
+                                                            href="{{ route('contact.us') }}" target="_blank"
+                                                            rel="nofollow">
                                                             <div class="ekit_page_list_content">
                                                                 <span class="elementor-icon-list-icon">
                                                                     <svg aria-hidden="true"

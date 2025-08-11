@@ -148,12 +148,6 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="elementor-element elementor-element-1034c89e elementor-widget elementor-widget-text-editor"
-                                                data-id="1034c89e" data-element_type="widget"
-                                                data-widget_type="text-editor.default">
-                                                <div class="elementor-widget-container">
-                                                    Portfolio </div>
-                                            </div>
                                         </div>
                                     </div>
                                 </div>

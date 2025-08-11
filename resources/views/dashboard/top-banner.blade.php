@@ -15,7 +15,7 @@
                 <input type="file" name="value" class="form-control" id="value_banner_image">
 
                 @if (!empty($data['banner_image']))
-                    <img src="{{ asset($data['banner_image']) }}" class="mt-2" style="max-width: 400px;">
+                    <img src="{{ asset('storage/' . $data['banner_image']) }}" class="mt-2" style="max-width: 400px;">
                 @endif
 
                 @error('value_banner_image')

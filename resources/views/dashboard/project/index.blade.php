@@ -16,7 +16,7 @@
     <div class="container mt-5" style="max-width: 800px;">
         {{-- Header --}}
         <div class="card-header bg-info text-white fw-semibold">
-            <i class="fas fa-bullseye me-2"></i> Our Projects
+            <i class="fas fa-bullseye me-2"></i> Manufacturing Capabilities
         </div>
         {{-- Success Message --}}
         @if (session('success'))
@@ -26,7 +26,7 @@
         {{-- Add Project --}}
         <form action="{{ route('projects.store') }}" method="POST" enctype="multipart/form-data" class="card p-4 shadow mb-4">
             @csrf
-            <h5 class="mb-3">Add New Project</h5>
+            <h5 class="mb-3">Add Manufacturing Capabilities</h5>
             <div class="mb-2">
                 <input type="text" name="title" class="form-control" placeholder="Project Title" required>
             </div>
@@ -46,7 +46,7 @@
 
         {{-- Project List --}}
         <div class="card-header bg-info text-white fw-semibold">
-            <i class="fas fa-bullseye me-2"></i> Project List
+            <i class="fas fa-bullseye me-2"></i> Manufacturing Capabilities List
         </div>
         @foreach ($projects as $project)
             <div class="card p-4 shadow mb-3">

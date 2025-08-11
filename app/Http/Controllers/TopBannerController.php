@@ -17,19 +17,31 @@ class TopBannerController extends Controller
             $request->validate([
                 'value' => 'required|image|mimes:jpeg,png,jpg|max:2048',
             ]);
-            $imagePath = $request->file('value')->store('uploads', 'public');
+
+            // Find old record
+            $oldRecord = TopBanner::where('key', $key)->first();
+
+            // Delete old file if exists
+            if ($oldRecord && $oldRecord->value && \Storage::disk('public')->exists($oldRecord->value)) {
+                \Storage::disk('public')->delete($oldRecord->value);
+            }
+
+            // Store new file
+            $imagePath = $request->file('value')->store('upload', 'public');
             $value = $imagePath;
+
         } else {
             $request->validate(['value' => 'required']);
             $value = $request->input('value');
         }
-    
+
         TopBanner::updateOrCreate(
             ['key' => $key],
             ['value' => $value]
         );
-    
+
         return back()->with('success', ucfirst(str_replace('_', ' ', $key)) . ' updated.');
     }
+
     
 }
