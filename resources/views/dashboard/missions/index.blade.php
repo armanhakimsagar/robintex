@@ -3,7 +3,7 @@
 @section('content')
     <div class="container mt-5" style="max-width: 800px;">
         <div class="card-header bg-info text-white fw-semibold">
-            <i class="fas fa-bullseye me-2"></i>Our Missions
+            <i class="fas fa-bullseye me-2"></i>Our Vision
         </div>
         {{-- Add New Mission --}}
         <form action="{{ route('missions.store') }}" method="POST" enctype="multipart/form-data"
@@ -25,7 +25,7 @@
                 <label>Long Description</label>
                 <textarea name="long_description" class="form-control rich-text" placeholder="Detailed description"></textarea>
             </div>
-            <button type="submit" class="btn btn-success">Add Mission</button>
+            <button type="submit" class="btn btn-success">Add Vision</button>
         </form>
 
         {{-- List Existing Missions --}}

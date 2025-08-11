@@ -10,7 +10,7 @@
         <!-- Add New Feature Form -->
         <div class="card shadow-sm mb-5">
             <div class="card-header bg-info text-white fw-semibold">
-                <i class="fas fa-plus-circle me-2"></i> Add New Top Feature
+                <i class="fas fa-plus-circle me-2"></i> Add Philosophy
             </div>
             <div class="card-body">
                 <form action="{{ route('top-feature.store') }}" method="POST" enctype="multipart/form-data">
@@ -54,7 +54,7 @@
         <!-- All Features List -->
         <div class="card shadow-sm">
             <div class="card-header bg-primary text-white fw-semibold">
-                <i class="fas fa-list me-2"></i> All Top Features
+                <i class="fas fa-list me-2"></i> All Philosophy
             </div>
             <div class="card-body">
                 @foreach ($features as $feature)

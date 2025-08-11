@@ -53,17 +53,7 @@
                                         <div class="elementor-element elementor-element-1c168d82 elementor-widget elementor-widget-button"
                                             data-id="1c168d82" data-element_type="widget" data-widget_type="button.default">
                                             <div class="elementor-widget-container">
-                                                <div class="elementor-button-wrapper">
-                                                    <a class="elementor-button elementor-button-link elementor-size-sm"
-                                                        href="">
-                                                        <span class="elementor-button-content-wrapper">
-                                                            <span class="elementor-button-icon">
-                                                                <i aria-hidden="true"
-                                                                    class="jki jki-arrow-up-right-line"></i> </span>
-                                                            <span class="elementor-button-text">Learn More</span>
-                                                        </span>
-                                                    </a>
-                                                </div>
+
                                             </div>
                                         </div>
                                     </div>

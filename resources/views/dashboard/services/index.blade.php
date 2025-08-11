@@ -11,7 +11,7 @@
         {{-- Add New Service Form --}}
         <div class="card mb-4">
             <div class="card-header bg-info text-white fw-semibold">
-                <i class="fas fa-bullseye me-2"></i> Add New Service
+                <i class="fas fa-bullseye me-2"></i> Add Product
             </div>
             <div class="card-body">
                 <form action="{{ route('services.store') }}" method="POST">
@@ -32,14 +32,14 @@
                         <textarea name="long_description" class="form-control" rows="4" required></textarea>
                     </div>
 
-                    <button class="btn btn-success">Add Service</button>
+                    <button class="btn btn-success">Add Product</button>
                 </form>
             </div>
         </div>
 
         {{-- Service List --}}
         <div class="card">
-            <div class="card-header">Service List</div>
+            <div class="card-header">Products List</div>
             <div class="card-body">
                 @if ($services->isEmpty())
                     <p>No services added yet.</p>

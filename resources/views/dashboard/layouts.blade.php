@@ -183,7 +183,7 @@
                                 <li class="nav-item">
                                     <a href="{{ route('top-feature.index') }}" class="nav-link">
                                         <i class="nav-icon bi bi-circle"></i>
-                                        <p>Top Feature</p>
+                                        <p>Top Philosophy</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
@@ -195,7 +195,7 @@
                                 <li class="nav-item">
                                     <a href="{{ route('missions.index') }}" class="nav-link">
                                         <i class="nav-icon bi bi-circle"></i>
-                                        <p>Our Mission</p>
+                                        <p>Our Vision</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
@@ -207,13 +207,13 @@
                                 <li class="nav-item">
                                     <a href="{{ route('services.index') }}" class="nav-link">
                                         <i class="nav-icon bi bi-circle"></i>
-                                        <p>Services</p>
+                                        <p>Products</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
                                     <a href="{{ route('projects.index') }}" class="nav-link">
                                         <i class="nav-icon bi bi-circle"></i>
-                                        <p>Our Project</p>
+                                        <p>Manufacturing Capabilities</p>
                                     </a>
                                 </li>
 

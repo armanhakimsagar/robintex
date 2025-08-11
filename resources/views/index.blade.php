@@ -52,19 +52,7 @@
                                         data-id="18172721" data-element_type="container">
                                         <div class="elementor-element elementor-element-1c168d82 elementor-widget elementor-widget-button"
                                             data-id="1c168d82" data-element_type="widget" data-widget_type="button.default">
-                                            <div class="elementor-widget-container">
-                                                <div class="elementor-button-wrapper">
-                                                    <a class="elementor-button elementor-button-link elementor-size-sm"
-                                                        href="">
-                                                        <span class="elementor-button-content-wrapper">
-                                                            <span class="elementor-button-icon">
-                                                                <i aria-hidden="true"
-                                                                    class="jki jki-arrow-up-right-line"></i> </span>
-                                                            <span class="elementor-button-text">Learn More</span>
-                                                        </span>
-                                                    </a>
-                                                </div>
-                                            </div>
+
                                         </div>
                                     </div>
                                 </div>
@@ -192,19 +180,11 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="elementor-element elementor-element-1034c89e elementor-widget elementor-widget-text-editor"
-                                                data-id="1034c89e" data-element_type="widget"
-                                                data-widget_type="text-editor.default">
-                                                <div class="elementor-widget-container">
-                                                    About Us </div>
-                                            </div>
                                         </div>
                                         <div class="elementor-element elementor-element-2d811b91 elementor-widget elementor-widget-heading"
                                             data-id="2d811b91" data-element_type="widget"
                                             data-widget_type="heading.default">
                                             <div class="elementor-widget-container">
-                                                <h2 class="elementor-heading-title elementor-size-default">Building the
-                                                    Future of Fashion and Threads</h2>
                                             </div>
                                         </div>
                                     </div>
@@ -320,19 +300,17 @@
                                                         data-widget_type="elementskit-icon-box.default">
                                                         <div class="elementor-widget-container">
                                                             <div class="ekit-wid-con"> <!-- link opening -->
-                                                                <a href=" " class="ekit_global_links">
-                                                                    <!-- end link opening -->
+                                                                <!-- end link opening -->
 
-                                                                    <div
-                                                                        class="elementskit-infobox text- text- icon-lef-right-aligin elementor-animation-   ">
-                                                                        <div class="box-body">
-                                                                            <h4 class="elementskit-info-box-title">
-                                                                                Our Goals </h4>
-                                                                        </div>
-
-
+                                                                <div
+                                                                    class="elementskit-infobox text- text- icon-lef-right-aligin elementor-animation-   ">
+                                                                    <div class="box-body">
+                                                                        <h4 class="elementskit-info-box-title">
+                                                                            Our Goals </h4>
                                                                     </div>
-                                                                </a>
+
+
+                                                                </div>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -343,26 +321,25 @@
                                                             data-widget_type="elementskit-icon-box.default">
                                                             <div class="elementor-widget-container">
                                                                 <div class="ekit-wid-con"> <!-- link opening -->
-                                                                    <a href=" " class="ekit_global_links">
-                                                                        <!-- end link opening -->
+                                                                    <!-- end link opening -->
 
+                                                                    <div
+                                                                        class="elementskit-infobox text- text-left icon-lef-right-aligin elementor-animation- media  ">
                                                                         <div
-                                                                            class="elementskit-infobox text- text-left icon-lef-right-aligin elementor-animation- media  ">
+                                                                            class="elementskit-box-header elementor-animation-">
                                                                             <div
-                                                                                class="elementskit-box-header elementor-animation-">
-                                                                                <div
-                                                                                    class="elementskit-info-box-icon  text-center">
-                                                                                    <i aria-hidden="true"
-                                                                                        class="elementkit-infobox-icon icon icon-shield1"></i>
-                                                                                </div>
+                                                                                class="elementskit-info-box-icon  text-center">
+                                                                                <i aria-hidden="true"
+                                                                                    class="elementkit-infobox-icon icon icon-shield1"></i>
                                                                             </div>
-                                                                            <div class="box-body">
-                                                                                <p>{{ $goal->title }}</p>
-                                                                            </div>
-
-
                                                                         </div>
-                                                                    </a>
+                                                                        <div class="box-body">
+                                                                            <p>{{ $goal->title }}</p>
+                                                                        </div>
+
+
+                                                                    </div>
+
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -377,20 +354,7 @@
                                             <div class="elementor-element elementor-element-74e7f0c6 elementor-widget elementor-widget-button"
                                                 data-id="74e7f0c6" data-element_type="widget"
                                                 data-widget_type="button.default">
-                                                <div class="elementor-widget-container">
-                                                    <div class="elementor-button-wrapper">
-                                                        <a class="elementor-button elementor-button-link elementor-size-sm"
-                                                            href="{{ route('about.page') }}">
-                                                            <span class="elementor-button-content-wrapper">
-                                                                <span class="elementor-button-icon">
-                                                                    <i aria-hidden="true"
-                                                                        class="jki jki-arrow-up-right-line"></i>
-                                                                </span>
-                                                                <span class="elementor-button-text">Learn More</span>
-                                                            </span>
-                                                        </a>
-                                                    </div>
-                                                </div>
+
                                             </div>
                                         </div>
                                     </div>
@@ -410,27 +374,25 @@
                                                         data-widget_type="elementskit-icon-box.default">
                                                         <div class="elementor-widget-container">
                                                             <div class="ekit-wid-con"> <!-- link opening -->
-                                                                <a href=" " class="ekit_global_links">
-                                                                    <!-- end link opening -->
+                                                                <!-- end link opening -->
 
+                                                                <div
+                                                                    class="elementskit-infobox text- text-left icon-lef-right-aligin elementor-animation- media  ">
                                                                     <div
-                                                                        class="elementskit-infobox text- text-left icon-lef-right-aligin elementor-animation- media  ">
+                                                                        class="elementskit-box-header elementor-animation-">
                                                                         <div
-                                                                            class="elementskit-box-header elementor-animation-">
-                                                                            <div
-                                                                                class="elementskit-info-box-icon  text-center">
-                                                                                <i aria-hidden="true"
-                                                                                    class="elementkit-infobox-icon icon icon-check"></i>
-                                                                            </div>
+                                                                            class="elementskit-info-box-icon  text-center">
+                                                                            <i aria-hidden="true"
+                                                                                class="elementkit-infobox-icon icon icon-check"></i>
                                                                         </div>
-                                                                        <div class="box-body">
-                                                                            <h4 class="elementskit-info-box-title">
-                                                                                Our Mission </h4>
-                                                                        </div>
-
-
                                                                     </div>
-                                                                </a>
+                                                                    <div class="box-body">
+                                                                        <h4 class="elementskit-info-box-title">
+                                                                            Our Mission </h4>
+                                                                    </div>
+
+
+                                                                </div>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -494,7 +456,7 @@
                                         data-id="a3ab26e" data-element_type="widget"
                                         data-widget_type="text-editor.default">
                                         <div class="elementor-widget-container">
-                                            <h2> Our Services </h2>
+                                            <h2> Our Products </h2>
                                         </div>
                                     </div>
                                 </div>
@@ -683,7 +645,7 @@
                                         data-id="a3ab26e" data-element_type="widget"
                                         data-widget_type="text-editor.default">
                                         <div class="elementor-widget-container">
-                                            <h2> Our Projects </h2>
+                                            <h2> MANUFACTURING CAPABILITIES </h2>
                                         </div>
                                     </div>
                                 </div>

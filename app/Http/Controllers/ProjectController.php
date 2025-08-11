@@ -16,8 +16,8 @@ class ProjectController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'title' => 'required|string|max:255',
-            'short_description' => 'required|string|max:255',
+            'title' => 'required|string',
+            'short_description' => 'required|string',
             'long_description' => 'nullable|string',
             'image' => 'nullable|image|mimes:jpeg,png,jpg',
         ]);
@@ -37,8 +37,8 @@ class ProjectController extends Controller
     public function update(Request $request, Project $project)
     {
         $request->validate([
-            'title' => 'required|string|max:255',
-            'short_description' => 'required|string|max:255',
+            'title' => 'required|string',
+            'short_description' => 'required|string',
             'long_description' => 'nullable|string',
             'image' => 'nullable|image|mimes:jpeg,png,jpg',
         ]);
