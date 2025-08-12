@@ -148,7 +148,7 @@ class ServiceController extends Controller
         $aboutUsPage = AboutUsPage::all();
         $contact = Contact::all();
         
-        return view('dashboard.frontend.Contact', compact(
+        return view('dashboard.frontend.contact', compact(
             'futures',
             'goals',
             'missions',
