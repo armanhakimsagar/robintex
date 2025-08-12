@@ -119,8 +119,10 @@
                         </div>
                     </div>
                 </div>
+                <h2 style="text-align:center">Our Philosophy</h2>
                 <div class="elementor-element elementor-element-e707c14 e-con-full e-flex e-con e-parent e-lazyloaded"
                     data-id="e707c14" data-element_type="container">
+
                     <div class="elementor-element elementor-element-25be30d e-con-full e-flex e-con e-child"
                         data-id="25be30d" data-element_type="container">
                         @foreach ($topFeatures as $feature)
@@ -306,7 +308,7 @@
                                                                     class="elementskit-infobox text- text- icon-lef-right-aligin elementor-animation-   ">
                                                                     <div class="box-body">
                                                                         <h4 class="elementskit-info-box-title">
-                                                                            Our Goals </h4>
+                                                                            Quality Control Process </h4>
                                                                     </div>
 
 
@@ -388,7 +390,7 @@
                                                                     </div>
                                                                     <div class="box-body">
                                                                         <h4 class="elementskit-info-box-title">
-                                                                            Our Mission </h4>
+                                                                            Our Vision </h4>
                                                                     </div>
 
 
@@ -544,16 +546,21 @@
                                     <div class="elementor-element elementor-element-fc0cb70 elementor-widget elementor-widget-text-editor"
                                         data-id="fc0cb70" data-element_type="widget"
                                         data-widget_type="text-editor.default">
-                                        <div class="elementor-widget-container">
-                                            Why Choose Us </div>
+                                        <h2 class="elementor-widget-container">
+                                            Why Choose Us </h2>
                                     </div>
                                 </div>
                                 <div class="elementor-element elementor-element-b6a077d elementor-widget elementor-widget-heading"
                                     data-id="b6a077d" data-element_type="widget" data-widget_type="heading.default">
                                     <div class="elementor-widget-container">
-                                        <h2 class="elementor-heading-title elementor-size-default">
+                                        <h5 class="elementor-heading-title elementor-size-default"
+                                            style="text-align: center">
                                             {{ $whyChooseUs->title }}
-                                        </h2>
+                                        </h5>
+                                        <div class="elementor-heading-title elementor-size-default"
+                                            style="text-align: center">
+                                            {{ $whyChooseUs->description }}
+                                        </div>
                                     </div>
                                 </div>
                             </div>
