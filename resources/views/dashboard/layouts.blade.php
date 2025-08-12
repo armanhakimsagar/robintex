@@ -189,7 +189,7 @@
                                 <li class="nav-item">
                                     <a href="{{ route('goals.index') }}" class="nav-link">
                                         <i class="nav-icon bi bi-circle"></i>
-                                        <p>Our Goal</p>
+                                        <p>QC Process</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">

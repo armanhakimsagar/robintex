@@ -4,7 +4,7 @@
     <div class="container mt-5" style="max-width: 800px;">
         {{-- Page Header --}}
         <div class="card-header bg-info text-white fw-semibold">
-            Goals Management
+            QC Process Management
         </div>
 
         {{-- Success Message --}}
@@ -30,12 +30,12 @@
             <div class="mb-3">
                 <textarea name="long_description" class="form-control rich-text" placeholder="Long Description"></textarea>
             </div>
-            <button type="submit" class="btn btn-success">Add Goal</button>
+            <button type="submit" class="btn btn-success">Add QC Process</button>
         </form>
 
         {{-- All Goals List --}}
         <div class="card-header bg-info text-white fw-semibold">
-            All Goals
+            All QC Process
         </div>
 
         @foreach ($goals as $goal)
