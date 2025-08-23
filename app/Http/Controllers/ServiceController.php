@@ -67,7 +67,37 @@ class ServiceController extends Controller
         return redirect()->route('services.index')->with('success', 'Service deleted successfully.');
     }
 
-
+    public function getintouch(){
+        $futures = Future::all();
+        $goals = Goal::all();
+        $missions = Mission::all();
+        $projects = Project::all();
+        $services = Service::all();
+        $teams = Team::all();
+        $topBanner = TopBanner::all();
+        $topElements = TopElement::all();
+        $topFeatures = TopFeature::all();
+        $whyChooseUs = WhyChooseUs::latest()->first(); // Assuming only one
+        $whyChooseUsReasons = WhyChooseUsReason::all();        
+        $aboutUsPage = AboutUsPage::all();
+        $contact = Contact::all();
+        
+        return view('dashboard.frontend.getintouch', compact(
+            'futures',
+            'goals',
+            'missions',
+            'projects',
+            'teams',
+            'topBanner',
+            'topElements',
+            'topFeatures',
+            'whyChooseUs',
+            'whyChooseUsReasons',
+            'services',
+            'aboutUsPage',
+            'contact'
+        ));
+    }
     
     public function show()
     {

@@ -29,6 +29,7 @@ Route::get('/project', [ServiceController::class, 'product'])->name('product.pag
 Route::get('/teams', [ServiceController::class, 'team'])->name('teams.page');
 Route::get('/our-portfolio', [ServiceController::class, 'portfolio'])->name('portfolio.page');
 Route::get('/contact-us', [ServiceController::class, 'contact'])->name('contact.us');
+Route::get('/getintouch', [ServiceController::class, 'getintouch'])->name('getintouch');
 Route::get('/login', [LoginController::class, 'showLogin'])->name('login');
 Route::post('/login', [LoginController::class, 'login'])->name('login.submit');
 Route::post('/logout', [LoginController::class, 'logout'])->name('logout');

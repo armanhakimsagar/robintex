@@ -251,7 +251,7 @@
                                 <div class="elementor-widget-container">
                                     <div class="elementor-button-wrapper">
                                         <a class="elementor-button elementor-button-link elementor-size-sm"
-                                            href="{{ route('contact.us') }}">
+                                            href="{{ route('getintouch') }}">
                                             <span class="elementor-button-content-wrapper">
                                                 <span class="elementor-button-icon">
                                                     <i aria-hidden="true" class="jki jki-arrow-up-right-line"></i>
@@ -574,7 +574,7 @@
                                         <div class="ekit-wid-con">
                                             <div class="ekit-mail-chimp">
                                                 <iframe
-                                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3651.0973078281972!2d90.41388697555888!3d23.77954898765636!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c77d5719ab2f%3A0xa8f283b9e86a2c82!2sRobintex%20Group!5e0!3m2!1sen!2sbd!4v1754413974172!5m2!1sen!2sbd"
+                                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3651.3016713458896!2d90.5603386!3d23.7722696!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755ca7b6997bad3%3A0xa0bdb349a8173569!2sROBINTEX%20GROUP!5e0!3m2!1sen!2sbd!4v1755935475120!5m2!1sen!2sbd"
                                                     width="100%" height="200px" style="border:0;"
                                                     allowfullscreen="" loading="lazy"
                                                     referrerpolicy="no-referrer-when-downgrade"></iframe>
