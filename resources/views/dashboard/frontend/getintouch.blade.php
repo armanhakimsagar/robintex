@@ -200,7 +200,7 @@
                                                     data-widget_type="elementskit-icon-box.default">
                                                     <div class="elementor-widget-container">
                                                         <div class="ekit-wid-con"> <!-- link opening -->
-                                                            <a href=" " class="ekit_global_links">
+                                                            <a class="ekit_global_links">
                                                                 <!-- end link opening -->
 
                                                                 <div
