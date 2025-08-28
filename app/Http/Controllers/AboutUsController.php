@@ -89,7 +89,7 @@ class AboutUsController extends Controller
             'banner_one' => 'nullable|image|max:2048'
         ]);
     
-        $data = html_entity_decode($request->only('description'));
+        $data = $request->only('description');
     
         foreach (['banner_one'] as $banner) {
             if ($request->hasFile($banner)) {
