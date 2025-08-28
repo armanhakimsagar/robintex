@@ -93,7 +93,7 @@
         }
 
         .elementor-123 .elementor-element.elementor-element-4d309e74.e-con {
-            background-color: #fffff4;
+            background-color: #ffffff;
             color: #b8967e
         }
 
