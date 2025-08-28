@@ -91,6 +91,19 @@
         .ekit-wid-con li {
             list-style: none
         }
+
+        .elementor-123 .elementor-element.elementor-element-4d309e74.e-con {
+            background-color: #fffff4;
+            color: #b8967e
+        }
+
+        .elementor-123 .elementor-element.elementor-element-c7715a5 .elementskit-navbar-nav>li>a {
+            color: #b8967e
+        }
+
+        .elementor-123 .elementor-element.elementor-element-c7715a5 .elementskit-navbar-nav .elementskit-submenu-panel>li>a {
+            color: #b8967e
+        }
     </style>
 
     <!-- JS Files -->
