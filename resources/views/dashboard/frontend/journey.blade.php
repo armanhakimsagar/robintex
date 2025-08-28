@@ -52,7 +52,9 @@
                                         data-id="18172721" data-element_type="container">
                                         <div class="elementor-element elementor-element-1c168d82 elementor-widget elementor-widget-button"
                                             data-id="1c168d82" data-element_type="widget" data-widget_type="button.default">
+                                            <div class="elementor-widget-container">
 
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -145,12 +147,6 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="elementor-element elementor-element-1034c89e elementor-widget elementor-widget-text-editor"
-                                                data-id="1034c89e" data-element_type="widget"
-                                                data-widget_type="text-editor.default">
-                                                <div class="elementor-widget-container">
-                                                    Portfolio </div>
-                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -202,8 +198,9 @@
 
                                                                     </div>
                                                                     <div class="box-body">
-
-                                                                        <p>{!! $portfolio[0]->description !!}
+                                                                        <img
+                                                                            src="{{ asset('storage/' . $aboutUsPage[0]->banner_one) }}">
+                                                                        <p>{!! $aboutUsPage[0]->description !!}
                                                                         </p>
                                                                     </div>
 

@@ -121,9 +121,6 @@
                                     data-settings="{&quot;_position&quot;:&quot;absolute&quot;}"
                                     data-widget_type="image.default">
                                     <div class="elementor-widget-container">
-                                        <img fetchpriority="high" decoding="async" width="1000" height="805"
-                                            src="" class="attachment-full size-full wp-image-3530" alt=""
-                                            sizes="(max-width: 1000px) 100vw, 1000px">
                                     </div>
                                 </div>
                             </div>

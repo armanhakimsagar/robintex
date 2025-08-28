@@ -148,7 +148,25 @@
                                 <li class="nav-item">
                                     <a href="{{ route('about.index') }}" class="nav-link">
                                         <i class="nav-icon bi bi-circle"></i>
-                                        <p>About Us Page</p>
+                                        <p>Sustainability Page</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="{{ route('about.client') }}" class="nav-link">
+                                        <i class="nav-icon bi bi-circle"></i>
+                                        <p>Client Page</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="{{ route('about.journey') }}" class="nav-link">
+                                        <i class="nav-icon bi bi-circle"></i>
+                                        <p>Journey Page</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="{{ route('about.leadership') }}" class="nav-link">
+                                        <i class="nav-icon bi bi-circle"></i>
+                                        <p>Leadership Page</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">

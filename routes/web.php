@@ -23,7 +23,12 @@ use App\Http\Controllers\PasswordController;
 
 Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
 Route::get('/', [FrontendController::class, 'index']);
-Route::get('/about-us', [AboutUsController::class, 'show'])->name('about.page');
+
+Route::get('/sustainability', [AboutUsController::class, 'show'])->name('sustainability.page');
+Route::get('/leadership', [AboutUsController::class, 'leadership'])->name('leadership.page');
+Route::get('/journey', [AboutUsController::class, 'journey'])->name('journey.page');
+Route::get('/client', [AboutUsController::class, 'client'])->name('client.page');
+
 Route::get('/service', [ServiceController::class, 'show'])->name('service.page');
 Route::get('/project', [ServiceController::class, 'product'])->name('product.page');
 Route::get('/teams', [ServiceController::class, 'team'])->name('teams.page');
@@ -44,8 +49,16 @@ Route::middleware('auth')->group(function () {
     Route::match(['get', 'post'], '/portfolio', [PortfolioController::class, 'index'])->name('portfolio.index');
     Route::match(['get', 'post'], '/contact', [ContactController::class, 'index'])->name('contact.index');
 
-    Route::get('/about-us-page', [AboutUsController::class, 'index'])->name('about.index');
+    Route::get('/sustainability-page', [AboutUsController::class, 'index'])->name('about.index');
+    
     Route::post('/about-us-page', [AboutUsController::class, 'store'])->name('about.store');
+    Route::post('/journey-page', [AboutUsController::class, 'journeyStore'])->name('journey.store');
+    Route::post('/client-page', [AboutUsController::class, 'clientStore'])->name('client.store');
+    Route::post('/leadership-page', [AboutUsController::class, 'leadershipStore'])->name('leadership.store');
+
+    Route::get('/journey-page', [AboutUsController::class, 'journeyd'])->name('about.journey');
+    Route::get('/leadership-page', [AboutUsController::class, 'leadershipd'])->name('about.leadership');
+    Route::get('/client-page', [AboutUsController::class, 'clientd'])->name('about.client');
 
     Route::get('/top-element', [TopElementController::class, 'index'])->name('top-element.index');
     Route::post('/top-element/update/{key}', [TopElementController::class, 'update'])->name('top-elements.update');

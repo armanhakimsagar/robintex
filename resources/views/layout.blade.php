@@ -55,6 +55,42 @@
             background-size: cover;
             background-position: center center;
         }
+
+        /* Hide submenu by default */
+        .elementskit-submenu-panel {
+            display: none;
+            position: absolute;
+            /* makes it float under parent */
+            top: 100%;
+            /* place below About Us */
+            left: 0;
+            background: #fff;
+            padding: 10px 0;
+            min-width: 200px;
+            z-index: 999;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Show submenu on hover */
+        .menu-item-has-children:hover>.elementskit-submenu-panel {
+            display: block;
+        }
+
+        /* Style submenu links */
+        .elementskit-submenu-panel li a {
+            display: block;
+            padding: 8px 15px;
+            color: #333;
+            text-decoration: none;
+        }
+
+        .elementskit-submenu-panel li a:hover {
+            background: #f5f5f5;
+        }
+
+        .ekit-wid-con li {
+            list-style: none
+        }
     </style>
 
     <!-- JS Files -->
@@ -178,15 +214,39 @@
                                                     data-vertical-menu="750px"><a href="{{ url('/') }}"
                                                         class="ekit-menu-nav-link active">Home</a></li>
 
-
                                                 <li id="menu-item-2237"
                                                     class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-2237 nav-item elementskit-dropdown-has relative_position elementskit-dropdown-menu-default_width elementskit-mobile-builder-content"
-                                                    data-vertical-menu="750px"><a href="{{ route('about.page') }}"
-                                                        class="ekit-menu-nav-link ekit-menu-dropdown-toggle">About Us<i
-                                                            aria-hidden="true"
-                                                            class="icon icon-plus elementskit-submenu-indicator"></i></a>
+                                                    data-vertical-menu="750px">
 
+                                                    <a href=""
+                                                        class="ekit-menu-nav-link ekit-menu-dropdown-toggle">
+                                                        About Us <span class="dropdown-icon">▼</span>
+                                                        <i aria-hidden="true"
+                                                            class="icon icon-plus elementskit-submenu-indicator"></i>
+                                                    </a>
+
+                                                    <!-- Dropdown Menu -->
+                                                    <ul class="elementskit-submenu-panel">
+                                                        <li class="menu-item">
+                                                            <a href="{{ route('sustainability.page') }}"
+                                                                class="dropdown-item">Sustainability</a>
+                                                        </li>
+                                                        <li class="menu-item">
+                                                            <a href="{{ route('leadership.page') }}"
+                                                                class="dropdown-item">Leadership</a>
+                                                        </li>
+                                                        <li class="menu-item">
+                                                            <a href="{{ route('journey.page') }}"
+                                                                class="dropdown-item">Our journey</a>
+                                                        </li>
+                                                        <li class="menu-item">
+                                                            <a href="{{ route('client.page') }}"
+                                                                class="dropdown-item">Our Client</a>
+                                                        </li>
+                                                    </ul>
                                                 </li>
+
+
                                                 <li id="menu-item-2237"
                                                     class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-2237 nav-item elementskit-dropdown-has relative_position elementskit-dropdown-menu-default_width elementskit-mobile-builder-content"
                                                     data-vertical-menu="750px"><a href="{{ route('service.page') }}"
@@ -497,7 +557,7 @@
                                                 <div class="elementor-icon-list-items ">
                                                     <div class="elementor-icon-list-item   ">
                                                         <a class="elementor-repeater-item-01d06f0 ekit_badge_left"
-                                                            href="{{ route('about.page') }}" target="_blank"
+                                                            href="{{ route('sustainability.page') }}" target="_blank"
                                                             rel="nofollow">
                                                             <div class="ekit_page_list_content">
                                                                 <span class="elementor-icon-list-icon">
@@ -510,8 +570,8 @@
                                                                         </path>
                                                                     </svg> </span>
                                                                 <span class="elementor-icon-list-text">
-                                                                    <span class="ekit_page_list_title_title">About
-                                                                        Us</span>
+                                                                    <span
+                                                                        class="ekit_page_list_title_title">Sustainability</span>
                                                                 </span>
                                                             </div>
                                                         </a>
