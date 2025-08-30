@@ -94,15 +94,15 @@
 
         .elementor-123 .elementor-element.elementor-element-4d309e74.e-con {
             background-color: #ffffff;
-            color: #b8967e
+            color: #8B7500
         }
 
         .elementor-123 .elementor-element.elementor-element-c7715a5 .elementskit-navbar-nav>li>a {
-            color: #b8967e
+            color: #8B7500
         }
 
         .elementor-123 .elementor-element.elementor-element-c7715a5 .elementskit-navbar-nav .elementskit-submenu-panel>li>a {
-            color: #b8967e
+            color: #8B7500
         }
     </style>
 
