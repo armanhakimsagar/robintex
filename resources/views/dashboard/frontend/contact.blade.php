@@ -90,7 +90,7 @@
                                                         class="elementskit-infobox text- text- icon-lef-right-aligin elementor-animation-   ">
                                                         <div class="box-body">
                                                             <h4 class="elementskit-info-box-title">
-                                                                24/7 Support </h4>
+                                                            </h4>
                                                             <p>Calls us:
                                                                 @if (isset($topElements))
                                                                     {{ $topElements[5]->value }}
